@@ -1,0 +1,26 @@
+{
+  "name": "scorchpoint-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+	"tech",
+	"coding"
+  ],
+  "author": "Ryan Fitzgerald",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
