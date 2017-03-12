@@ -62,6 +62,10 @@ $text: #74808a;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+
+    &.active {
+        overflow: hidden;
+    }
 }
 
 @keyframes dropHeader {
@@ -87,7 +91,7 @@ header {
 
     ul {
         display: inline-block;
-        background: #fff;
+        background: $background;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -115,6 +119,48 @@ header {
             color: $base-color;
             text-decoration: none;
         }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+#menu {
+    &.active {
+        display: block;
+    }
+}
+
+#mobile-menu-open {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    z-index: 10;
+}
+
+#mobile-menu-close {
+    display: none;
+    text-align: right;
+    width: 100%;
+    background: $background;
+    font-size: 1.5em;
+    padding-right: 15px;
+    padding-top: 10px;
+    cursor: pointer;
+    color: $base-color;
+
+    span {
+        font-size: 0.5em;
+        text-transform: uppercase;
+    }
+
+    i {
+        vertical-align: middle;
     }
 }
 
@@ -367,6 +413,17 @@ footer {
         width: 3px;
         background: $base-color;
         z-index: 0;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 40px;
+        background: $base-color;
+        background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+        top: 100%;
+        left: 303px;
     }
 }
 
@@ -647,9 +704,10 @@ footer {
 @media only screen and (max-width: 750px) {
 
     #experience-timeline {
-        &:before {
+        &:before, &:after {
             left: 23px;
         }
+
     }
 
     .vtimeline-date {
@@ -688,13 +746,43 @@ footer {
         }
     }
 
+    #about {
+        text-align: center;
+
+        p {
+            text-align: left;
+        }
+    }
+
 }
 
 // Small Devices
 @media only screen and (max-width : 768px) {
 
     header {
+        position: fixed;
         display: none;
+        z-index: 999;
+        animation: none;
+        bottom: 0;
+        height: 100%;
+    }
+
+    #mobile-menu-open, #mobile-menu-close {
+        display: block;
+    }
+
+    #menu {
+        height: 100%;
+        overflow-y: auto;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+
+        li {
+            display: block;
+            margin-bottom: 10px;
+        }
     }
 
     #lead-content {
