@@ -91,7 +91,7 @@ The Education is just a series of `.education-block` classes with some details a
 	<span class="education-date">Sept 2016 - Sept 2017</span>
 	<h4>Bachelor of Science in Computer Science</h4>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. 
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
 	</p>
 </div>
 ```
@@ -150,6 +150,14 @@ For more information on configuration of the contact form or dealing with errors
 ### Footer Section
 
 The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
+
+## Changelog
+
+### 1.1
+
+* Fixed menu toggle on mobile devices
+* Fixed z-index / scrolling issue with mobile menu
+* Mobile menu now closes once a nav element is hit
 
 ## License
 

@@ -1,7 +1,7 @@
 /*
     Title: Tech Portfolio Template
-    Version: 1.0
-    Last Change: 03/11/17
+    Version: 1.1
+    Last Change: 03/13/17
 
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
@@ -18,6 +18,11 @@
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
         }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+
+        // Hide the menu once clicked if mobile
+        if ($('header').hasClass('active')) {
+            $('header, body').removeClass('active');
+        }
     });
 
     // Scroll to top

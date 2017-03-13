@@ -1,7 +1,7 @@
 /*
     Title: Tech Portfolio Template
-    Version: 1.0
-    Last Change: 03/11/17
+    Version: 1.1
+    Last Change: 03/13/17
 
     Description: This file contains all the styles associated with the page
     that don't come from third party libraries. This file gets compiled using
@@ -65,6 +65,7 @@ body {
 
     &.active {
         overflow: hidden;
+        z-index: -1;
     }
 }
 
@@ -135,12 +136,15 @@ header {
 #mobile-menu-open {
     display: none;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 15px;
     top: 10px;
-    color: #fff;
+    color: $base-color;
     font-size: 1.5em;
     z-index: 10;
+    padding: 0 7px;
+    border-radius: 4px;
+    background: $background;
 }
 
 #mobile-menu-close {
@@ -472,7 +476,7 @@ footer {
     background: $base-color;
     border-radius: 50%;
     float: left;
-    z-index: 999;
+    z-index: 99;
     margin-left: 280px;
 
     i {
