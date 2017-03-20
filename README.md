@@ -153,7 +153,13 @@ The Footer contains an optional copyright where you can place your name as well 
 
 ## Changelog
 
-### 1.1
+### 1.1.1
+
+* Made input placeholder text more readable
+* Removed timeline line when no JS
+* Added some basic styling to timeline when no JS
+
+### 1.1.0
 
 * Fixed menu toggle on mobile devices
 * Fixed z-index / scrolling issue with mobile menu

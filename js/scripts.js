@@ -1,13 +1,16 @@
 /*
-    Title: Tech Portfolio Template
-    Version: 1.1
-    Last Change: 03/13/17
+    Title: Dev Portfolio Template
+    Version: 1.1.1
+    Last Change: 03/19/17
 
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
 */
 
 (function($) {
+
+    // Remove no-js class
+    $('html').removeClass('no-js');
 
     // Animate to section when nav is clicked
     $('header a').click(function(e) {

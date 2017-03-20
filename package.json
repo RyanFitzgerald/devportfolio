@@ -1,17 +1,15 @@
 {
-  "name": "scorchpoint-theme",
-  "version": "1.1.0",
+  "name": "devportfolio-template",
+  "version": "1.1.1",
   "description": "",
   "main": "js/scripts.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "portfolio",
     "personal",
     "website",
 	"tech",
-	"coding"
+	"coding",
+    "dev"
   ],
   "author": "Ryan Fitzgerald",
   "license": "MIT",

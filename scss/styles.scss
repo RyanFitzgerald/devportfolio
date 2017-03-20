@@ -1,7 +1,7 @@
 /*
-    Title: Tech Portfolio Template
-    Version: 1.1
-    Last Change: 03/13/17
+    Title: Dev Portfolio Template
+    Version: 1.1.1
+    Last Change: 03/19/17
 
     Description: This file contains all the styles associated with the page
     that don't come from third party libraries. This file gets compiled using
@@ -53,6 +53,26 @@ $text: #74808a;
     transition: #{$duration} #{$func} #{$property};
 }
 
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        @content;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
 /*
     ----------------------------
     ----- 3. Global Styles -----
@@ -66,6 +86,43 @@ body {
     &.active {
         overflow: hidden;
         z-index: -1;
+    }
+}
+
+// No JS styles
+.no-js {
+    #experience-timeline {
+        > div {
+            background: $background;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid $border;
+
+            h3 {
+                font-size: 1.5em;
+                font-weight: 300;
+                color: $heading;
+                display: inline-block;
+                margin: 0;
+            }
+
+            h4 {
+                font-size: 1.2em;
+                font-weight: 300;
+                color: #7e8890;
+                margin: 0 0 15px 0;
+            }
+
+            p {
+                color: $text;
+                font-size: 0.9em;
+                margin: 0;
+            }
+        }
+
+        &:before, &:after {
+            content: none;
+        }
     }
 }
 
@@ -668,6 +725,9 @@ footer {
         color: #fff;
         border: 1px solid #246c9c;
         @include transition();
+        @include placeholder {
+            color: #fff;
+        }
 
         &:focus {
             outline: none;
