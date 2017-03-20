@@ -13,7 +13,9 @@ gulp.task('scripts', function() {
                 this.emit('end');
             }
         })))
-        .pipe(uglify())
+        .pipe(uglify({
+            preserveComments: 'license'
+        }))
         .pipe(rename({extname: '.min.js'}))
         .pipe(gulp.dest('js'));
 });

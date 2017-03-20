@@ -1,8 +1,11 @@
-/*
+/*!
     Title: Dev Portfolio Template
     Version: 1.1.1
     Last Change: 03/19/17
-
+    Author: Ryan Fitzgerald
+    Repo: https://github.com/RyanFitzgerald/devportfolio-template
+    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+    
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
 */
