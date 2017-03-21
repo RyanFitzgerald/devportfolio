@@ -61,6 +61,14 @@ There is also a number of default CSS classes that can be applied such as `.shad
 
 The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
 
+If you wish to add a header link to an external page, simply add the class `no-scroll` to the anchor. For example:
+
+```HTML
+<li>
+    <a href="https://google.com" class="no-scroll">Google</a>
+</li>
+```
+
 ### Lead Section
 
 The Lead section is pretty straightforward, it contains an h1 for your name and an h2 for your title. It also contains a link that can be used to link to your resume should you wish to add it as well.
@@ -118,7 +126,7 @@ The Project section contains a number of `.project` elements that represent each
         <img src="images/project.jpg" />
     </div>
     <!-- End .project-image -->
-    
+
     <div class="project-info">
         <h3>Project Name Here</h3>
         <p>
@@ -163,6 +171,12 @@ For more information on configuration of the contact form or dealing with errors
 The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
 
 ## Changelog
+
+### 1.1.2
+
+* Added `no-scroll` class option to header navigation anchor if you want to link to external site
+* Changed contact form input / textarea colours to be based off `$base-color`
+* Changed main background to 100vh so it doesn't overflow if viewport height < 700px
 
 ### 1.1.1
 

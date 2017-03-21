@@ -202,7 +202,7 @@ header {
     top: 10px;
     color: $base-color;
     font-size: 1.5em;
-    z-index: 10;
+    z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
     background: $background;
@@ -341,14 +341,21 @@ footer {
 
 #lead {
     position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
     background: url(../images/lead-bg.jpg);
     background-size: cover;
-    padding: 250px 15px;
+    padding: 15px;
+    overflow: hidden;
 }
 
 #lead-content {
-    position: relative;
+    position: absolute;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 
     h1, h2 {
@@ -408,7 +415,7 @@ footer {
     i {
         animation: pulsate 1.5s ease;
         animation-iteration-count: infinite;
-        padding-top: 5px;
+        padding-top: 5px;;
     }
 }
 
@@ -725,9 +732,8 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: #246c9c;
+        background: darken($base-color, 15%);
         color: #fff;
-        border: 1px solid #246c9c;
         @include transition();
         @include placeholder {
             color: #fff;
@@ -735,7 +741,7 @@ footer {
 
         &:focus {
             outline: none;
-            background: darken(#246c9c, 10%);
+            background: darken($base-color, 25%);
         }
     }
 
@@ -801,10 +807,18 @@ footer {
 @media only screen and (max-width : 992px) {
 
     #lead {
+        height: auto;
+        min-height: auto;
+        max-height: auto;
         padding: 100px 15px;
     }
 
     #lead-content {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+
         h1 {
             font-size: 3em;
         }
