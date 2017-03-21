@@ -725,9 +725,9 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: #246c9c;
+        background: lighten($base-color, 10%);
         color: #fff;
-        border: 1px solid #246c9c;
+        border: 1px solid darken($base-color, 5%);
         @include transition();
         @include placeholder {
             color: #fff;
