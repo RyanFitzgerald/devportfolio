@@ -15,7 +15,7 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
 ## Contents
 
 - [Setup and Configuration](#setup-and-configuration)
-    - [Making Edits / Customizing the Template](#making-edits-/-customizing-the-template)
+    - [Making Edits / Customizing the Template](#making-edits--customizing-the-template)
     - [Using the Template As Is](#using-the-template-as-is)
 - [Customization and Editing](#customization-and-editing)
     - [General](#general)
@@ -26,7 +26,7 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
     - [Education Section](#education-section)
     - [Projects Section](#projects-section)
     - [Skills Section](#skills-section)
-    - [Contact Section](#contacts-section)
+    - [Contact Section](#contact-section)
     - [Footer Section](#footer-section)
 - [Changelog](#changelog)
 - [License](#license)
