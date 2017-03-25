@@ -19,6 +19,7 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
     - [Using the Template As Is](#using-the-template-as-is)
 - [Customization and Editing](#customization-and-editing)
     - [General](#general)
+    - [Images](#images)
     - [Header Section](#header-section)
     - [Lead Section](#lead-section)
     - [About Section](#about-section)
@@ -76,6 +77,14 @@ If you wish to change the general colour scheme of the page for example, simply 
 
 There is also a number of default CSS classes that can be applied such as `.shadow`, `.shadow-large`, `.btn-rounded-white`, and various others. These can be found under the General Styles section in the style sheet.
 
+### Images
+
+By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
+
+* Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
+* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can kept or changed easily by replacing the `favicon.ico` with your new one.
+* Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
+
 ### Header Section
 
 The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
@@ -86,6 +95,14 @@ If you wish to add a header link to an external page, simply add the class `no-s
 <li>
     <a href="https://google.com" class="no-scroll">Google</a>
 </li>
+```
+
+If you wish to have a sticky (fixed) header, you simply need to add a class of `sticky` to the main header. For example, that would be accomplished as follows:
+
+```HTML
+<header class="sticky">
+    <!-- Header content -->
+</header>
 ```
 
 ### Lead Section
@@ -192,6 +209,12 @@ For a quick tutorial about formspree, check out this [tutsplus tutorial](https:/
 The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
 
 ## Changelog
+
+### 1.1.3
+
+* Added default favicon to be used or changed
+* Added `sticky` class to make header fixed
+* Updated docs to add image section
 
 ### 1.1.2
 
