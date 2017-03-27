@@ -7,13 +7,14 @@
     "portfolio",
     "personal",
     "website",
-	"tech",
-	"coding",
+    "tech",
+    "coding",
     "dev"
   ],
   "author": "Ryan Fitzgerald",
   "license": "MIT",
   "devDependencies": {
+    "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-plumber": "^1.1.0",
