@@ -10,7 +10,7 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio-
 * Sass ready with lots of commenting
 * Fully responsive
 * Comes with Bootstrap grid system
-* Easy colour changes can be done through simply variable edits
+* Easy colour changes can be done through simple variable edits
 
 ## Contents
 
