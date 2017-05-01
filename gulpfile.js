@@ -33,7 +33,13 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('watch', ['scripts', 'styles'], function() {
+gulp.task('fonts', function() {
+  return gulp.src('node_modules/font-awesome/fonts/*')
+    .pipe(gulp.dest('fonts'));
+});
+
+gulp.task('watch', ['scripts', 'styles', 'fonts'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
+    gulp.watch('fonts/*', ['fonts']);
 });
