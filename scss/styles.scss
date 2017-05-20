@@ -1,7 +1,7 @@
 /*!
     Title: Dev Portfolio Template
-    Version: 1.1.3
-    Last Change: 03/25/17
+    Version: 1.2.0
+    Last Change: 05/20/17
     Author: Ryan Fitzgerald
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
     Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
@@ -23,7 +23,8 @@
         8. Project Styles
         9. Skills Styles
         10. Contact Styles
-        11. Media Queries
+        11. Optional Section Styles
+        12. Media Queries
 */
 
 /*
@@ -674,6 +675,10 @@ footer {
     }
 }
 
+#more-projects {
+    display: none;
+}
+
 /*
     -------------------------------
     ----- 9. Skills Styles -----
@@ -774,9 +779,57 @@ footer {
 }
 
 /*
-    ----------------------------
-    ----- 11. Media Queries -----
-    ----------------------------
+    ---------------------------------------
+    ----- 11. Optional Section Styles -----
+    ---------------------------------------
+*/
+
+.optional-section {
+    padding: 50px 15px;
+    text-align: center;
+    border-top: 1px solid $border;
+
+    h2 {
+        color: $heading;
+    }
+}
+
+.optional-section-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid $border;
+    background: #fff;
+    text-align: left;
+
+    h3 {
+        font-weight: 500;
+        margin: 0 0 15px 0;
+        color: $heading;
+    }
+
+    h4 {
+        color: $text;
+        clear: both;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+    }
+
+    p, ul {
+        margin: 0 0 15px 0;
+        color: $text;
+        font-size: 0.9em;
+    }
+
+    ul {
+        padding: 0 0 0 15px;
+    }
+}
+
+/*
+    -----------------------------
+    ----- 12. Media Queries -----
+    -----------------------------
 */
 
 // Collapse timeline
