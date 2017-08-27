@@ -1,7 +1,7 @@
 /*!
     Title: Dev Portfolio Template
-    Version: 1.2.0
-    Last Change: 05/20/17
+    Version: 1.2.1
+    Last Change: 08/28/2017
     Author: Ryan Fitzgerald
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
     Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
@@ -675,6 +675,15 @@ footer {
     }
 }
 
+.no-image {
+    .project-info {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        transform: none;
+    }
+}
+
 #more-projects {
     display: none;
 }
@@ -956,6 +965,7 @@ footer {
     .project-info {
         position: relative;
         margin: 0;
+        padding: 30px 15px;
         top: auto;
         transform: none;
     }

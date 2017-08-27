@@ -210,6 +210,23 @@ If you want to hide some projects by default, you can throw them in an additiona
 
 This will add a link that says "View More Projects" under the current projects and when clicked, all projects in the "More-projects" div will be shown. This is optional functionality and isn't provided by default. It is important that you keep the wrapping div ID intact ("#more-projects") as well as the anchor ID ("#view-more-projects"), however the contents of the div and the anchor text itself can be edited however you like.
 
+#### Projects without images
+
+If you do not wish to have a project image associated with a project, you can simply add `no-image` as an additional class to the project. It would look like the following:
+
+```HTML
+<div class="project no-image">
+    <div class="project-info">
+        <h3>Project Name Here</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
+        </p>
+        <a href="#">View Project</a>
+    </div>
+    <!-- End .project-info -->
+</div>
+```
+
 ### Skills Section
 
 The Skills section is simply an unordered list that spits out a "Skill Cloud" with all the skills listed. To add / remove skills, simply edit or add list elements, like so:
@@ -246,7 +263,7 @@ The Footer contains an optional copyright where you can place your name as well 
 
 ### Optional Sections
 
-The template comes with an optional section that can be added to the page markup to list things like Certifications, Hobbies, and more (Note: these are not included by default). The markup for the additional optional section is as follow:
+The template comes with an optional section that can be added to the page markup to list things like Certifications, Hobbies, and more (Note: these are not included by default). The markup for the additional optional section is as follows:
 
 ```HTML
 <div class="optional-section background-alt">
@@ -280,6 +297,11 @@ You can copy .optional-section-block for each new item you wish you have in the 
 The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
 
 ## Changelog
+
+### 1.2.1
+
+* Updated dependencies and gulpfile
+* Added `no-image` optional class for projects without images (see above for usage)
 
 ### 1.2.0
 
