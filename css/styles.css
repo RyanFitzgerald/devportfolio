@@ -62,6 +62,15 @@ body.active
 		transform: translateY(0);
 	}
 }
+a
+{
+	color: rgba(16, 158, 35, 1);
+}
+.projImg
+{
+	width: 300px;
+	height: 300px;
+}
 header
 {
 	animation-duration: 0.75s;
@@ -74,6 +83,13 @@ header
 	text-align: center;
 	top: 0;
 	z-index: 10;
+}
+.gradImg{
+	width: 300px;
+	margin-bottom: 25px;
+	border-radius: 100%;
+	transition: all 0.2s;
+	opacity: 1;
 }
 header ul
 {
@@ -91,7 +107,8 @@ header li
 }
 header a
 {
-	color: #3498db;
+	/*color: #3498db;*/
+	color: rgba(16, 158, 35, 1);
 	display: block;
 	padding: 10px;
 }
@@ -245,7 +262,8 @@ footer
 }
 .heading:after
 {
-	background: #3498db;
+	/*background: #3498db;*/
+	background: rgba(16, 158, 35, 0.8);
 	content: '';
 	height: 1px;
 	left: 0;
@@ -294,14 +312,16 @@ footer
 }
 #lead-content h2
 {
-	color: #a0cfee;
+	/*color: #a0cfee;*/
+	color: #ffffff;
 	font-size: 2.25em;
 	font-weight: 500;
 	margin-bottom: 15px;
 }
 #lead-overlay
 {
-	background: rgba(33,125,187,0.8);
+	/*background: rgba(33,125,187,0.8);*/
+	background: rgba(16, 158, 35, 0.8);
 	bottom: 0;
 	height: 100%;
 	left: 0;
@@ -386,7 +406,8 @@ footer
 }
 #experience-timeline:before
 {
-	background: #3498db;
+	/*background: #3498db;*/
+	background: rgba(16, 158, 35, 0.8);
 	bottom: 0;
 	content: '';
 	height: 100%;
@@ -400,7 +421,7 @@ footer
 #experience-timeline:after
 {
 	background: #3498db;
-	background: linear-gradient(to bottom, #3498db, rgba(52,152,219,0));
+	background: linear-gradient(to bottom, rgba(16, 158, 35, 0.8), rgba(52,152,219,0));
 	content: '';
 	height: 40px;
 	left: 303px;
@@ -447,7 +468,8 @@ footer
 }
 .vtimeline-icon
 {
-	background: #3498db;
+	/*background: #3498db;*/
+	background: rgba(16, 158, 35, 0.8);
 	border-radius: 50%;
 	color: #fff;
 	float: left;
@@ -607,7 +629,8 @@ footer
 }
 #contact
 {
-	background: #3498db;
+	/*background: #3498db;*/
+	background: rgba(16, 158, 35, 1);
 	padding: 50px 15px;
 	text-align: center;
 }
@@ -634,7 +657,8 @@ footer
 }
 #contact-form input,#contact-form textarea
 {
-	background: #1d6fa5;
+	/*background: #1d6fa5;*/
+	background: rgba(0, 14, 5, 0.73);
 	border: none;
 	border-radius: 4px;
 	color: #fff;
@@ -678,7 +702,8 @@ footer
 	border: none;
 	border-radius: 4px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
-	color: #3498db;
+	/*color: #3498db;*/
+	color: rgba(16, 158, 35, 1);
 	display: block;
 	font-weight: 700;
 	padding: 5px 10px;
