@@ -71,6 +71,9 @@ a
 	width: 300px;
 	height: 300px;
 }
+.contactInfo{
+	font-weight: 700;
+}
 header
 {
 	animation-duration: 0.75s;
@@ -116,7 +119,8 @@ header a:hover
 {
 	background: #eee;
 	border-radius: 4px;
-	color: #217dbb;
+	/*color: #217dbb;*/
+	color: rgba(0, 14, 5, 0.73);
 	text-decoration: none;
 }
 header a:focus
@@ -227,7 +231,8 @@ footer
 }
 .social a:hover
 {
-	color: #3498db;
+	/*color: #3498db;*/
+	color: rgba(16, 158, 35, 1);
 }
 .btn-rounded-white
 {
@@ -241,7 +246,8 @@ footer
 .btn-rounded-white:hover
 {
 	background: #fff;
-	color: #3498db;
+	/*color: #3498db;*/
+	color: rgba(0, 14, 5, 1);
 	text-decoration: none;
 }
 .shadow
@@ -335,7 +341,7 @@ footer
 {
 	bottom: 15px;
 	color: #fff;
-	left: 0;
+	left: 0;rgba(0, 14, 5, 0.73);
 	position: absolute;
 	right: 0;
 	text-align: center;
@@ -344,7 +350,8 @@ footer
 }
 #lead-down span
 {
-	border: 3px solid #a0cfee;
+	/*border: 3px solid #a0cfee;*/
+	border: 3px solid rgba(0, 14, 5, 0.73);
 	border-radius: 50%;
 	cursor: pointer;
 	display: block;
@@ -469,7 +476,7 @@ footer
 .vtimeline-icon
 {
 	/*background: #3498db;*/
-	background: rgba(16, 158, 35, 0.8);
+	background: rgba(16, 158, 35, 1);
 	border-radius: 50%;
 	color: #fff;
 	float: left;
