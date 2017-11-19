@@ -34,7 +34,8 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+//$base-color: #cae8f2;
+$base-color: #DBDBDB; // dcd0c0,
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -46,7 +47,8 @@ $border: #dcd9d9;
 
 // Define text colors
 $heading: #374054;
-$text: #74808a;
+$text: #fff;
+//DEFAULT: $text: #74808a;
 
 /*
     ---------------------
@@ -268,7 +270,7 @@ footer {
 }
 
 .social {
-    text-align: right;
+    text-align: center;
 
     ul {
         margin: 5px 0 0 0;
