@@ -48,6 +48,9 @@ $border: #dcd9d9;
 $heading: #543737;
 $text: #8a7474;
 
+// Define shading (highlight on hover)
+$highlight: #d3d3d3;
+
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -156,20 +159,20 @@ header {
         display: inline-block;
         background: $background;
         text-align: center;
-        padding: 10px;
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+        padding: 0;
     }
 
     li {
         display: inline-block;
     }
 
-    a {
+    a, {
         display: block;
         color: $base-color;
-        padding: 10px;
+        padding: 1em;
 
         &:hover {
             color: $base-color-hover;
@@ -192,12 +195,44 @@ header {
         position: fixed;
         z-index: 999;
     }
+
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: $highlight;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: $background;
+        z-index: 1;
+        left: 32%;
+        right: 32%;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+    }
+
+    .submenu a {
+        color: $base_color;
+        text-decoration: none;
+    }
+
+    .submenu a:hover {
+        background-color: $highlight;
+    }
+
+    .menu-item:hover .submenu {
+        display: block;
+    }
+
+    li.menuitem {
+        position: relative;
+        display: inline-block;
+    }
 }
 
 #menu {
-    &.active {
-        display: block;
-    }
+        display: inline-block;
+        list-style-type:none;
 }
 
 #mobile-menu-open {
