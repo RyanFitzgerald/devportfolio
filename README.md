@@ -1,337 +1,147 @@
-# Dev Portfolio
+# minima
 
-This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
+*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
 
-To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+[Theme preview](https://jekyll.github.io/minima/)
 
-## Features
+![minima theme preview](/screenshot.png)
 
-* Gulp ready (compiles Sass and minifies JS)
-* Sass ready with lots of commenting
-* Fully responsive
-* Comes with Bootstrap grid system
-* Easy colour changes can be done through simple variable edits
+## Installation
 
-## Contents
+Add this line to your Jekyll site's Gemfile:
 
-- [Setup and Configuration](#setup-and-configuration)
-    - [Making Edits / Customizing the Template](#making-edits--customizing-the-template)
-    - [Using the Template As Is](#using-the-template-as-is)
-- [Customization and Editing](#customization-and-editing)
-    - [General](#general)
-    - [Images](#images)
-    - [Header Section](#header-section)
-    - [Lead Section](#lead-section)
-    - [About Section](#about-section)
-    - [Experience Section](#experience-section)
-    - [Education Section](#education-section)
-    - [Projects Section](#projects-section)
-    - [Skills Section](#skills-section)
-    - [Contact Section](#contact-section)
-    - [Footer Section](#footer-section)
-    - [Optional Sections](#optional-sections)
-- [Changelog](#changelog)
-- [License](#license)
-
-## Setup and Configuration
-
-The setup required can be broken into two types:
-1. If you want to make edits or customize the template
-2. If you just want to add your information as use as is
-
-### Making Edits / Customizing the Template
-
-To setup, simply fork the repo and run `npm install` in order to get all the Gulp dev dependencies. Next, run `Gulp watch` to compile the Sass and minify the JavaScript. Alternatively, if you don't have Gulp installed globally, you can run the npm script `npm run watch`. Any changes done to the JavaScript (js/scripts.js) or Sass (sass/styles.scss) will be autocompiled and ready to go.
-
-All scripts are within `js/scripts.js` and get minified to `js/scripts.min.js`. All styles are in `sass/styles.scss` and get compiled to `css/styles.css`. Both the minified scripts file and compiled CSS file are what is loaded on the page by default.
-
-At this point, the page is ready to go and you can begin to add your own information and make any needed changes. The sections below  contains a quick breakdown of each of the default sections and how they work.
-
-### Using The Template As Is
-
-If you wish to use the template as is (i.e. how it's seen in the demo), then all that's required is the `css`, `images`, `js`, `libs` folders and the `index.html` file. You would then add your content to `index.html` as needed and you're good to go!
-
-## Customization and Editing
-
-### General
-
-In general, most styles on the page are based off the definitions of variables in the variable section of the style sheet:
-
-```SCSS
-// Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
-
-// Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
-
-// Define border colors
-$border: #dcd9d9;
-
-// Define text colors
-$heading: #374054;
-$text: #74808a;
+```ruby
+gem "minima"
 ```
 
-If you wish to change the general colour scheme of the page for example, simply change the value of `$base-color`.
+And add this line to your Jekyll site:
 
-There is also a number of default CSS classes that can be applied such as `.shadow`, `.shadow-large`, `.btn-rounded-white`, and various others. These can be found under the General Styles section in the style sheet.
-
-### Images
-
-By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
-
-* Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
-* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can kept or changed easily by replacing the `favicon.ico` with your new one.
-* Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
-
-### Header Section
-
-The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
-
-If you wish to add a header link to an external page, simply add the class `no-scroll` to the anchor. For example:
-
-```HTML
-<li>
-    <a href="https://google.com" class="no-scroll">Google</a>
-</li>
+```yaml
+theme: minima
 ```
 
-If you wish to have a sticky (fixed) header, you simply need to add a class of `sticky` to the main header. For example, that would be accomplished as follows:
+And then execute:
 
-```HTML
-<header class="sticky">
-    <!-- Header content -->
-</header>
+    $ bundle
+
+
+## Contents At-A-Glance
+
+Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
+
+### Layouts
+
+Refers to files within the `_layouts` directory, that define the markup for your theme.
+
+  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
+  - `home.html` &mdash; The layout for your landing-page / home-page / index-page.
+  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
+  - `post.html` &mdash; The layout for your posts.
+
+### Includes
+
+Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
+
+  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
+  - `footer.html` &mdash; Defines the site's footer section.
+  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
+  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
+  - `header.html` &mdash; Defines the site's main header section.
+  - `icon-* files` &mdash; Inserts github and twitter ids with respective icons.
+
+### Sass
+
+Refers to `.scss` files within the `_sass` directory that define the theme's styles.
+
+  - `minima.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
+  - `minima/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
+  - `minima/_layout.scss` &mdash; Defines the visual style for various layouts.
+  - `minima/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
+
+### Assets
+
+Refers to various asset files within the `assets` directory.
+Contains the `main.scss` that imports sass files from within the `_sass` directory. This `main.scss` is what gets processed into the theme's main stylesheet `main.css` called by `_layouts/default.html` via `_includes/head.html`.
+
+This directory can include sub-directories to manage assets of similar type, and will be copied over as is, to the final transformed site directory.
+
+
+## Usage
+
+### Customization
+
+To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
+e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
+
+The site's default CSS has now moved to a new place within the gem itself, [`assets/main.scss`](assets/main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
+- Create a new instance of `main.scss` at site source.
+  - Create a new file `main.scss` at `<your-site>/assets/`
+  - Add the frontmatter dashes, and
+  - Add `@import "minima";`, to `<your-site>/assets/main.scss`
+  - Add your custom CSS.
+- Download the file from this repo
+  - Create  a new file `main.scss` at `<your-site>/assets/`
+  - Copy the contents at [assets/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
+- Copy directly from Minima 2.0 gem
+  - Go to your local minima gem installation directory ( run `bundle show minima` to get the path to it ).
+  - Copy the `assets/` folder from there into the root of `<your-site>`
+  - Change whatever values you want, inside `<your-site>/assets/main.scss`
+
+--
+
+### Change default date format
+
+You can change the default date format by specifying `site.minima.date_format`
+in `_config.yml`.
+
+```
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
 ```
 
-### Lead Section
+--
 
-The Lead section is pretty straightforward, it contains an h1 for your name and an h2 for your title. It also contains a link that can be used to link to your resume should you wish to add it as well.
+### Enabling comments (via Disqus)
 
-If you want your resume to automatically download when the button is clicked instead of opening up in another tab (the default behaviour), add the following code (Thanks to jkfran for the suggestion) in the lead:
+Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
 
-```HTML
-<a href="path/to/resume.pdf" download="resume.pdf" class="btn-rounded-white">Download Resume</a>
+To enable it, add the following lines to your Jekyll site:
+
+```yaml
+  disqus:
+    shortname: my_disqus_shortname
 ```
 
-The href attribute points to where your resume is stored and the download attribute is what triggers the download / provides the name the file will be downloaded as when the user clicks the button (In this case, it will download as resume.pdf).
+You can find out more about Disqus' shortnames [here](https://help.disqus.com/customer/portal/articles/466208).
 
-### About Section
+Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
 
-The about section contains a quick about blurb that can be edited by changing the text within the paragraph tags.
+If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's YAML Front Matter.
 
-### Experience Section
+--
 
-The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptaion of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
+### Enabling Google Analytics
 
-The default format is as follows:
+To enable Google Anaytics, add the following lines to your Jekyll site:
 
-```HTML
-<div id="experience-timeline">
-    <div data-date="September 2015 – September 2016">
-        <h3>Employer Name</h3>
-        <h4>Job Title</h4>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-    </div>
-</div>
+```yaml
+  google_analytics: UA-NNNNNNNN-N
 ```
 
-The data attribute `data-date` is what is used to add a date to the associated timeline point. All that is really required is a wrapping div (i.e. `#experience-timeline`) and nested divs to build the timeline. The h3, h4, and p tags are option and the contents of the div can be styled however you wish.
+Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
 
-To add additional section, simply add additional nested divs under the main wrapping div.
+## Contributing
 
-### Education Section
+Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-The Education is just a series of `.education-block` classes with some details associated with them. By default, it shows school name, date, degree, and some additional details. For example:
+## Development
 
-```HTML
-<div class="education-block">
-    <h3>University of Ottawa</h3>
-    <span class="education-date">Sept 2016 - Sept 2017</span>
-    <h4>Bachelor of Science in Computer Science</h4>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-    </p>
-</div>
-```
+To set up your environment to develop this theme, run `script/bootstrap`.
 
-To add additional section, simply add additional `.education-block` elements.
-
-### Projects Section
-
-The Project section contains a number of `.project` elements that represent each of your projects. By default, it contains a 300x300 image under `.project-image` and relevant project information under `.project-info`. An example is as follows:
-
-```HTML
-<div class="project">
-    <div class="project-image">
-        <img src="images/project.jpg" />
-    </div>
-    <!-- End .project-image -->
-
-    <div class="project-info">
-        <h3>Project Name Here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-        <a href="#">View Project</a>
-    </div>
-    <!-- End .project-info -->
-</div>
-```
-
-If you want to hide some projects by default, you can throw them in an additional row and add the markup for the "Show More" button. This would be done as follows:
-
-```HTML
-<!-- Projects Above -->
-
-<a id="view-more-projects" href="#">View More Projects</a>
-<div id="more-projects" class="row">
-    <div class="project shadow-large">
-        <div class="project-image">
-            <img src="images/project.jpg" />
-        </div>
-        <!-- End .project-image -->
-        <div class="project-info">
-            <h3>Project Name Here</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
-            <a href="#">View Project</a>
-        </div>
-        <!-- End .project-info -->
-    </div>
-    <!-- End .project -->
-</div>
-```
-
-This will add a link that says "View More Projects" under the current projects and when clicked, all projects in the "More-projects" div will be shown. This is optional functionality and isn't provided by default. It is important that you keep the wrapping div ID intact ("#more-projects") as well as the anchor ID ("#view-more-projects"), however the contents of the div and the anchor text itself can be edited however you like.
-
-#### Projects without images
-
-If you do not wish to have a project image associated with a project, you can simply add `no-image` as an additional class to the project. It would look like the following:
-
-```HTML
-<div class="project no-image">
-    <div class="project-info">
-        <h3>Project Name Here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-        <a href="#">View Project</a>
-    </div>
-    <!-- End .project-info -->
-</div>
-```
-
-### Skills Section
-
-The Skills section is simply an unordered list that spits out a "Skill Cloud" with all the skills listed. To add / remove skills, simply edit or add list elements, like so:
-
-```HTML
-<ul>
-    <li>JavaScript</li>
-    <li>Python</li>
-    <li>Ruby</li>
-    <li>Go</li>
-    <li>Node.js</li>
-</ul>
-```
-
-### Contact Section
-
-Since the page is static, I opted to use the awesome Formspree to allow for a contact form without the need for anything else. To use it, you must have the page hosted on a server (loading a basic HTML page won't work) where a referrer header is generated. Also, simply add the email to the action. An example is as follows:
-
-```HTML
-<form method="POST" action="https://formspree.io/email@email.com">
-    <input type="hidden" name="_subject" value="Contact request from personal website" />
-    <input type="email" name="_replyto" placeholder="Your email" required>
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-</form>
-```
-For more information on configuration of the contact form or dealing with errors, check out [Formspree](https://formspree.io/).
-
-For a quick tutorial about formspree, check out this [tutsplus tutorial](https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870) that covers different aspects and features of the form tool.
-
-### Footer Section
-
-The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
-
-### Optional Sections
-
-The template comes with an optional section that can be added to the page markup to list things like Certifications, Hobbies, and more (Note: these are not included by default). The markup for the additional optional section is as follows:
-
-```HTML
-<div class="optional-section background-alt">
-    <h2 class="heading">Section Name</h2>
-
-    <div class="optional-section-block">
-        <h3>Some content title</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-        </p>
-        <ul>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-        </ul>
-    </div>
-    <!-- End .optional-section-block -->
-
-</div>
-<!-- End .optional-section -->
-```
-
-You can copy .optional-section-block for each new item you wish you have in the optional section. Also, the background-alt class may need to be removed depending on where the optional section is placed in your layout as this adds the grey background. If you play it at the bottom after "Skills", it can be used as is. Also, by default the border is applied at the top, but this can also be adjusted as needed.
-
-The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
-
-## Changelog
-
-### 1.2.1
-
-* Updated dependencies and gulpfile
-* Added `no-image` optional class for projects without images (see above for usage)
-
-### 1.2.0
-
-* Added support for optional "Show More Projects" that hides some projects by default if included
-* Added optional sections to display certifications, languages, etc.
-
-### 1.1.3
-
-* Added default favicon to be used or changed
-* Added `sticky` class to make header fixed
-* Updated docs to add image section
-
-### 1.1.2
-
-* Added `no-scroll` class option to header navigation anchor if you want to link to external site
-* Changed contact form input / textarea colours to be based off `$base-color`
-* Changed main background to 100vh so it doesn't overflow if viewport height < 700px
-
-### 1.1.1
-
-* Made input placeholder text more readable
-* Removed timeline line when no JS
-* Added some basic styling to timeline when no JS
-
-### 1.1.0
-
-* Fixed menu toggle on mobile devices
-* Fixed z-index / scrolling issue with mobile menu
-* Mobile menu now closes once a nav element is hit
+To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
 
 ## License
 
-Completely free (MIT)! See [LICENSE.md](LICENSE.md) for more.
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
