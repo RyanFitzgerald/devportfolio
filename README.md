@@ -3,7 +3,9 @@
 Leah Ashe trying to figure out how deployment on Github works. 12 Jan 2018.
 Do I have the process down?
 
-And another change to the readme. Let's see if I've got it. 
+And another change to the readme. Let's see if I've got it.
+
+Now I'm trying to make a change to AshePortfolioTry2 and merge it into AshePortfolioTry1 by making a pull request. 
 
 
 This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
