@@ -305,6 +305,10 @@ footer {
         background: #fff;
         text-decoration: none;
     }
+
+    &:focus {
+        color: $base-color;
+    }
 }
 
 .shadow {
