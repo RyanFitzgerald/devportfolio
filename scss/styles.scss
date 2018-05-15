@@ -770,6 +770,36 @@ footer {
     }
 }
 
+#skills-inline {
+    text-align: center;
+    float: right;
+    
+    h2 {
+        color: $heading;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 800px;
+    }
+
+    li {
+        display: inline-block;
+        margin: 7px;
+        padding: 5px 15px;
+        color: $heading-alt;
+        background: darken($base-color, 5%);
+        list-style: none;
+        cursor: default;
+        font-size: 1.2em;
+            border-radius: 30px;
+
+    }
+}
+
 /*
     -------------------------------
     ----- 10. Contact Styles -----
