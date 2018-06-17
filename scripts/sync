@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -ex
+
+aws s3 sync ${PWD} s3://hotlinedring.co/ --delete --exclude "node_modules/*" --exclude ".git/*" --exclude ".gitignore" --exclude "scss/*" --exclude "scripts/ *" --exclude "package*" --exclude "*.md" --exclude "gulpfile.js"

@@ -34,7 +34,9 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+// $base-color: #3498db;
+$base-color: #CD5555;
+
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -92,6 +94,10 @@ body {
         overflow: hidden;
         z-index: -1;
     }
+}
+
+.company-title {
+    text-decoration: underline;
 }
 
 // No JS styles
@@ -350,7 +356,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/IMG_1617.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -653,6 +659,12 @@ footer {
 .project-image {
     float: left;
 }
+.martini-image, .bb-image {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
 
 .project-info {
     position: absolute;
@@ -694,7 +706,7 @@ footer {
     -------------------------------
 */
 
-#skills {
+.skills {
     padding: 50px 15px;
     text-align: center;
 
@@ -719,6 +731,28 @@ footer {
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+    }
+}
+.skills-projects {
+    padding: 30px 10px;
+    text-align: center;
+
+    ul {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 600px;
+    }
+
+    li {
+        display: inline-block;
+        margin: 7px;
+        padding: 5px 10px;
+        color: $heading;
+        background: darken($background-alt, 5%);
+        list-style: none;
+        cursor: default;
+        font-size: 0.8em;
     }
 }
 
