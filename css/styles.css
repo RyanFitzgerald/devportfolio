@@ -545,7 +545,8 @@ footer {
 }
 
 .project-image {
-    float: left
+    float: left;
+
 }
 
 .project-info {
