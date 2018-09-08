@@ -46,6 +46,7 @@ $border: #dcd9d9;
 // Define text colors
 $heading: #374054;
 $text: #74808a;
+$text-alt: #ffffff;
 
 /*
     ---------------------
@@ -91,6 +92,10 @@ body {
     overflow: hidden;
     z-index: -1;
   }
+}
+
+.chevron-border {
+  border: 3px solid #a0cfee !important;
 }
 
 // No JS styles
@@ -237,6 +242,7 @@ header {
 
 footer {
   padding: 50px 0;
+  background: $base-color;
 }
 
 .copyright {
@@ -244,7 +250,7 @@ footer {
 
   p {
     margin: 0;
-    color: $text;
+    color: $text-alt;
   }
 }
 
@@ -258,12 +264,11 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid lighten($text, 25%);
     text-align: center;
   }
 
   i {
-    color: $text;
+    color: $text-alt;
   }
 }
 
@@ -283,12 +288,12 @@ footer {
 
   a {
     display: block;
-    color: $text;
+    color: $text-alt;
     padding: 10px;
 
-    &:hover {
-      color: $base-color;
-    }
+    // &:hover {
+    //   color: $base-color;
+    // }
   }
 }
 
