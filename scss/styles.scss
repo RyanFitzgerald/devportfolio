@@ -345,6 +345,13 @@ footer {
     --------------------------
 */
 
+#particles-js{
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    z-index: -2;
+}
+
 #lead {
     position: relative;
     height: 100vh;
