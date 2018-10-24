@@ -30,7 +30,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('watch', ['scripts', 'styles'], function() {
-    gulp.watch('js/*.js', ['scripts']);
-    gulp.watch('scss/*.scss', ['styles']);
+gulp.task('watch', gulp.parallel('scripts', 'styles'), function() {
+    gulp.watch('js/*.js', 'scripts');
+    gulp.watch('scss/*.scss', 'styles');
 });
