@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Arun Nemani</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -15,6 +15,18 @@
 </head>
 
 <body>
+    <script>
+      (function(w, d){
+       var id='embedly-platform', n = 'script';
+       if (!d.getElementById(id)){
+         w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+         var e = d.createElement(n); e.id = id; e.async=1;
+         e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+         var s = d.getElementsByTagName(n)[0];
+         s.parentNode.insertBefore(e, s);
+       }
+      })(window, document);
+    </script>
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
@@ -37,6 +49,12 @@
                 <a href="#projects">Projects</a>
             </li>
             <li>
+                <a href="#news">News</a>
+            </li>
+            <li>
+                <a href="#publications">Publications</a>
+            </li>
+            <li>
                 <a href="#skills">Skills</a>
             </li>
             <li>
@@ -48,9 +66,9 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Ryan Fitzgerald</h1>
-            <h2>Software Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <h1>Arun Nemani, PhD</h1>
+            <h2>Neuro + Data Scientist</h2>
+            <a href="https://zety.com/mycv/ArunNemani" class="btn-rounded-white">Download Resume</a>
         </div>
         <!-- End #lead-content -->
 
@@ -66,17 +84,18 @@
     <!-- End #lead -->
 
     <div id="about">
+        <h2 class="heading">About Me</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
+                <div class="col-md-3">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                        I'm a data scientist that's passionate about discovering hidden gems and insights in large and complex datasets for businesses and scientific research. I completed my Ph.D. on December 2017 at Rensselaer Polytechnic Institute co-advised by Drs. Suvranu De and Xavier Intes.
+                        My thesis showed, for the first time, that machine learning can be used to classify and accurately predict surgical motor skills using brain imaging datasets. Check out my research for more info!
                     </p>
+                </div>
+                <div class="col-md-3">
                 </div>
             </div>
         </div>
@@ -86,27 +105,32 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="July 2018 – Present">
+                <h3>Food Genius (a US Foods company)</h3>
+                <h4>Sr. Data Scientist</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+
                 </p>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="September 2010 – Nov 2017">
+                <h3>Rensselaer Polytechnic Institute</h3>
+                <h4>Research Scientist</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                    Developed and validated machine learning models (linear discriminant
+                    analysis, support vector machines, and logistic regression) using brain imaging data to assess surgical motor skill proficiency.
+                    Validated classification models to robustly (ROC - AUC = 0.94) predict motor skill levels with a 113% higher accuracy than current US Surgery Board Certification methods.
+                    Led three multi-institutional NIH clinical studies with ~$2M of funding in collaboration with Massachusetts General Hospital, Harvard Medical School, Yale Medical School, and University at Buffalo.
                 </p>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="July 2009 – May 2010">
+                <h3>St. Jude Medical (an Abbott company) </h3>
+                <h4>Manufacturing Engineer</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                    Leveraged computer vision (OpenCV) and machine learning to implement a real-time medical device part inspection system for the cardiovascular diseases division.
+
+                    Used data driven and analytical methods to prove value of automated part inspection system resulting in net cost reductions of ~$200K / year.
                 </p>
             </div>
         </div>
@@ -116,29 +140,37 @@
     <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
+            <h3>Rensselaer Polytechnic Institute</h3>
+            <span class="education-date">Jan 2013 - Nov 2017</span>
+            <h4>Ph.D in Biomedical Engineering</h4>
+            <ul>
+                <li>
+                    Advisors: Suvranu De and Xavier Intes
+                </li>
+                <li>
+                    Research areas: Machine learning, image processing, and brain imaging for motor skill assessment
+                </li>
+            </ul>
         </div>
         <!-- End .education-block -->
 
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>Rensselaer Polytechnic Institute</h3>
+            <span class="education-date">Sep 2010 - Dec 2012</span>
+            <h4>M.S in Biomedical Engineering</h4>
             <ul>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Research areas: Surgical simulation, virtual surgery
                 </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>University of Minnesota - Twin Cities</h3>
+            <span class="education-date">Sept 2005 - Dec 2009</span>
+            <h4>Bachelor of Science in Biomedical Engineering</h4>
+            <ul>
             </ul>
         </div>
         <!-- End .education-block -->
@@ -151,15 +183,20 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/rpi.png" height="300px"/>
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>PhD Thesis: Surgical motor skill differentiation via non-invasive brain imaging</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            Current metrics for surgical motor skill assessment are often simplistic, subjective, and inconsistent. Yet these metrics are used for Board certification and haven't changed for decades. This thesis presents a much more accurate approach to measure surgical motor skill via non-invasive brain imaging.
                         </p>
-                        <a href="#">View Project</a>
+
+                        <p>
+                            RPI thesis
+                        </p>
+                        <a href="docs/arun-nemani-phd-thesis.pdf">Read Thesis</a>
+                        <a href="https://www.youtube.com/watch?v=XFUfUZzB0PQ">Invited Talk</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -167,15 +204,80 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/brain.jpg" width="300px"/>
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        <h3>Assessing bimanual motor skills with optical neuroimaging</h3>
+                        <p class="justify">
+                            Measuring motor skill proficiency is critical for the certification of highly skilled individuals in numerous fields, especially surgery. However, conventional measures use subjective metrics that often cannot distinguish between expertise levels. This work presents an advanced optical neuroimaging methodology that can classify subjects with different expertise levels associated with an accuracy of ~94%.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="http://advances.sciencemag.org/content/4/10/eaat3807">Read Article</a>
+                        <a href="https://github.com/arun-nemani/Surgical-skill-classification">View Code</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/fnirs-layout.jpg" height="300px"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Successful and unsuccessful surgical training assessment via non-invasive brain imaging</h3>
+                        <p class="justify">
+                            When is a resident ready to perform surgery? With regards to surgical skill assessment on real tissue, current metrics are very subjective and inconsistent. My work shows that non-invasive brain imaging can be used to accurately assess whether a trainee has successfully completed training when they practice on real tissue.
+                        </p>
+                        <a href="https://link.springer.com/article/10.1007%2Fs00464-018-6535-z">Read Article</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/probe.jpg" height="300px"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Probe placement optimization via Monte Carlo simulation</h3>
+                        <p class="justify">
+                            How do you know where to efficiently place brain imaging probes? This work objectively determines the best optical probe placement on the scalp according to each application using Monte Carlo based photon migration simulations.
+                        </p>
+                        <a href="https://www.osapublishing.org/abstract.cfm?uri=BIOMED-2014-BM3A.36">Read Article</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/tibia.jpg" height="300px"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Resonance as a means to predict locations of bone formation during mechanical loading</h3>
+                        <p class="justify">
+                            Mechanical loading has been proven to increase bone formation for patients with osteoporosis or osteopenia. This study shows that maximum bone formation depends on the location and frequency of mechanical loading.
+                        </p>
+                        <a href="https://link.springer.com/article/10.1007/s10237-013-0491-2">Read Article</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/fls.jpg" width="300px"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Automated tool and block tracking for surgical training assessment</h3>
+                        <p class="justify">
+                            Surgical training assessment is very challenging problem. This work utilizes real-time computer vision and machine learning classifiers, based on Haar features, to track objects and surgical tools during resident training programs to improve skill assessment metrics.
+                        </p>
+                        <a href="https://github.com/arun-nemani/FLS-PegTransfer-detection">View Code</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -185,35 +287,111 @@
     </div>
     <!-- End #projects -->
 
+    <div id="news" class="optional-section background-alt">
+        <h2 class="heading">News</h2>
+            <blockquote class="embedly-card"><h4><a href="https://www.wsj.com/articles/brain-scans-can-detect-who-has-better-skills-1538589600?mod=hp_featst_pos1">Brain Scans Can Detect Who Has Better Skills</a></h4><p>Researchers leveraging advanced scanning technologies found they could identify novice from experienced surgeons by analyzing brain scans taken as the physicians worked.</p></blockquote>
+            <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+            <blockquote class="embedly-card"><h4><a href="https://www.scpr.org/programs/airtalk/2018/10/10/63774/new-study-uses-brain-activity-to-evaluate-skills-w/">New study uses brain activity to evaluate skills, we discuss the ethical implications</a></h4><p>About AirTalk® Join KPCC's AirTalk with host Larry Mantle weekdays for lively and in-depth discussions of city news, politics, science, the arts, entertainment, and more. Call-in number: 866-893-5722 A new study published last Wednesday in the journal Science Advances shows how skilled surgical practitioners exhibit different brain activities from unskilled practitioners.</p></blockquote>
+            <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+            <blockquote class="embedly-card"><h4><a href="https://www.cbc.ca/radio/quirks/oct-6-2018-canada-s-newest-nobel-laureate-reading-surgeons-minds-sniffing-out-shark-water-and-more-1.4850312/researchers-are-reading-doctors-brains-to-see-how-good-they-are-at-surgery-1.4850339">Researchers are reading doctors' brains to see how good they are at surgery | CBC Radio</a></h4><p>Using a brain imaging method called "functional near-infrared spectroscopy," researchers were able to see the activity of different regions of the brain while a surgeon performed a simulated surgery, and use patterns of that activity to evaluate their level of expertise. Dr. Arun Nemani developed this idea in his Ph.D research in biomedical engineering at Rensselaer Polytechnic Institute.</p></blockquote>
+            <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+            <blockquote class="embedly-card"><h4><a href="https://www.vice.com/en_nz/article/9k7mva/a-third-of-gluten-free-foods-in-us-restaurants-contain-gluten">Sometimes Your Brain Goes Back in Time and Changes What it Perceived</a></h4><p>Transparent skull in doctor's office A new brain scan can tell the difference between good surgeons and inexperienced ones Prominent heart surgeon David Sabiston, who performed an early coronary bypass operation in the 1960s, led a surgical training program at Duke known colloquially as "Decade with Dave."</p></blockquote>
+            <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+        <!-- End .optional-section-block -->
+    </div>
+    <!-- End .optional-section -->
+
+    <div id="publications" class="optional-section background-alt">
+        <h2 class="heading">Publications</h2>
+        <p>
+            Full list of publications on <a href="https://scholar.google.com/citations?user=x1AaAyMAAAAJ&hl=en">Google scholar</a>
+        </p>
+        <div class="optional-section-block">
+            <h3>Assessing bimanual motor skills with optical neuroimaging</h3>
+            <p>
+                <strong>A Nemani</strong>, M Yücel, U Kruger, D Gee, C Cooper, S Schwaitzberg, S De, X Intes
+                <br>
+                <font color="red"><i>Science Advances</i></font> (2018) 4 , eaat3807. Impact factor: 11.51
+            </p>
+
+            <h3>Objective assessment of surgical skill transfer using non-invasive brain imaging</h3>
+            <p>
+                <strong>A Nemani</strong>, U Kruger, C Cooper, S Schwaitzberg, X Intes, S De
+                <br>
+                <i>Surgical endoscopy</i> (2018), In press. (Impact factor: 3.747)
+            </p>
+
+            <h3>Noninvasive Brain Imaging Demonstrates that Surgical Skills Transfer from Training Simulators to Ex Vivo Models</h3>
+            <p>
+                <strong>A Nemani</strong>, C Cooper, X Intes, S De, S Schwaitzberg
+                <br>
+                <i>JACS</i> (2017) 225 , e22. (Impact factor: 5.122)
+            </p>
+
+            <h3>Monte Carlo based simulation of sensitivity curvature for evaluating optimal probe geometry</h3>
+            <p>
+                <strong>A Nemani</strong>, X Intes, S De
+                <br>
+                <i>Biomedical Optics</i> (2014), BM3A. 36. (Impact factor: 2.859)
+            </p>
+
+            <h3>Resonance in the mouse tibia as a predictor of frequencies and locations of loading-induced bone formation</h3>
+            <p>
+                L Zhao, T Dodge, <strong>A Nemani</strong>, H Yokota
+                <br>
+                <i>Biomech. Model. Mechanobiol</i> (2014) 13, 141-151 (Impact factor: 3.323)
+            </p>
+        </div>
+        <!-- End .optional-section-block -->
+
+    </div>
+    <!-- End .optional-section -->
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
-            <li>JavaScript</li>
             <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
+            <li>Jupyter/IPython</li>
+            <li>Pandas</li>
+            <li>SciPy</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+            <li>Scikit-learn</li>
+            <li>Keras</li>
+            <li>Tensorflow</li>
+            <li>Git</li>
+            <li>Bash</li>
+            <li>UNIX</li>
+            <li>SQL</li>
+            <li>SPSS</li>
+            <li>OpenCV</li>
+            <li>MATLAB</li>
+            <li>Tableau</li>
             <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
+            <li>AWS</li>
+            <li>S3</li>
+            <li>EC2</li>
+            <li>ElasticSearch</li>
+            <li>Flask</li>
+            <li>Kibana</li>
+            <li>Linear/Logistic Regression</li>
+            <li>Clustering</li>
+            <li>Classification</li>
+            <li>NLP</li>
+            <li>Statistics</li>
+            <li>Probabilistic modeling</li>
+            <li>SVMs</li>
+            <li>Random Forests</li>
+            <li>PCA</li>
+            <li>LDA</li>
+            <li>Fourier Analysis</li>
+            <li>Optical imaging</li>
+            <li>Research design</li>
+            <li>Clinical studies</li>
+
         </ul>
     </div>
     <!-- End #skills -->
@@ -237,7 +415,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017 YOUR NAME
+                        Copyright &copy; 2017 Arun Nemani
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -248,22 +426,13 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/arun-nemani" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/arun-nemani/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/anemani0316" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
