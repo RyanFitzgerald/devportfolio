@@ -238,7 +238,7 @@
                 <div id="software-implementation" style="padding:50px;" class="row">
                                             <h2 class="heading">Software Implementation</h2>
                         <div style="padding:20px;float:right;">
-                        <iframe width="560" height="315" src="https://youtu.be/XkQ-qT2bu5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=XkQ-qT2bu5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                             <p>We eventually decided on a sensor-based design - where the user must speak the word they are prompted in another language - as follows: </p>
@@ -249,7 +249,6 @@
                                 <li>Given the correct word, the user is given a positive reinforcement by making the colour blue, and then given the meaning of the word, so they can learn. We decided on this so that it can be a <strong>learning tool</strong>, and also so the interaction feels like a game.</li>
                                 <li>Given an incorrect word, the user is given negative reinforcement by making the colour red and then given a new word, this clearly indicates they should try again. This way they can clearly see the progress of the unlock and <strong>always have feedback</strong> on their interaction. </li>
                             </ul>
-                            <br>
                     <p>We eventually decided on a touch-based design - where the user matches the hands by touching the clock one hand at a time - as follows: </p>
                     <ul>
                         <li>We chose to use the multiple hands design so the user does not have to approximate themself - they can see where it needs to stop on the clock. This makes the interaction <strong>efficient, and also better suggests what the user has to do</strong> when it is clicked on.</li>
@@ -259,6 +258,8 @@
                         <li>The hands that need to be matched are orange and stick out and are behind the actual time - like shadow hands - so it seems like they are movable.</li>
                         <li>There is one interaction for each hand so the <strong>interactions are not long and awkward</strong>, and also to prevent accidental activation.</li>
                     </ul>
+
+                    <p>I worked on the speech recognition for the sensor-based login method. I set up the library of words, language configuration, and the matching and error handling logic. I then passed this to Daniel to make it look beautiful.</p>
 
                        <h3> Try <a href="/unlockme">Unlock Me</a> right now~!<br>
                            First choose Sensor or Touch to unlock in the method you like. The source code is hosted on <a href="https://github.com/hfirdaus/unlockme">Github</a>. You can download <a href="/files/unlock-me.zip">unlock-me.zip</a> as well.<br><br></h3>
