@@ -102,7 +102,7 @@
                         <li>The user will see a picture of a shiny glass on the screen and the user will have to blow on the mic to "cloud up" the screen. Once it's all fogged up, the user will be able to get in.</li>
                         <li>The user will move their finger up and down over the ambient light sensor in a pre-determined morse code pattern to unlock their phone.</li>
                         <li>The user will say "Open Sesame!" That likely doesn't come up much in conversation and would be fun! </li>
-                        <li>The user will be in a locked room and will have to speak into the phone to answer questions to unlock the phone, a puzzle.</li>
+                        <li>The user will be in a locked room and will have to speak into the phone to answer questions to unlock the phone, like a puzzle.</li>
                     </ol>
                         My intent was that since they will be using the sensor - minimizing any other type of interaction will make it nicer.
                         I really liked the "Open Sesame!" one since it was fun and convenient, but also it wouldn't be that weird if somebody said it out loud. Mostly eccentric.
@@ -118,12 +118,12 @@
                             My initial sketches for touch-based ways to open my phone are as follows:
                         <ol>
                             <li>User enters a tune with four piano keys available that they've previously set. Or perhaps given a prompt of a tune and then must match it.</li>
-                            <li>An image of a closed door to a house, with a rug on the bottom. The user clicks once on the rug to grab the key, then click on the keyhole to unlock the door to get in their phone.</li>
+                            <li>The screen shows an image of a closed door to a house, with a rug on the bottom. The user clicks once on the rug to grab the key, then click on the keyhole to put that key inside, which will unlock the door to get in their phone.</li>
                             <li>Cut the wires of a bomb in the order that is shown on the top of the screen, based on colours! Any wrong cut and your phone "explodes" and you try again.</li>
                             <li>Have a different shaped zipper each time you want to unlock the phone. You have to unzip the zipper.</li>
                             <li>You are asked a math question, and you have to draw the resulting answer.</li>
                         </ol>
-                        I wanted to have 2 touches at a minimum for these to prevent accidental activation. My favourite was the one with the door, because it's simple and obvious, and meta and funny.
+                        I wanted to have 2 touches at a minimum for these to prevent accidental activation. My favourite was the one with the door, because it's obvious and meta.
                         </p>
 
                     </div>
@@ -156,10 +156,10 @@
                                         <strong>SENSOR</strong>: Being prompted with a combination of three words that wouldn't normally be used together, and having to say them.
                                     </li>
                                     <li>
-                                        <strong>SENSOR</strong>: Getting a chemical formula and having to say it out loud! Funny... but mean hahaha unless it was for studying.
+                                        <strong>SENSOR</strong>: Getting a chemical formula and having to say it out loud! Funny... but mean unless it was for studying.
                                     </li>
                                     <li>
-                                        <strong>TOUCH</strong>: Getting the time as a set of numbered option to swipe through to match to the actual time.
+                                        <strong>TOUCH</strong>: Getting the time as a set of numbered options to swipe through to match to the actual time.
                                     </li>
                                 </ul>
                             </td>
@@ -246,16 +246,14 @@
                                 <li>We wanted to <strong>show a microphone</strong> so that the user would quickly realize they need to speak the word that they are given.</li>
                                 <li>We combined two refined ideas of translation, and chose the one where the user speaks the foreign word instead of translating it, since it might be harder to grasp from using it that it needs to be translated. This makes the interaction more <strong>learnable and obvious</strong>.</li>
                                 <li>Given the correct word, the user is given a positive reinforcement by making the colour blue, and then given the meaning of the word, so they can learn. We decided on this so that it can be a <strong>learning tool</strong>, and also so the interaction feels like a game.</li>
-                                <li>Given an incorrect word, the user is given negative reinforcement by making the colour red and then given a new word, this clearly indicates they should try again. This way they can clearly see the progress of the unlock and <strong>always have feedback</strong> on their interaction. </li>
+                                <li>Given an incorrect word, the user is given negative reinforcement by making the colour red and then given a new word, this clearly indicates they should try again. This way they can see the progress of the unlock and <strong>always get feedback</strong> on their interaction. </li>
                             </ul>
                     <p>We eventually decided on a touch-based design - where the user matches the hands by touching the clock one hand at a time - as follows: </p>
                     <ul>
-                        <li>We chose to use the multiple hands design so the user does not have to approximate themself - they can see where it needs to stop on the clock. This makes the interaction <strong>efficient, and also better suggests what the user has to do</strong> when it is clicked on.</li>
-                        <li>Instead of having to drag each hand, you have to press and hold on the clock once for the hour hand, and once for the minute hand, this way the user has really <strong>simple quick touch inputs</strong>.</li>
+                        <li>We chose to use the multiple hands design so the user does not have to approximate the time to a digital time - they can see where it needs to stop on the clock. This makes the interaction <strong>efficient</strong> and also <strong>implies an actionable task</strong>.</li>
                         <li>The user also has a <strong>big space to touch</strong> so it isn't hard for people with clumsy thumbs or large hands.</li>
-                        <li>The current time matches the clock design by being black and also moves with the time, so it makes it clear that that is the current time.</li>
-                        <li>The hands that need to be matched are orange and stick out and are behind the actual time - like shadow hands - so it seems like they are movable.</li>
-                        <li>There is one interaction for each hand so the <strong>interactions are not long and awkward</strong>, and also to prevent accidental activation.</li>
+                        <li>The hands that need to be matched are orange and stick out against the black and white clock, suggesting they are actionable.</li>
+                        <li>Instead of having to drag each hand, you have to press and hold on the clock once for the hour hand, and once for the minute hand, so the <strong>interactions are not long and awkward</strong>, and also prevent accidental activation.</li>
                     </ul>
 
                     <p>I worked on the speech recognition for the sensor-based login method. I set up the library of words, language configuration, and the matching and error handling logic. I then passed this to Daniel to make it look beautiful. I also made the video and the readme.</p>
