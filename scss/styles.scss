@@ -20,10 +20,10 @@
 */
 
 // Define base and accent colors
-//   $base-color: #3498db;
+   $base-color: #3498db;
 // $base-color:#f1da36cc;
 $base-color-hover: darken($base-color, 10%);
-$base-color: #f1da36cc;
+
  
 
 // Define background colors
@@ -378,6 +378,7 @@ footer {
 }
 
 #lead-overlay {
+    $base-color: #f1da36cc;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -386,6 +387,7 @@ footer {
     bottom: 0;
     left: 0;
      background: rgba($base-color, 0.8);
+
     //  background: rgb(241, 218, 54, 0.8);
 
     z-index: 1;
