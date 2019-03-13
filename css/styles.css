@@ -274,7 +274,7 @@ footer {
 }
 
 #lead-content h1 {
-    color: #fff;
+    /* color: #fff; */
     font-weight: 900;
     font-size: 5em;
     text-transform: uppercase;
