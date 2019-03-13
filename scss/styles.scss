@@ -23,6 +23,7 @@
  $base-color: #3498db;
 // $base-color:#f1da36cc;
 $base-color-hover: darken($base-color, 10%);
+$overlay: #f1da36cc;
  
 
 // Define background colors
@@ -384,8 +385,8 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    // background: rgba($base-color-hover, 0.8);
-     background: rgb(241, 218, 54, 0.8);
+     background: rgba($overlay, 0.8);
+    //  background: rgb(241, 218, 54, 0.8);
 
     z-index: 1;
 }
