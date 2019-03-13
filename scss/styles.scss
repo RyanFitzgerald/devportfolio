@@ -1,15 +1,4 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.1
-    Last Change: 08/28/2017
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
 
-    Description: This file contains all the styles associated with the page
-    that don't come from third party libraries. This file gets compiled using
-    Gulp and send to the /css folder which is then loaded on the page.
-*/
 /*
     File Contents:
 
@@ -18,13 +7,10 @@
         3. Global Styles
         4. Lead Styles
         5. About Styles
-        6. Experience Styles
-        7. Education Styles
-        8. Project Styles
-        9. Skills Styles
-        10. Contact Styles
-        11. Optional Section Styles
-        12. Media Queries
+        6. Project Styles
+        7. Skills Styles
+        8. Contact Styles
+        9. Media Queries
 */
 
 /*
@@ -34,12 +20,15 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+ $base-color: #3498db;
+// $base-color:#f1da36cc;
 $base-color-hover: darken($base-color, 10%);
+ 
 
 // Define background colors
 $background: #fff;
-$background-alt: #f2f2f5;
+ $background-alt: #f2f2f5;
+// $background-alt: -webkit-linear-gradient(bottom, #fefcea 0%,#f1da36 100%);
 
 // Define border colors
 $border: #dcd9d9;
@@ -336,7 +325,8 @@ footer {
 }
 
 .background-alt {
-    background: $background-alt;
+    // background: $background-alt;
+    background: -webkit-linear-gradient(bottom, #fefcea 0%,#f1da36 100%);
 }
 
 /*
@@ -378,7 +368,8 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+         color: lighten($base-color, 25%);
+        color: $base-color;
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +384,9 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    // background: rgba($base-color-hover, 0.8);
+     background: rgb(241, 218, 54, 0.8);
+
     z-index: 1;
 }
 
@@ -458,171 +451,6 @@ footer {
         margin: 0;
     }
 }
-
-/*
-    --------------------------------
-    ----- 6. Experience Styles -----
-    --------------------------------
-*/
-
-#experience {
-    padding: 50px 15px;
-    text-align: center;
-    border-bottom: 1px solid $border;
-
-    h2 {
-        color: $heading;
-    }
-}
-
-// #experience-timeline {
-//     margin: 30px auto 0 auto;
-//     position: relative;
-//     max-width: 1000px;
-
-//     &:before {
-//         position: absolute;
-//         content: '';
-//         top: 0;
-//         bottom: 0;
-//         left: 303px;
-//         right: auto;
-//         height: 100%;
-//         width: 3px;
-//         background: $base-color;
-//         z-index: 0;
-//     }
-
-//     &:after {
-//         position: absolute;
-//         content: '';
-//         width: 3px;
-//         height: 40px;
-//         background: $base-color;
-//         background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
-//         top: 100%;
-//         left: 303px;
-//     }
-// }
-
-// .vtimeline-content {
-//     margin-left: 350px;
-//     background: #fff;
-//     border: 1px solid #e6e6e6;
-//     padding: 15px;
-//     border-radius: 3px;
-//     text-align: left;
-
-//     h3 {
-//         font-size: 1.5em;
-//         font-weight: 300;
-//         color: $heading;
-//         display: inline-block;
-//         margin: 0;
-//     }
-
-//     h4 {
-//         font-size: 1.2em;
-//         font-weight: 300;
-//         color: #7e8890;
-//         margin: 0 0 15px 0;
-//     }
-
-//     p {
-//         color: $text;
-//         font-size: 0.9em;
-//         margin: 0;
-//     }
-// }
-
-// .vtimeline-point {
-//     position: relative;
-//     display: block;
-//     vertical-align: top;
-//     margin-bottom: 30px;
-// }
-
-// .vtimeline-icon {
-//     position: relative;
-//     color: #fff;
-//     width: 50px;
-//     height: 50px;
-//     background: $base-color;
-//     border-radius: 50%;
-//     float: left;
-//     z-index: 99;
-//     margin-left: 280px;
-
-//     i {
-//         display: block;
-//         font-size: 2em;
-//         margin-top: 10px;
-//     }
-// }
-
-// .vtimeline-date {
-//     width: 260px;
-//     text-align: right;
-//     position: absolute;
-//     left: 0;
-//     top: 10px;
-//     font-weight: 300;
-//     color: #374054;
-// }
-
-// /*
-//     -------------------------------
-//     ----- 7. Education Styles -----
-//     -------------------------------
-// */
-
-// #education {
-//     padding: 50px 15px 20px 15px;
-//     border-bottom: 1px solid $border;
-//     text-align: center;
-
-//     h2 {
-//         color: $heading;
-//         margin-bottom: 50px;
-//     }
-// }
-
-// .education-block {
-//     max-width: 700px;
-//     margin: 0 auto 30px auto;
-//     padding: 15px;
-//     border: 1px solid $border;
-//     text-align: left;
-
-//     h3 {
-//         font-weight: 500;
-//         float: left;
-//         margin: 0;
-//         color: $heading;
-//     }
-
-//     span {
-//         color: $text;
-//         float: right;
-//     }
-
-//     h4 {
-//         color: $text;
-//         clear: both;
-//         font-weight: 500;
-//         margin: 0 0 15px 0;
-//     }
-
-//     p, ul {
-//         margin: 0;
-//         color: $text;
-//         font-size: 0.9em;
-//     }
-
-//     ul {
-//         padding: 0 0 0 15px;
-//     }
-// }
 
 /*
     -------------------------------
@@ -858,54 +686,6 @@ footer {
         &:hover {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         }
-    }
-}
-
-/*
-    ---------------------------------------
-    ----- 11. Optional Section Styles -----
-    ---------------------------------------
-*/
-
-.optional-section {
-    padding: 50px 15px;
-    text-align: center;
-    border-top: 1px solid $border;
-
-    h2 {
-        color: $heading;
-    }
-}
-
-.optional-section-block {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    padding: 15px;
-    border: 1px solid $border;
-    background: #fff;
-    text-align: left;
-
-    h3 {
-        font-weight: 500;
-        margin: 0 0 15px 0;
-        color: $heading;
-    }
-
-    h4 {
-        color: $text;
-        clear: both;
-        font-weight: 500;
-        margin: 0 0 15px 0;
-    }
-
-    p, ul {
-        margin: 0 0 15px 0;
-        color: $text;
-        font-size: 0.9em;
-    }
-
-    ul {
-        padding: 0 0 0 15px;
     }
 }
 
