@@ -168,7 +168,7 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #b9bfc4;
+    border: 3px solid #3498db;
     text-align: center
 }
 
@@ -349,10 +349,6 @@ footer {
     border-bottom: 1px solid #dcd9d9
 }
 
-#about h2 {
-    color: #374054
-}
-
 #about p {
     color: #74808a;
     margin: 0
@@ -484,7 +480,7 @@ footer {
 }
 
 #skills {
-    padding: 50px 15px;
+    padding: 15px 55px;
     text-align: center
 }
 
@@ -632,7 +628,8 @@ footer {
     }
 
     #lead-content h1 {
-        font-size: 3em
+        font-size: 3em;
+        font-style: italic
     }
 
     #lead-content h2 {
