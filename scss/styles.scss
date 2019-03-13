@@ -369,7 +369,7 @@ footer {
     }
 
     h2 {
-         color: lighten($base-color, 25%);
+         color: lighten($base-color, 50%);
         // color: $base-color;
         font-weight: 500;
         font-size: 2.25em;
@@ -378,7 +378,7 @@ footer {
 }
 
 #lead-overlay {
-     $background: #f1da36cc !important;
+    //  $background: #f1da36cc !important;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -388,7 +388,7 @@ footer {
     left: 0;
     //  background: rgba($base-color, 0.8);
 
-      background: rgb($background, 0.8);
+      background: rgba($background, 0.8);
 
     z-index: 1;
 }
