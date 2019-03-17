@@ -26,7 +26,69 @@
         11. Optional Section Styles
         12. Media Queries
 */
+.avatar {
+    background-image: url("../images/avatar.jpg");
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    align-content: center;
 
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+		}
+
+
+		
+.caption{
+    text-align: center;
+    padding-top: 80px;
+    
+}
+.border{
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    align-content: center;
+}
+
+.bg-img2 {
+    margin-top: -60px;
+    margin-right:-15px;
+    margin-left: -15px;
+    /* The image used */
+    background-image: url("../images/comp.jpg");
+    /* Set a specific height */
+    height: 200px; 
+    
+    /* Create the parallax scrolling effect */
+    position: relative;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgimg3 {
+    /* The image used */
+    background-image: url("../images/bg.jpg");
+    /* Set a specific height */
+    min-height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /*
     ------------------------
     ----- 1. Variables -----
@@ -38,7 +100,7 @@ $base-color: #3498db;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
+$background: white;
 $background-alt: #f2f2f5;
 
 // Define border colors
@@ -106,7 +168,7 @@ body {
             h3 {
                 font-size: 1.5em;
                 font-weight: 300;
-                color: $heading;
+                color: white;
                 display: inline-block;
                 margin: 0;
             }
@@ -160,10 +222,12 @@ header {
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+        
     }
 
     li {
         display: inline-block;
+        border-radius: 10px;
     }
 
     a {
@@ -197,6 +261,7 @@ header {
 #menu {
     &.active {
         display: block;
+        
     }
 }
 
@@ -212,6 +277,7 @@ header {
     padding: 0 7px;
     border-radius: 4px;
     background: $background;
+    
 }
 
 #mobile-menu-close {
@@ -224,6 +290,7 @@ header {
     padding-top: 10px;
     cursor: pointer;
     color: $base-color;
+   
 
     span {
         font-size: 0.5em;
@@ -258,12 +325,12 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid lighten(#3498db, 25%);
         text-align:center;
     }
 
     i {
-        color: $text;
+        color: #3498db;
     }
 }
 
@@ -304,22 +371,23 @@ footer {
         color: $base-color;
         background: #fff;
         text-decoration: none;
+       
     }
 }
 
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
 }
 
 .shadow-large {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.18), 0 3px 6px rgba(0,0,0,0.25);
 }
 
 .heading {
     position: relative;
     display: inline-block;
     font-size: 2em;
-    font-weight: 300;
     margin: 0 0 30px 0;
 
     &:after {
@@ -338,7 +406,9 @@ footer {
 .background-alt {
     background: $background-alt;
 }
-
+.background-img{
+    background: url(../images/comp.jpg);
+}
 /*
     --------------------------
     ----- 4. Lead Styles -----
@@ -350,7 +420,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/road.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -393,7 +463,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0.3);
     z-index: 1;
 }
 
@@ -446,7 +516,8 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    text-align: center;
+    padding:  30px 15px;
     border-bottom: 1px solid $border;
 
     h2 {
@@ -471,7 +542,7 @@ footer {
     border-bottom: 1px solid $border;
 
     h2 {
-        color: $heading;
+        color: #ffff;
     }
 }
 
@@ -567,7 +638,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    color: #fff;
 }
 
 /*
@@ -719,6 +790,7 @@ footer {
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+        border-radius: 4px;
     }
 }
 
