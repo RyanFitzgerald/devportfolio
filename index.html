@@ -28,16 +28,16 @@
                 <a href="#about">About</a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
             </li>
             <li>
                 <a href="#projects">Projects</a>
             </li>
             <li>
-                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
             </li>
             <li>
                 <a href="#contact">Contact</a>
@@ -50,7 +50,7 @@
         <div id="lead-content">
             <h1>Cameron Ray</h1>
             <h2>Full Stack Web Developer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <a href="./documents/Cameron-Ray-Portfolio-Resume.pdf" target="_blank" class="btn-rounded-white">View Resume</a>
         </div>
         <!-- End #lead-content -->
 
@@ -81,31 +81,102 @@
     </div>
     <!-- End #about -->
 
+    <div id="skills">
+        <h2 class="heading">My Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>SQL</li>
+            <li>Postgres</li>
+            <li>Git</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">My Favorite Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/chattr-image.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Chattr - Live Web Chat</h3>
+                        <p>
+                            Chattr is a live chat application that companies can integrate into their own websites with a code snippet.
+                            My contributions included planning and building database models, API endpoints, and front end live chat dashboard components; implementing Stripe subscription billing; and integrating Firebase auth into various registration processes
+                            
+                        </p>
+                        <a href="https://labs10-webchat.netlify.com/" target="_blank">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <!-- <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+
+                    <div class="project-info">
+                        <h3>LambdaMUD Adventure Game</h3>
+                        <p>
+                            Built out the front end client for a multi-user dungeon game integrated with Python and Django backend
+                            I implemented Pusher Web Sockets for live messages between users. I also added a fun map coloring feature using dynamic props with Styled-Components. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                   
+                </div> -->
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
     <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
+        <h2 class="heading">My Work Experience</h2>
         <div id="experience-timeline">
             <div data-date="October 2017 - May 2018">
                 <h3>Instrumental, Inc.</h3>
                 <h4>Sales Development Representative</h4>
                 <p>
-                    As 1st SDR hire, I expanded the sales funnel, focusing on Hardware Product Development teams.
+                    As the first SDR, I expanded the sales funnel and helped to develop a sales strategy and playbook, focusing on Hardware Product Development teams.
                     I collaborated with the product, engineering, and marketing teams to relay feedback from prospects and develop new marketing material.
                 </p>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="May 2017 - October 2017">
+                <h3>Aviatrix Systems, Inc.</h3>
+                <h4>Sales Development Representative</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                    As first SDR hire, I conducted outbound sales campaigns to establish meetings for 2 SMB reps and 2 Enterprise reps.
+                    I analyzed feedback from conversations with Infrastructure, Cloud, Networking, and DevOps engineers and executives to recommend messaging improvements to our sales team.
                 </p>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="October 2016 – February 2017">
+                <h3>AmberBox, Inc.</h3>
+                <h4>Sales Director</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                    Worked on 2-person sales team alongside founder to build sales funnel and generate first 5 proposals for POC.
+                    Consulted with dozens of target prospects to understand needs and relay to engineering team building first generation product.
+                </p>
+            </div>
+
+            <div data-date="October 2015 – October 2016">
+                <h3>Delta Thermal Solutions, Inc.</h3>
+                <h4>Sales Engineer</h4>
+                <p>
+                    I specified products and system packages for consulting engineers based on project requirements during planning phase.
+                    I also interpreted published engineering drawings and specs to create appropriate proposals during bid phase.
                 </p>
             </div>
         </div>
@@ -113,30 +184,49 @@
     <!-- End #experience -->
 
     <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+        <h2 class="heading">My Education</h2>
+        <!-- <div class="education-block">
+            <h3>University of Mississippi</h3>
+            <span class="education-date">May 2015</span>
+            <h4>Bachelor of Science in Mechanical Engineering</h4>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                I graduated cum laude from Ole Miss with a BS in Mechanical Engineering and minors in Spanish and Math.
             </p>
+        </div> -->
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Lambda School</h3>
+            <span class="education-date">July 2018 - March 2019</span>
+            <h4>Full Stack Web Development</h4>
+            <ul>
+                <li>
+                    Wrote production code for Front End and Back End
+                </li>
+                <li>
+                    Front End Languages: JavaScript, React, Redux, HTML/CSS
+                </li>
+                <li>
+                    Back End Languages: NodeJS, Express, SQL, Python, Django
+                </li>
+                <li>
+                    Utilized Git workflows, agile development, and project management skills to deliver finished products as an individual and as a team member.
+                </li>
+
+            </ul>
         </div>
         <!-- End .education-block -->
 
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>University of Mississippi</h3>
+            <span class="education-date">May 2015</span>
+            <h4>Bachelor of Science in Mechanical Engineering, cum laude</h4>
             <ul>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Minors in Spanish and Mathematics
                 </li>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Competed in American Society of Mechanical Engineers regional robotics competition.
                 </li>
             </ul>
         </div>
@@ -144,80 +234,7 @@
     </div>
     <!-- End #education -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
+    <!-- <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/email@email.com">
@@ -227,8 +244,7 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-        <!-- End #contact-form -->
-    </div>
+    </div> -->
     <!-- End #contact -->
 
     <footer>
@@ -236,7 +252,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017 YOUR NAME
+                        Copyright &copy; 2019 Cameron Ray
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -247,23 +263,15 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/upsmancsr" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/cameronsray/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
