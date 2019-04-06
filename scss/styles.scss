@@ -362,8 +362,10 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: left;
-    // border: 1px solid black;
+    // text-align: left;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
 
     b {
         color: #fff;
