@@ -362,7 +362,29 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
+    border: 1px solid black;
+
+    b {
+        color: #fff;
+    }
+
+    .lead-links {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        .social-link {
+            display: block;
+            color: #fff;
+            padding: 10px;
+            font-size: 2.25em;
+
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
 
     h1, h2 {
         margin: 0;
