@@ -389,7 +389,8 @@ footer {
         .lead-links {
             display: flex;
             justify-content: space-between;
-            width: 90%;
+            width: 80%;
+            max-width: 400px;
     
             .social-link {
                 display: block;
