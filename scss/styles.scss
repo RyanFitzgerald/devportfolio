@@ -700,9 +700,10 @@ footer {
 
 .project-info {
     position: absolute;
+    text-align: left;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
+    margin-left: 275px;
     padding: 15px;
 
     h3 {
@@ -717,6 +718,10 @@ footer {
         margin: 0 0 15px 0;
         font-size: 0.9em;
     }
+
+    // a {
+    //     margin: 0 0 15px 0;
+    // }
 }
 
 .no-image {
