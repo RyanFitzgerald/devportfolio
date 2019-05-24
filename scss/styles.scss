@@ -561,35 +561,35 @@ footer {
   }
   
 
-// .project-info {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     margin-left: 300px;
-//     padding: 15px;
+.project-info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 300px;
+    padding: 15px;
 
-//     h3 {
-//         font-size: 1.5em;
-//         font-weight: 300;
-//         color: $heading;
-//         margin: 0 0 15px 0;
-//     }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        color: $heading;
+        margin: 0 0 15px 0;
+    }
 
-//     p {
-//         color: $text;
-//         margin: 0 0 15px 0;
-//         font-size: 0.9em;
-//     }
-// }
+    p {
+        color: $text;
+        margin: 0 0 15px 0;
+        font-size: 0.9em;
+    }
+}
 
-// .no-image {
-//     .project-info {
-//         position: relative;
-//         margin: 0;
-//         padding: 30px 15px;
-//         transform: none;
-//     }
-// }
+.no-image {
+    .project-info {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        transform: none;
+    }
+}
 
 /******START of .project-info ----> .card-text******/
 .card-text {
