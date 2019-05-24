@@ -474,6 +474,7 @@ footer {
     padding: 30px 15px;
     transform: none
 } */
+/*******START of .project-info ---> .card-text******/
 
 .card-text {
     position: absolute;
@@ -496,13 +497,13 @@ footer {
     font-size: 0.9em
 }
 
-.no-image .project-info {
+.no-image .card-text {
     position: relative;
     margin: 0;
     padding: 30px 15px;
     transform: none
 }
-
+/*****END of .project-info ---> .card-text*****/
 #more-projects {
     display: none
 }

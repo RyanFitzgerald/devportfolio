@@ -560,8 +560,39 @@ footer {
     font-family: 'Quattrocento', serif;
   }
   
-//end
-.project-info {
+
+// .project-info {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     margin-left: 300px;
+//     padding: 15px;
+
+//     h3 {
+//         font-size: 1.5em;
+//         font-weight: 300;
+//         color: $heading;
+//         margin: 0 0 15px 0;
+//     }
+
+//     p {
+//         color: $text;
+//         margin: 0 0 15px 0;
+//         font-size: 0.9em;
+//     }
+// }
+
+// .no-image {
+//     .project-info {
+//         position: relative;
+//         margin: 0;
+//         padding: 30px 15px;
+//         transform: none;
+//     }
+// }
+
+/******START of .project-info ----> .card-text******/
+.card-text {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -583,13 +614,16 @@ footer {
 }
 
 .no-image {
-    .project-info {
+    .card-text {
         position: relative;
         margin: 0;
         padding: 30px 15px;
         transform: none;
     }
 }
+/******END of .project-info ----> .card-text******/
+
+
 
 #more-projects {
     display: none;
