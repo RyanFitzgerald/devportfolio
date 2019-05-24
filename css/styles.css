@@ -447,7 +447,7 @@ footer {
     font-family: 'Quattrocento', serif
 }
 
-/* .project-info {
+.project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -473,10 +473,10 @@ footer {
     margin: 0;
     padding: 30px 15px;
     transform: none
-} */
+}
 /*******START of .project-info ---> .card-text******/
 
-.card-text {
+/* .card-text {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -502,7 +502,7 @@ footer {
     margin: 0;
     padding: 30px 15px;
     transform: none
-}
+} */
 /*****END of .project-info ---> .card-text*****/
 #more-projects {
     display: none
