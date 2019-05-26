@@ -365,7 +365,6 @@ footer {
     margin-bottom: 50px
 }
 
-/*        */
 
 .project-image {
     float: left
@@ -624,7 +623,7 @@ footer {
 .project-info,
 .card-text,
 .card-block {
-    position: relative;
+    /* position: relative; */
     margin: 0;
     padding: 30px 15px;
     top: auto;
