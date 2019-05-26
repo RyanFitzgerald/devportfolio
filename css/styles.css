@@ -365,15 +365,7 @@ footer {
     margin-bottom: 50px
 }
 
-.project {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 4px;
-    padding-top: 25px
-}
+/*        */
 
 .project-image {
     float: left
@@ -417,6 +409,18 @@ footer {
     flex: 1 1 100%
 }
 
+
+.project {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    padding-top: 25px;
+    height: 50em;
+}
+
 .project-title {
     color: #01213b;
     flex: 1 1 auto;
@@ -450,8 +454,8 @@ footer {
 .project-info {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    /* transform: translateY(-50%);
+    margin-left: 300px; */
     padding: 15px
 }
 
@@ -469,10 +473,11 @@ footer {
 }
 
 .no-image .project-info {
-    position: relative;
+    /* position: relative; */
     margin: 0;
-    padding: 30px 15px;
-    transform: none
+    /* padding: 30px 15px; */
+    transform: none;
+    margin-top: 1em;
 }
 /*******START of .project-info ---> .card-text******/
 
