@@ -404,7 +404,7 @@ footer {
 }
 
 .project {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     flex: 1 1 100%
 }
