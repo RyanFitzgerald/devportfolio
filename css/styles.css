@@ -616,6 +616,17 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
 }
 
+.project-info,
+.card-text,
+.card-block {
+    position: relative;
+    margin: 0;
+    padding: 30px 15px;
+    top: auto;
+    transform: none
+}
+
+
 @media only screen and (max-width: 750px) {
 
     #experience-timeline:before,
@@ -723,7 +734,9 @@ footer {
         display: none
     }
 
-    .project-info {
+    .project-info,
+    .card-text,
+    .card-block {
         position: relative;
         margin: 0;
         padding: 30px 15px;
@@ -731,13 +744,6 @@ footer {
         transform: none
     }
 
-    .card-block {
-            position: relative;
-            margin: 0;
-            padding: 30px 15px;
-            top: auto;
-            transform: none
-    }
     footer {
         text-align: center
     }
