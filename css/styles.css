@@ -760,4 +760,12 @@ footer {
         font-size: 0.9em;
         padding: 5px 10px
     }
+
+    .card-block {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        top: auto;
+        transform: none
+}
 }
