@@ -718,10 +718,6 @@ footer {
         display: none
     }
 
-    .education-block h3,
-    .education-block span {
-        float: none
-    }
 
     .project-image {
         display: none
@@ -735,6 +731,13 @@ footer {
         transform: none
     }
 
+    .card-block {
+            position: relative;
+            margin: 0;
+            padding: 30px 15px;
+            top: auto;
+            transform: none
+    }
     footer {
         text-align: center
     }
