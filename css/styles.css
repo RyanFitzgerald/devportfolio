@@ -472,7 +472,7 @@ footer {
 }
 
 .no-image .project-info {
-    /* position: relative; */
+    position: relative;
     margin: 0;
     /* padding: 30px 15px; */
     transform: none;
