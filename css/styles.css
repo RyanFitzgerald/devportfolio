@@ -217,6 +217,13 @@ footer {
   margin: 0 auto;
   background: #3498db;
 }
+.heading2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+}
 .background-alt {
   background: #f2f2f5;
 }
