@@ -688,25 +688,34 @@ footer {
 }
 
 .project {
-    position: relative;
+    // position: relative;
     max-width: 900px;
+    height: max-content;
     margin: 0 auto 30px auto;
-    overflow: hidden;
+    // overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .project-image {
-    float: left;
-    max-width: 350px;
+    // float: left;
+    max-width: 250px;
+
+    img {
+        // float: left;
+        height: 150px;
+        width: auto;
+    }
 }
 
 .project-info {
-    position: absolute;
+    // position: absolute;
     text-align: left;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 275px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    margin-left: 20px;
     padding: 15px;
 
     h3 {
@@ -719,6 +728,12 @@ footer {
     p {
         color: $text;
         margin: 0 0 15px 0;
+        font-size: 0.9em;
+    }
+
+    li {
+        color: $text;
+        margin: 0 0 5px 0;
         font-size: 0.9em;
     }
 
