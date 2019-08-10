@@ -350,7 +350,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/coffee-shop-bg.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -378,7 +378,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: lighten($base-color, 100%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +393,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0.4);
     z-index: 1;
 }
 
@@ -411,17 +411,17 @@ footer {
         cursor: pointer;
         display: block;
         margin: 0 auto;
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid lighten($base-color, 5%);
         text-align:center;
     }
 
     i {
         animation: pulsate 1.5s ease;
         animation-iteration-count: infinite;
-        padding-top: 5px;;
+        padding-top: 10px;;
     }
 }
 
@@ -431,7 +431,7 @@ footer {
     }
 
     50% {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.7, 1.7);
     }
 
     100% {

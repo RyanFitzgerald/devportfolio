@@ -4,7 +4,9 @@
   "description": "",
   "main": "js/scripts.js",
   "scripts": {
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "start": "http-server", 
+    "lint": "eslint"
   },
   "keywords": [
     "portfolio",
