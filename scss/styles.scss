@@ -704,6 +704,7 @@ footer {
 .project-images-container {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
 .project-image {
@@ -720,6 +721,7 @@ footer {
 }
 
 .project-info {
+	width: 75%;
 	// position: absolute;
 	text-align: left;
 	// top: 50%;
@@ -746,9 +748,31 @@ footer {
 		font-size: 0.9em;
 	}
 
-	// a {
-	//     margin: 0 0 15px 0;
-	// }
+	.project-links {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.btn-rounded-blue {
+		width: max-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #4587bd;
+		padding: 5px 15px;
+		margin: 5px;
+		border: 3px solid #4587bd;
+		border-radius: 30px;
+		@include transition();
+
+		&:hover {
+			color: #fff;
+			background: #4587bd;
+			border-color: transparent;
+			text-decoration: none;
+		}
+	}
 }
 
 .no-image {
