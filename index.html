@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Cameron Ray</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -48,7 +48,7 @@
             </div>
             <div class="lead-content-right">
                 <h2>Welcome to my website!</h2>
-                <h2>I'm <b>Cameron Ray</b>,</h2>
+                <h2>I'm <b>Cameron Ray</b></h2>
                 <h2>Full Stack Web Developer</h2>
                 <div class="lead-links">
                     <a href="./documents/Cameron-Ray-Portfolio-Resume.pdf" target="_blank" class="btn-rounded-white">Résumé</a>
@@ -106,13 +106,17 @@
         <h2 class="heading">Skills</h2>
         <ul>
             <li>JavaScript</li>
-            <li>Node.js</li>
-            <li>React</li>
-            <li>SQL</li>
-            <li>Postgres</li>
-            <li>Git</li>
             <li>HTML</li>
             <li>CSS</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Hooks</li>
+            <li>SQL</li>
+            <li>Postgres</li>
+            <li>Express.js</li>
+            <li>Knex.js</li>
+            <li>Git</li>
             <li>SCSS/Sass</li>
             <li>Python</li>
             <li>C</li>
@@ -145,7 +149,7 @@
                             I built the full stack for this project, including Node backend with RESTful API and SQL database, and React frontend.
                         </p>
                         <p>
-                            Features include:
+                            Features:
                         </p>
                         <ul>
                             <li>Sign up, sign in, and sign out (using Firebase Authentication)</li>
@@ -161,9 +165,22 @@
                         <p>
                             Technology stack: React - NodeJS - Firebase authentication - Cloud Firestore realtime database - Cloudinary image upload and storage - Google Places API - Stripe API.
                         </p>
-                        <a href="https://usemytoolssf.netlify.com/" target="_blank">View Live Site</a>
-                        </br>
-                        <a href="https://github.com/upsmancsr/Use-My-Tools-CSR" target="_blank">View Repo</a>
+                        <div class="project-links">
+                            <a 
+                                href="https://usemytoolssf.netlify.com/" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                Live Site
+                            </a>
+                            <a 
+                                href="https://github.com/upsmancsr/Use-My-Tools-CSR" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                GitHub Repo
+                            </a>
+                        </div>
                     </div>
                    
                 </div>
@@ -196,9 +213,65 @@
                         <p>
                             Technology stack: React - Node.js - PostgreSQL - Socket.io - Stripe API - Firebase Auth - Material UI - Styled Components
                         </p>
-                        <a href="https://labs10-webchat.netlify.com/" target="_blank">View Live Site</a>
-                        </br>
-                        <a href="https://github.com/Lambda-School-Labs/labs10-webchat" target="_blank">View Repo</a>
+                        <div class="project-links">
+                            <a 
+                                href="https://labs10-webchat.netlify.com/" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                Live Site
+                            </a>
+                            <a 
+                                href="https://github.com/Lambda-School-Labs/labs10-webchat" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+
+                    <div class="project-images-container">
+                        <div class="project-image">
+                            <img src="images/To-Do-Hooks.png" />
+                        </div>
+                        <!-- End .project-image -->
+                    </div>
+                    
+                    <div class="project-info">
+                        <h3>To Do Hooks</h3>
+                        <p>
+                            A small project I did learning how to use React Hooks in place of lifecycle methods.
+                        </p>
+                        <p>Features:</p>
+                        <ul>
+                            <li>Add To Do tasks</li>
+                            <li>Filter options to display all tasks, complete tasks, or incomplete tasks</li>
+                        </ul>
+                        <p>
+                            Technology stack: React - React Hooks (useState, useReducer, useContext)
+                        </p>
+                        <div class="project-links">
+                            <a 
+                                href="https://upsmancsr.github.io/To-Do-Hooks/" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                Live Site
+                            </a>
+                            <a 
+                                href="https://github.com/upsmancsr/To-Do-Hooks" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                GitHub Repo
+                            </a>
+                        </div>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -211,15 +284,25 @@
                             I built out the front end client for a multi-user dungeon game integrated with Python and Django backend.
                             I implemented Pusher Web Sockets for live messages between users. I also added a fun map coloring feature using dynamic props with Styled-Components. 
                         </p>
-                        <a href="https://github.com/upsmancsr/LambdaMUD-Project" target="_blank">View Back End Repo</a>
-                    </br>
-                        <a href="https://github.com/upsmancsr/LambdaMUD-Client" target="_blank">View Front End Repo</a>
-
+                        <div class="project-links">
+                            <a 
+                                href="https://github.com/upsmancsr/LambdaMUD-Project" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                Backend Repo
+                            </a>
+                            <a 
+                                href="https://github.com/upsmancsr/LambdaMUD-Client" 
+                                target="_blank"
+                                class="btn-rounded-blue"
+                            >
+                                Frontend Repo
+                            </a>
+                        </div>
                     </div>
-                   
                 </div>
                 <!-- End .project -->
-
             </div>
         </div>
     </div>
