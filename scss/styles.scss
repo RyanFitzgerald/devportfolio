@@ -617,6 +617,13 @@ footer {
     color: $heading;
     margin-bottom: 50px;
   }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #7e8890;
+    margin: 0 0 15px 0;
+  }
 }
 
 .education-block {
@@ -855,9 +862,11 @@ footer {
   text-align: left;
 
   h3 {
-    font-weight: 500;
-    margin: 0 0 15px 0;
+    font-size: 1.5em;
+    font-weight: 300;
     color: $heading;
+    display: inline-block;
+    margin: 0;
   }
 
   h4 {
@@ -868,9 +877,11 @@ footer {
   }
 
   p, ul {
+    margin: 0;
+    color: #7e8890;
+    font-size: 1.2em;
+    font-weight: 300;
     margin: 0 0 15px 0;
-    color: $text;
-    font-size: 0.9em;
   }
 
   ul {

@@ -517,6 +517,12 @@ footer {
   color: #374054;
   margin-bottom: 50px;
 }
+#education p {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
+}
 
 .education-block {
   max-width: 700px;
@@ -740,9 +746,11 @@ footer {
   text-align: left;
 }
 .optional-section-block h3 {
-  font-weight: 500;
-  margin: 0 0 15px 0;
+  font-size: 1.5em;
+  font-weight: 300;
   color: #374054;
+  display: inline-block;
+  margin: 0;
 }
 .optional-section-block h4 {
   color: #74808a;
@@ -751,9 +759,11 @@ footer {
   margin: 0 0 15px 0;
 }
 .optional-section-block p, .optional-section-block ul {
+  margin: 0;
+  color: #7e8890;
+  font-size: 1.2em;
+  font-weight: 300;
   margin: 0 0 15px 0;
-  color: #74808a;
-  font-size: 0.9em;
 }
 .optional-section-block ul {
   padding: 0 0 0 15px;
