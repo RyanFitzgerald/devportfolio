@@ -375,9 +375,10 @@ footer {
   color: #374054;
 }
 #about p {
-  color: #74808a;
-  margin: 0;
-  font-size: 40px;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
 }
 
 /*
@@ -420,6 +421,12 @@ footer {
   background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
   top: 100%;
   left: 303px;
+}
+#experience-timeline p {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
 }
 
 .vtimeline-content {
@@ -518,13 +525,17 @@ footer {
 .education-block h4 {
   color: #74808a;
   clear: both;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
   margin: 0 0 15px 0;
 }
 .education-block p, .education-block ul {
   margin: 0;
-  color: #74808a;
-  font-size: 0.9em;
+  color: #7e8890;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0 0 15px 0;
 }
 .education-block ul {
   padding: 0 0 0 15px;
@@ -543,6 +554,12 @@ footer {
 #projects h2 {
   color: #374054;
   margin-bottom: 50px;
+}
+#projects p {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
 }
 
 .project {
