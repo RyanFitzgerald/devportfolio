@@ -816,6 +816,9 @@ footer {
   #lead-content h2 {
     font-size: 1.75em;
   }
+  #lead-content h3 {
+    font-size: 1.75em;
+  }
 
   #about {
     text-align: center;
@@ -856,6 +859,9 @@ footer {
   #lead-content h2 {
     font-size: 1.3em;
   }
+  #lead-content h3 {
+    font-size: 1.3em;
+  }
   #lead-content a {
     padding: 10px 20px;
   }
@@ -893,6 +899,9 @@ footer {
     font-size: 1.5em;
   }
   #lead-content h2 {
+    font-size: 1em;
+  }
+  #lead-content h3 {
     font-size: 1em;
   }
   #lead-content a {
