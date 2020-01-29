@@ -385,6 +385,12 @@ footer {
     }
 }
 
+.circular--square {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
 #lead-overlay {
     position: absolute;
     height: 100%;
