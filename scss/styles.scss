@@ -35,7 +35,9 @@
 
 // Define base and accent colors
 $base-color: #4285F4;
-$opposite-color: #F4B400;
+$yellow-color: #F4B400;
+$green-color: #0F9D58;
+$red-color: #DB4437;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -384,7 +386,7 @@ footer {
   }
 
   h2 {
-    color: $opposite-color;
+    color: $red-color;
     font-weight: 600;
     font-size: 2.5em;
     margin-bottom: 15px;
@@ -392,9 +394,9 @@ footer {
   }
 
   h3 {
-    color: $base-color;
-    font-weight: 400;
-    font-size: 1.5em;
+    color: $yellow-color;
+    font-weight: 600;
+    font-size: 2.5em;
     margin-bottom: 15px;
     text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
   }
