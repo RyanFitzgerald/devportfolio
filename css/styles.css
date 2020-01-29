@@ -275,7 +275,7 @@ footer {
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background: url(../images/lead-bg.jpg);
+  background: url(../images/lead.png);
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -293,18 +293,20 @@ footer {
   margin: 0;
 }
 #lead-content h1 {
-  color: #fff;
+  color: #4285F4;
   font-weight: 900;
   font-size: 5em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   line-height: 0.9em;
+  text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
 }
 #lead-content h2 {
-  color: #a0cfee;
+  color: #4285F4;
   font-weight: 500;
   font-size: 2.25em;
   margin-bottom: 15px;
+  text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
 }
 
 .circular--square {
@@ -342,7 +344,7 @@ footer {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 3px solid #a0cfee;
+  border: 3px solid #4285F4;
   text-align: center;
 }
 #lead-down i {
