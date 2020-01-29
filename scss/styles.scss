@@ -34,12 +34,13 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #4285F4;
+$opposite-color: #E2A828;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
 $background: #fff;
-$background-alt: #f2f2f5;
+$background-alt: #f6f6f9;
 
 // Define border colors
 $border: #dcd9d9;
@@ -47,6 +48,10 @@ $border: #dcd9d9;
 // Define text colors
 $heading: #374054;
 $text: #74808a;
+
+a {
+  color: $base-color;
+}
 
 /*
     ---------------------
@@ -369,7 +374,7 @@ footer {
   }
 
   h1 {
-    color: #4285F4;
+    color: $base-color;
     font-weight: 900;
     font-size: 5em;
     text-transform: uppercase;
@@ -379,9 +384,17 @@ footer {
   }
 
   h2 {
-    color: #4285F4;
+    color: $opposite-color;
     font-weight: 500;
     font-size: 2.25em;
+    margin-bottom: 15px;
+    text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
+  }
+
+  h3 {
+    color: $base-color;
+    font-weight: 400;
+    font-size: 1.5em;
     margin-bottom: 15px;
     text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
   }
@@ -422,7 +435,7 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #4285F4;
+    border: 3px solid $base-color;
     text-align: center;
   }
 
@@ -539,7 +552,7 @@ footer {
   }
 
   h4 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 300;
     color: #7e8890;
     margin: 0 0 15px 0;
@@ -779,7 +792,7 @@ footer {
     border-radius: 4px;
     border: none;
     margin-bottom: 10px;
-    background: darken($base-color, 15%);
+    background: $base-color;
     color: #fff;
     @include transition();
     @include placeholder {
@@ -788,7 +801,7 @@ footer {
 
     &:focus {
       outline: none;
-      background: darken($base-color, 25%);
+      background: $base-color;
     }
   }
 

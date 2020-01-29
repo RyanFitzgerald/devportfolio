@@ -31,6 +31,10 @@
     ----- 1. Variables -----
     ------------------------
 */
+a {
+  color: #4285F4;
+}
+
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -112,17 +116,17 @@ header li {
 }
 header a {
   display: block;
-  color: #3498db;
+  color: #4285F4;
   padding: 10px;
 }
 header a:hover {
-  color: #217dbb;
+  color: #1266f1;
   text-decoration: none;
   background: #eee;
   border-radius: 4px;
 }
 header a:focus {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
 }
 header.active {
@@ -143,7 +147,7 @@ header.sticky {
   position: fixed;
   right: 15px;
   top: 10px;
-  color: #3498db;
+  color: #4285F4;
   font-size: 1.5em;
   z-index: 20;
   padding: 0 7px;
@@ -160,7 +164,7 @@ header.sticky {
   padding-right: 15px;
   padding-top: 10px;
   cursor: pointer;
-  color: #3498db;
+  color: #4285F4;
 }
 #mobile-menu-close span {
   font-size: 0.5em;
@@ -217,7 +221,7 @@ footer {
   padding: 10px;
 }
 .social a:hover {
-  color: #3498db;
+  color: #4285F4;
 }
 
 .btn-rounded-white {
@@ -229,7 +233,7 @@ footer {
   transition: 0.5s ease all;
 }
 .btn-rounded-white:hover {
-  color: #3498db;
+  color: #4285F4;
   background: #fff;
   text-decoration: none;
 }
@@ -258,11 +262,11 @@ footer {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: #3498db;
+  background: #4285F4;
 }
 
 .background-alt {
-  background: #f2f2f5;
+  background: #f6f6f9;
 }
 
 /*
@@ -302,9 +306,16 @@ footer {
   text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
 }
 #lead-content h2 {
-  color: #4285F4;
+  color: #E2A828;
   font-weight: 500;
   font-size: 2.25em;
+  margin-bottom: 15px;
+  text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
+}
+#lead-content h3 {
+  color: #4285F4;
+  font-weight: 400;
+  font-size: 1.5em;
   margin-bottom: 15px;
   text-shadow: 3px 0 0 #fff, -3px 0 0 #fff, 0 3px 0 #fff, 0 -3px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
 }
@@ -323,7 +334,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(33, 125, 187, 0.8);
+  background: rgba(18, 102, 241, 0.8);
   z-index: 1;
 }
 
@@ -411,7 +422,7 @@ footer {
   right: auto;
   height: 100%;
   width: 3px;
-  background: #3498db;
+  background: #4285F4;
   z-index: 0;
 }
 #experience-timeline:after {
@@ -419,8 +430,8 @@ footer {
   content: "";
   width: 3px;
   height: 40px;
-  background: #3498db;
-  background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
+  background: #4285F4;
+  background: linear-gradient(to bottom, #4285F4, rgba(66, 133, 244, 0));
   top: 100%;
   left: 303px;
 }
@@ -447,7 +458,7 @@ footer {
   margin: 0;
 }
 .vtimeline-content h4 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 300;
   color: #7e8890;
   margin: 0 0 15px 0;
@@ -470,7 +481,7 @@ footer {
   color: #fff;
   width: 50px;
   height: 50px;
-  background: #3498db;
+  background: #4285F4;
   border-radius: 50%;
   float: left;
   z-index: 99;
@@ -631,7 +642,7 @@ footer {
   margin: 7px;
   padding: 5px 10px;
   color: #374054;
-  background: #e4e4ea;
+  background: #e7e7ef;
   list-style: none;
   cursor: default;
   font-size: 1.2em;
@@ -644,7 +655,7 @@ footer {
 */
 #contact {
   padding: 50px 15px;
-  background: #3498db;
+  background: #4285F4;
   text-align: center;
 }
 #contact h2 {
@@ -664,7 +675,7 @@ footer {
   border-radius: 4px;
   border: none;
   margin-bottom: 10px;
-  background: #1d6fa5;
+  background: #4285F4;
   color: #fff;
   transition: 0.5s ease all;
 }
@@ -684,7 +695,7 @@ footer {
 }
 #contact-form input:focus, #contact-form textarea:focus {
   outline: none;
-  background: #16527a;
+  background: #4285F4;
 }
 #contact-form textarea {
   height: 150px;
@@ -697,7 +708,7 @@ footer {
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: #3498db;
+  color: #4285F4;
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.5s ease all;
