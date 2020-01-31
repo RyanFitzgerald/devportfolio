@@ -810,15 +810,6 @@ footer {
     left: auto;
     top: auto;
   }
-  #lead-content h1 {
-    font-size: 3em;
-  }
-  #lead-content h2 {
-    font-size: 1.75em;
-  }
-  #lead-content h3 {
-    font-size: 1.75em;
-  }
 
   #about {
     text-align: center;
@@ -853,15 +844,6 @@ footer {
     margin-bottom: 10px;
   }
 
-  #lead-content h1 {
-    font-size: 2em;
-  }
-  #lead-content h2 {
-    font-size: 1.3em;
-  }
-  #lead-content h3 {
-    font-size: 1.3em;
-  }
   #lead-content a {
     padding: 10px 20px;
   }
@@ -895,15 +877,6 @@ footer {
   }
 }
 @media only screen and (max-width: 480px) {
-  #lead-content h1 {
-    font-size: 1.5em;
-  }
-  #lead-content h2 {
-    font-size: 1em;
-  }
-  #lead-content h3 {
-    font-size: 1em;
-  }
   #lead-content a {
     font-size: 0.9em;
     padding: 5px 10px;
