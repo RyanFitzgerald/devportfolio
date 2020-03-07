@@ -77,12 +77,12 @@
     });
 
     // Open mobile menu
-    $('#mobile-menu-open').click(function() {
+    $('#mobile-menu-open>i').click(function() {
         $('header, body').addClass('active');
     });
 
     // Close mobile menu
-    $('#mobile-menu-close').click(function() {
+    $('#mobile-menu-close>i').click(function() {
         $('header, body').removeClass('active');
     });
 
