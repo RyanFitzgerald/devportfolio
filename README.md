@@ -4,6 +4,8 @@ This repo contains an easy-to-customize personal dev portfolio template that was
 
 To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio/).
 
+Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgerald/devblog).
+
 ## Features
 
 * Gulp ready (compiles Sass and minifies JS)
@@ -140,7 +142,7 @@ The default format is as follows:
 </div>
 ```
 
-The data attribute `data-date` is what is used to add a date to the associated timeline point. All that is really required is a wrapping div (i.e. `#experience-timeline`) and nested divs to build the timeline. The h3, h4, and p tags are option and the contents of the div can be styled however you wish.
+The data attribute `data-date` is what is used to add a date to the associated timeline point. All that is really required is a wrapping div (i.e. `#experience-timeline`) and nested divs to build the timeline. The h3, h4, and p tags are optional and the contents of the div can be styled however you wish.
 
 To add additional section, simply add additional nested divs under the main wrapping div.
 
