@@ -95,7 +95,7 @@ header a {
 }
 
 header a:hover {
-  color: #217dbb;
+  color: #D59F01;
   text-decoration: none;
   background: #eee;
   border-radius: 4px
@@ -306,7 +306,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(33, 125, 187, 0.8);
+  background: rgba(250, 193, 0, 0.8);
   z-index: 1
 }
 
