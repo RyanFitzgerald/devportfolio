@@ -300,6 +300,10 @@ The optional section blocks have styling for h3 (the block title), h4, p, and ul
 
 ## Changelog
 
+### 1.2.2
+
+* Updated dependencies and gulpfile
+
 ### 1.2.1
 
 * Updated dependencies and gulpfile
