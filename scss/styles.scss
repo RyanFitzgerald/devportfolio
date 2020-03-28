@@ -533,6 +533,15 @@ footer {
         font-size: 0.9em;
         margin: 0;
     }
+
+    ul {
+        padding-left: 15px;
+        color: $text;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 8px;
+    }
 }
 
 .vtimeline-point {
