@@ -141,6 +141,7 @@ header div.profile {
 
 }
 #mobile-menu-open {
+    background-color: transparent;
     user-select: none;
     min-width: 100vw;
     display: none;
