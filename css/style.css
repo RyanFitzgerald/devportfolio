@@ -83,6 +83,8 @@ header {
     right: 0;
     text-align: right;
     z-index: 10;
+    transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
     animation-name: dropHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease;
@@ -151,6 +153,9 @@ header div.profile {
     z-index: 200;
     padding: 10px 15px;
     text-align: right;
+    transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
+
 }
 
 
@@ -159,7 +164,7 @@ header div.profile {
     display: none;
     text-align: right;
     width: 100vw;
-    background: #fff;
+    background: #fafafa;
     font-size: 1.5em;
     padding: 10px 15px;
     color: #3498db
