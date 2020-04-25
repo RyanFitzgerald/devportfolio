@@ -60,9 +60,6 @@ body.active {
 .no-js #experience-timeline:before,.no-js #experience-timeline:after {
     content: none
 }
-.no-js header, .no-js #mobile-menu-open {
-    background-color: #fafafa;
-}
 
 
 @keyframes dropHeader {
