@@ -629,10 +629,15 @@
             var state = document.readyState
             if (state == 'complete') {
                 document.getElementById('interactive');
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 0); //Just in case user plays with scroll
+                $('html, body').scrollTop(0).show(); //Just in case user plays with scroll
                 $('#ld').fadeOut();
+
+                //Scroll down if hash is present
+                if (window.location.hash) {
+                        $('html, body').animate({
+                            scrollTop: $(window.location.hash).offset().top -$('header').height()
+                        }, 750)
+                }
             }
         }
     </script>
