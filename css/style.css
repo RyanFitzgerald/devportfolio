@@ -6,59 +6,39 @@ body.active {
     overflow: hidden;
     z-index: -1
 }
-.no-js #education-timeline>div {
+.no-js #education-timeline>div, .no-js #experience-timeline>div {
     background: #fff;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #dcd9d9
 }
-.no-js #education-timeline>div h3 {
+.no-js #education-timeline>div h3, .no-js #experience-timeline>div h3 {
     font-size: 1.5em;
     font-weight: 300;
     color: #374054;
     display: inline-block;
     margin: 0
 }
-.no-js #education-timeline>div h4 {
+.no-js #education-timeline>div h4, .no-js #experience-timeline>div h4 {
     font-size: 1.2em;
     font-weight: 300;
     color: #7e8890;
     margin: 0 0 15px 0
 }
-.no-js #education-timeline>div p {
+.no-js #education-timeline>div p, .no-js #experience-timeline>div p {
     color: #74808a;
     font-size: 0.9em;
     margin: 0
 }
-.no-js #education-timeline:before,.no-js #education-timeline:after {
+.no-js #education-timeline:before,.no-js #education-timeline:after, .no-js #experience-timeline:before,.no-js #experience-timeline:after {
     content: none
 }
-.no-js #experience-timeline>div {
-    background: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #dcd9d9
+
+.no-js header, .no-js #mobile-menu-open {
+    background-color: #fafafa;
 }
-.no-js #experience-timeline>div h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #374054;
-    display: inline-block;
-    margin: 0
-}
-.no-js #experience-timeline>div h4 {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #7e8890;
-    margin: 0 0 15px 0
-}
-.no-js #experience-timeline>div p {
-    color: #74808a;
-    font-size: 0.9em;
-    margin: 0
-}
-.no-js #experience-timeline:before,.no-js #experience-timeline:after {
-    content: none
+.no-js #mobile-menu-open i,.no-js #lead-down, .no-js #to-top{
+    visibility: hidden;
 }
 
 
