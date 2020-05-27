@@ -535,6 +535,10 @@ footer {
     margin: 0 0 15px 0;
     font-size: 0.9em
 }
+.project-info a {
+    color: var(--text);
+    font-weight:  450;
+}
 .no-image .project-info {
     position: relative;
     margin: 0;
