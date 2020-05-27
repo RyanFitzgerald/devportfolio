@@ -160,13 +160,13 @@
 
 
     <div id="mobile-menu-open">
-        <div style="float:left">Subhalingam D</div>
+        <div style="float:left;cursor:pointer">Subhalingam D</div>
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
     <header class="sticky">
-        <div id="mobile-menu-close" class="shadow-large">
-            <div style="float:left">Subhalingam D</div>
+        <div id="mobile-menu-close">
+            <div style="float:left;cursor:pointer">Subhalingam D</div>
 
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
@@ -380,7 +380,7 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -397,7 +397,7 @@
                 <!-- End .project -->
 
 
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -413,7 +413,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -429,7 +429,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -449,7 +449,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -464,7 +464,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -479,7 +479,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -494,7 +494,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-                <div class="project shadow-large">
+                <div class="project">
                     <div class="project-image">
                         <img src="images/project.png" />
                     </div>
@@ -545,13 +545,19 @@
 
     
     <div id="contact">
-        <h2>Get in Touch</h2>
-            <form id="contact-form" method="POST" action="https://formspree.io/subhalingam.d@gmail.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <div class="row">
+            <div class="col-md-5">
+                <h2 class="heading">Get in Touch</h2>
+            </div>
+            <div class="col-md-7">
+                <form id="contact-form" method="POST" action="https://formspree.io/subhalingam.d@gmail.com">
+                    <input type="hidden" name="_subject" value="Contact request from personal website" />
+                    <input type="email" name="_replyto" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- End #contact -->
@@ -602,13 +608,13 @@
 
             </div>
 
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-sm-12 top">
                     <span id="to-top">
                         <i class="fa fa-chevron-up" aria-hidden="true"></i>
                     </span>
                 </div>
-            </div>
+            </div>-->
         </div>
     </footer>
     <!-- End footer -->
