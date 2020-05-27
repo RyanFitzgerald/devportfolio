@@ -490,7 +490,8 @@ footer {
 }
 .por-block p,.por-block ul {
     margin: 0;
-    color: var(--text-disabled);
+    color: var(--text);
+    font-weight:  300;
     font-size: 0.9em
 }
 .por-block ul {
@@ -646,6 +647,7 @@ footer {
         position: relative;
         margin-bottom: 15px;
         display: block;
+        font-weight: 500;
         margin-left: 70px
     }
     .vtimeline-icon {
