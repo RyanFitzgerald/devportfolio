@@ -184,7 +184,7 @@ footer {
 }
 .copyright p {
     margin: 0;
-    color: #74808a
+    color: var(--text-disabled)
 }
 .top {
     text-align: center
@@ -217,7 +217,7 @@ footer {
 }
 .social a {
     display: block;
-    color: #74808a;
+    color: var(--text);
     padding: 10px
 }
 .social a:hover {
