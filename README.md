@@ -85,12 +85,12 @@ There is also a number of default CSS classes that can be applied such as `.shad
 By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
 
 * Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
-* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can kept or changed easily by replacing the `favicon.ico` with your new one.
+* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main background, this can kept or changed easily by replacing the `favicon.ico` with your new one.
 * Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
 
 ### Header Section
 
-The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
+The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the `href` of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
 
 If you wish to add a header link to an external page, simply add the class `no-scroll` to the anchor. For example:
 
@@ -118,7 +118,7 @@ If you want your resume to automatically download when the button is clicked ins
 <a href="path/to/resume.pdf" download="resume.pdf" class="btn-rounded-white">Download Resume</a>
 ```
 
-The href attribute points to where your resume is stored and the download attribute is what triggers the download / provides the name the file will be downloaded as when the user clicks the button (In this case, it will download as resume.pdf).
+The `href` attribute points to where your resume is stored and the download attribute is what triggers the download / provides the name the file will be downloaded as when the user clicks the button (In this case, it will download as resume.pdf).
 
 ### About Section
 
@@ -126,7 +126,7 @@ The about section contains a quick about blurb that can be edited by changing th
 
 ### Experience Section
 
-The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptaion of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
+The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptation of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
 
 The default format is as follows:
 
@@ -245,7 +245,7 @@ The Skills section is simply an unordered list that spits out a "Skill Cloud" wi
 
 ### Contact Section
 
-Since the page is static, I opted to use the awesome Formspree to allow for a contact form without the need for anything else. To use it, you must have the page hosted on a server (loading a basic HTML page won't work) where a referrer header is generated. Also, simply add the email to the action. An example is as follows:
+Since the page is static, I opted to use the awesome [Formspree](https://formspree.io/) to allow for a contact form without the need for anything else. To use it, you must have the page hosted on a server (loading a basic HTML page won't work) where a referrer header is generated. Also, simply add the email to the action. An example is as follows:
 
 ```HTML
 <form method="POST" action="https://formspree.io/email@email.com">
@@ -257,11 +257,11 @@ Since the page is static, I opted to use the awesome Formspree to allow for a co
 ```
 For more information on configuration of the contact form or dealing with errors, check out [Formspree](https://formspree.io/).
 
-For a quick tutorial about formspree, check out this [tutsplus tutorial](https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870) that covers different aspects and features of the form tool.
+For a quick tutorial about Formspree, check out this [tutsplus tutorial](https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870) that covers different aspects and features of the form tool.
 
 ### Footer Section
 
-The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
+The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains GitHub, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
 
 ### Optional Sections
 
