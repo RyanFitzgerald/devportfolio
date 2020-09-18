@@ -1,7 +1,7 @@
 /*!
     Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
+    Version: 1.2.1
+    Last Change: 08/28/2017
     Author: Ryan Fitzgerald
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
     Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
@@ -40,14 +40,20 @@ $base-color-hover: darken($base-color, 10%);
 // Define background colors
 $background: #fff;
 $background-alt: #f2f2f5;
-
+$background-dark: #737373;
 // Define border colors
-$border: #dcd9d9;
+//$border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
+//$heading: #374054;
 $text: #74808a;
 
+// UMD colors
+$maroon: #7a0019;
+$gold: #ffcc33;
+$border: $gold;
+$heading: $maroon;
+$base-color: $background-dark;
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -120,7 +126,7 @@ body {
 
             p {
                 color: $text;
-                font-size: 0.9em;
+//                font-size: 0.9em;
                 margin: 0;
             }
         }
@@ -140,7 +146,7 @@ body {
   }
 }
 
-header {
+/*header {
     position: absolute;
     top: 0;
     left: 0;
@@ -151,10 +157,9 @@ header {
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-duration: 0.75s;
-
     ul {
         display: inline-block;
-        background: $background;
+        background: $background-dark;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -168,7 +173,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: $background;
         padding: 10px;
 
         &:hover {
@@ -206,24 +211,24 @@ header {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: $base-color;
+    color: $background;
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: $background;
+    background: $background-dark;
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: $background;
+    background: $background-dark;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: $base-color;
+    color: $background;
 
     span {
         font-size: 0.5em;
@@ -234,7 +239,7 @@ header {
         vertical-align: middle;
     }
 }
-
+*/
 footer {
     padding: 50px 0;
 }
@@ -277,7 +282,7 @@ footer {
 
     li {
         display: inline-block;
-        font-size: 1.25em;
+        font-size: 1.2em;
         list-style: none;
     }
 
@@ -296,13 +301,13 @@ footer {
     display: inline-block;
     color: #fff;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid $gold;
     border-radius: 30px;
     @include transition();
 
     &:hover {
-        color: $base-color;
-        background: #fff;
+        color: #fff;
+        background: rgba($background-dark, 0.50);
         text-decoration: none;
     }
 }
@@ -321,7 +326,6 @@ footer {
     font-size: 2em;
     font-weight: 300;
     margin: 0 0 30px 0;
-
     &:after {
         position: absolute;
         content: '';
@@ -348,10 +352,11 @@ footer {
 #lead {
     position: relative;
     height: 100vh;
-    min-height: 500px;
+    min-height: 200px;
+    width: 100%;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
-    background-size: cover;
+    background: url(../images/csUMD.png);
+    background-size: 100% 125%;
     padding: 15px;
     overflow: hidden;
 }
@@ -359,7 +364,7 @@ footer {
 #lead-content {
     position: absolute;
     z-index: 10;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -369,16 +374,17 @@ footer {
     }
 
     h1 {
-        color: #fff;
+        color: rgb(200,200,200);
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        line-height: 0.9em;
+//        line-height: 0.9em;
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+ /*       color: lighten($base-color, 25%);*/
+	color: $background-dark;
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +399,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+//    background: rgba($base-color-hover, 0.0);
     z-index: 1;
 }
 
@@ -447,13 +453,13 @@ footer {
 
 #about {
     padding: 75px 15px;
-    border-bottom: 1px solid $border;
-
+    border-bottom: 5px solid $border;
     h2 {
         color: $heading;
     }
 
     p {
+        font-size: 1.1em;
         color: $text;
         margin: 0;
     }
@@ -468,13 +474,16 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid $border;
-
+//    border-bottom: 5px solid $border;
     h2 {
         color: $heading;
     }
+    li {
+	color: $text;	
+	font-weight: 400;
+//	font-size: .9em;
+    }
 }
-
 #experience-timeline {
     margin: 30px auto 0 auto;
     position: relative;
@@ -530,7 +539,7 @@ footer {
 
     p {
         color: $text;
-        font-size: 0.9em;
+//        font-size: 0.9em;
         margin: 0;
     }
 }
@@ -578,7 +587,7 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
+//    border-bottom: 5px solid $border;
     text-align: center;
 
     h2 {
@@ -591,7 +600,7 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid $border;
+    border: 1px solid $background-dark;
     text-align: left;
 
     h3 {
@@ -616,7 +625,7 @@ footer {
     p, ul {
         margin: 0;
         color: $text;
-        font-size: 0.9em;
+//        font-size: 0.9em;
     }
 
     ul {
@@ -632,7 +641,7 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+//    border-bottom: 5px solid $border;
     text-align: center;
 
     h2 {
@@ -644,6 +653,7 @@ footer {
 .project {
     position: relative;
     max-width: 900px;
+//    min-height: 300px;
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
@@ -651,16 +661,21 @@ footer {
 }
 
 .project-image {
+    position: relative;
     float: left;
+//    position: absolute;
+//    top: 12.5%;
+//    left: 15px;
 }
 
 .project-info {
+    overflow: auto;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    top: 0;
+    bottom: 0;
+    max-height: 300px;
+    margin-left: 315px;
     padding: 15px;
-
     h3 {
         font-size: 1.5em;
         font-weight: 300;
@@ -669,10 +684,15 @@ footer {
     }
 
     p {
+        text-align: left;
         color: $text;
         margin: 0 0 15px 0;
-        font-size: 0.9em;
+//        font-size: 0.9em;
     }
+    li {
+        text-align: left;
+    }
+    overflow: auto;
 }
 
 .no-image {
@@ -827,7 +847,7 @@ footer {
     p, ul {
         margin: 0 0 15px 0;
         color: $text;
-        font-size: 0.9em;
+//        font-size: 0.9em;
     }
 
     ul {
@@ -993,7 +1013,7 @@ footer {
         }
 
         a {
-            font-size: 0.9em;
+//            font-size: 0.9em;
             padding: 5px 10px;
         }
     }
