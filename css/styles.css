@@ -514,6 +514,58 @@ footer {
     ----- 7. Education Styles -----
     -------------------------------
 */
+#talks {
+  padding: 50px 15px 20px 15px;
+  border-bottom: 1px solid #dcd9d9;
+  text-align: center;
+}
+#talks h2 {
+  color: #374054;
+  margin-bottom: 50px;
+}
+#talks p {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
+}
+
+.talks-block {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  padding: 15px;
+  border: 1px solid #dcd9d9;
+  text-align: left;
+}
+.talks-block h3 {
+  font-weight: 500;
+  float: left;
+  margin: 0;
+  color: #374054;
+}
+.talks-block span {
+  color: #74808a;
+  float: right;
+}
+.talks-block h4 {
+  color: #74808a;
+  clear: both;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
+}
+.talks-block p, .talks-block ul {
+  margin: 0;
+  color: #7e8890;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0 0 15px 0;
+}
+.talks-block ul {
+  padding: 0 0 0 15px;
+}
+
 #education {
   padding: 50px 15px 20px 15px;
   border-bottom: 1px solid #dcd9d9;
@@ -737,7 +789,8 @@ footer {
 .optional-section {
   padding: 50px 15px;
   text-align: center;
-  border-top: 1px solid #dcd9d9;
+  border-top: 1px #dcd9d9;
+  background: #f6f6f9;
 }
 .optional-section h2 {
   color: #374054;
