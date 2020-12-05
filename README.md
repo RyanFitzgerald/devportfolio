@@ -1,5 +1,7 @@
 # Dev Portfolio
 
+🚀 **[Dev Portfolio V2 has arrived. Meet Devfolio, a modern portfolio + blog template built with GatsbyJS and TailwindCSS](https://github.com/RyanFitzgerald/devfolio)** 🚀
+
 This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
 
 To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio/).
@@ -85,7 +87,7 @@ There is also a number of default CSS classes that can be applied such as `.shad
 By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
 
 * Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
-* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can kept or changed easily by replacing the `favicon.ico` with your new one.
+* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can be kept or changed easily by replacing the `favicon.ico` with your new one.
 * Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
 
 ### Header Section
@@ -126,7 +128,7 @@ The about section contains a quick about blurb that can be edited by changing th
 
 ### Experience Section
 
-The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptaion of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
+The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptation of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
 
 The default format is as follows:
 
@@ -144,7 +146,7 @@ The default format is as follows:
 
 The data attribute `data-date` is what is used to add a date to the associated timeline point. All that is really required is a wrapping div (i.e. `#experience-timeline`) and nested divs to build the timeline. The h3, h4, and p tags are optional and the contents of the div can be styled however you wish.
 
-To add additional section, simply add additional nested divs under the main wrapping div.
+To add an additional section, simply add additional nested divs under the main wrapping div.
 
 ### Education Section
 
@@ -299,6 +301,10 @@ You can copy .optional-section-block for each new item you wish you have in the 
 The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
 
 ## Changelog
+
+### 1.2.2
+
+* Updated dependencies and gulpfile
 
 ### 1.2.1
 
