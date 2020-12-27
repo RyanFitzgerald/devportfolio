@@ -446,7 +446,7 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    padding: 75px 0;
     border-bottom: 1px solid $border;
 
     h2 {
@@ -631,7 +631,7 @@ footer {
 */
 
 #projects {
-    padding: 50px 15px;
+    padding: 50px 0;
     border-bottom: 1px solid $border;
     text-align: center;
 
@@ -871,7 +871,7 @@ footer {
 }
 
 // Medium Devices
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 991px) {
 
     #lead {
         height: auto;
@@ -906,7 +906,7 @@ footer {
 }
 
 // Small Devices
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 767px) {
 
     header {
         position: fixed;
@@ -952,10 +952,18 @@ footer {
         display: none;
     }
 
+    #about {
+        padding: 75px 15px;
+    }
+
     .education-block {
         h3, span {
             float: none;
         }
+    }
+
+    #projects {
+        padding: 50px 15px;
     }
 
     .project-image {
