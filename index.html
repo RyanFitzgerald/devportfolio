@@ -51,8 +51,7 @@
             <h1>Hyunbin<br>Rebeca Lee</h1>
             <h2>Junior Developer</h2>
             <div>
-                <a href="#" class="btn-rounded-white">Resume (KR) <i class="fas fa-file-download"></i></a>
-                <a href="#" class="btn-rounded-white">Resume (EN) <i class="fas fa-file-download"></i></a>
+                <a href="#" class="btn-rounded-white">Download Resume<i class="fas fa-file-download"></i></a>
             </div>
         </div>
         <!-- End #lead-content -->
@@ -76,7 +75,7 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        안녕하세요. 기획자 출신 신입 개발자 이현빈입니다.
+                        기획자 출신 신입 개발자 이현빈입니다.
                     </p>
                     <p>
                         더 많은 사람들이 행복한, 더 나은 세상을 만들어가는데 보탬이 되고 싶습니다.
@@ -99,8 +98,8 @@
                     <div class="project-info">
                         <h3>Weneed - 원티드 사이트 클론 (6인 / 6주)</h3>
                         <p>
-                            구인구직 사이트 원티드(wanted.com) 클론한 프로젝트에서 팀장 및 기업서비스단 전반 담당<br>
-                            이력서 필터링 및 검색 기능, 이력서 더보기 페이징 처리(ajax),<br>
+                            Spring Framework를 활용한 구인구직 사이트 원티드(wanted.com) 클론 프로젝트에서 팀장 및 기업서비스단 전반 담당<br>
+                            이력서 필터링 및 검색 기능, 이력서 더보기 페이징 처리(ajax)<br>
                             더블페이징 in 원페이지(ajax), 기업이미지 CRUD 기능(ajax)<br>
                             기업정보, 채용공고 CRUD 및 회원가입 기능<br>
                             기업서비스 관련 승인 처리 전후 목록 조회(ajax)
@@ -119,7 +118,8 @@
                     <div class="project-info">
                         <h3>BatchaPedia (4인 / 3주)</h3>
                         <p>
-                            영화 커뮤니티 구현 프로젝트에서 팀장역할과 메인페이지 및 상세페이지 담당 개발
+                            JSP Model2 (MVC) 기반의 영화 커뮤니티 구현 프로젝트에서 팀장역할 및 메인페이지, 상세페이지 담당 개발<br>
+                            메인페이지 및 사이트 기획 / Chart.js 활용 / 평점시스템 구축
                         </p>
                         <a href="#">View Project</a>
                     </div>
@@ -139,13 +139,23 @@
             <h4>관광경영학과 (주전공)</h4>
             
         </div>
-        <!-- End .education-block -->
 
         <div class="education-block">
             <h3>세종대학교</h3>
             <span class="education-date">2010.03 ~ 2016.08</span>
             <h4>디지털콘텐츠학과 (복수전공)</h4>
             
+        </div>
+
+        <div class="education-block">
+            <h3>아이티윌</h3>
+            <span class="education-date">2020.09 ~ 2021.02</span>
+            <h4>JAVA 웹개발자 과정</h4>
+            <ul>
+                <li>
+                    <p>교육과정 중 2회의 팀 프로젝트에서 팀장 역할</p>
+                </li>
+            </ul>
         </div>
         <!-- End .education-block -->
     </div>
@@ -191,6 +201,7 @@
             <li>HTML</li>
             <li>GIT</li>
             <li>github</li>
+            <li>Spring</li>
             <li>python (Tried)</li>
             <li>Node.js (Tried)</li>
         </ul>
@@ -199,9 +210,14 @@
 
     <div id="contact">
         <h2>Get in Touch</h2>
-           <p>
-               jazzo5947@gmail.com
-           </p>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/f/mdopreqq">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
         <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
