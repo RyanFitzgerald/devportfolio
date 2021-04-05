@@ -175,7 +175,7 @@ header {
         &:hover {
             color: $base-color-hover;
             text-decoration: none;
-            background: #eee;
+            background: $background-alt;
             border-radius: 4px;
         }
 
@@ -288,21 +288,21 @@ footer {
         padding: 10px;
 
         &:hover {
-            color: $base-color;
+            color: $base-color-hover;
         }
     }
 }
 
 .btn-rounded-white {
     display: inline-block;
-    color: $background;
+    color: $text;
     padding: 15px 25px;
-    border: 3px solid $background;
+    border: 3px solid $text;
     border-radius: 30px;
     @include transition();
 
     &:hover {
-        color: $base-color;
+        color: $base-color-hover;
         background: $background;
         text-decoration: none;
     }
