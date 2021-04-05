@@ -34,19 +34,19 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #374054;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: #374054;
+$background-alt: #232935a8;
 
 // Define border colors
 $border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #74898a;
+$text: #74898a;
 
 /*
     ---------------------
@@ -87,6 +87,7 @@ $text: #74808a;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    background-color: $background;
 
     &.active {
         overflow: hidden;
@@ -168,7 +169,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: $text;
         padding: 10px;
 
         &:hover {
@@ -258,7 +259,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid lighten($base-color, 25%);
         text-align:center;
     }
 
@@ -294,15 +295,15 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+    color: $background;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid $background;
     border-radius: 30px;
     @include transition();
 
     &:hover {
         color: $base-color;
-        background: #fff;
+        background: $background;
         text-decoration: none;
     }
 }
@@ -369,7 +370,7 @@ footer {
     }
 
     h1 {
-        color: #fff;
+        color: $background;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -405,7 +406,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff;
+    color: $background;
 
     span {
         cursor: pointer;
@@ -507,7 +508,7 @@ footer {
 
 .vtimeline-content {
     margin-left: 350px;
-    background: #fff;
+    background: $background;
     border: 1px solid #e6e6e6;
     padding: 15px;
     border-radius: 3px;
@@ -544,7 +545,7 @@ footer {
 
 .vtimeline-icon {
     position: relative;
-    color: #fff;
+    color: $background-alt;
     width: 50px;
     height: 50px;
     background: $base-color;
@@ -567,7 +568,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    color: $text;
 }
 
 /*
@@ -646,7 +647,7 @@ footer {
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
-    background: #fff;
+    background: $background;
     border-radius: 4px;
 }
 
@@ -672,6 +673,10 @@ footer {
         color: $text;
         margin: 0 0 15px 0;
         font-size: 0.9em;
+    }
+    a {
+        color: $text;
+
     }
 }
 
@@ -735,7 +740,7 @@ footer {
 
     h2 {
         margin: 0 0 15px 0;
-        color: #fff;
+        color: $background;
         font-weight: 500;
     }
 }
@@ -752,10 +757,10 @@ footer {
         border: none;
         margin-bottom: 10px;
         background: darken($base-color, 15%);
-        color: #fff;
+        color: $background;
         @include transition();
         @include placeholder {
-            color: #fff;
+            color: $background;
         }
 
         &:focus {
@@ -772,11 +777,11 @@ footer {
     button {
         display: block;
         width: 100%;
-        background: #fff;
+        background:$background-alt;
         border-radius: 4px;
         padding: 5px 10px;
         border: none;
-        color: $base-color;
+        color: $text;
         font-weight: 700;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         @include transition();
@@ -808,7 +813,7 @@ footer {
     margin: 0 auto 30px auto;
     padding: 15px;
     border: 1px solid $border;
-    background: #fff;
+    background: $background;
     text-align: left;
 
     h3 {
@@ -919,6 +924,7 @@ footer {
 
     #mobile-menu-open, #mobile-menu-close {
         display: block;
+        color: $background-alt
     }
 
     #menu {
@@ -927,6 +933,7 @@ footer {
         box-shadow: none;
         border-radius: 0;
         width: 100%;
+        
 
         li {
             display: block;
