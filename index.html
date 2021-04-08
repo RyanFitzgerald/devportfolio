@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-	<link rel="shortcut icon" href="..\images\NMPIcon.ico" type="image/x-icon">
-	<link rel="icon" href="..\images\NMPIcon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="..\images\NMPIconDark.ico" type="image/x-icon">
+	<link rel="icon" href="..\images\NMPIconDark.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -88,17 +88,17 @@
                 <h3>Intuit Inc</h3>
                 <h4>Junior Developer</h4>
                 <p>
-                <ul>
+                 <ul id="experience-bullets">
                 <li>
-                    Built utility software for internal use with PowerShell, C#, Python and WinForms for internal use that helped improve team workflow and productivityby over 40%.
+                    Built utility software for internal use with PowerShell, C#, Python and WinForms for internal use.
                 </li>
                 <li>
-                    Onboarded new hires to QA roles and focused on meticulous documentation fortraining.
+                    Onboarded new hires to QA roles and focused on meticulous documentation for training.
                 </li>
                 <li>
-                    Experience with GitHub , Rest API tools and Proprietary IDEs to implement codechanges in C#, Python, HTML and CSS. Used services like Jenkins and Splunk totroubleshoot software payload errors.
+                    Used services like GitHub, Rest API and Networking tools while implementing code changes in C#, Python, HTML and CSS. Used services like Jenkins and Splunk to troubleshoot software payload errors. Automated testing using Selenium and Postman.
                 </li>
-                <li>Conceptualized and took lead on multiple internal tools and IDEs for easierand more efficient code changes by non-developer staff. Focused on UI design principals to improve the look and feel of the tools.
+                <li>Conceptualized and took lead on multiple internal tools and IDEs for easier and more efficient code changes by non-developer staff.
                 </li>
             </ul>
                 
@@ -111,16 +111,17 @@
             <div data-date="Aug 2019 - Aug 2020">
                 <h3>Intuit Inc</h3>
                 <h4>Tax Software Content Analyst</h4>
-                <p> •Development of Tax software suite including ProFile, ProTax and TurboTax toupdate Income Tax software content.<br><br>
-                    •Researched tax laws and Tax form updates and implemented the calculation of algorithms within the tax software suite.<br><br>
-                    •Significant QA experience with tax filing software Intuit ProFile and ProTax witha focus on SLDC based workflow.<br><br>
-                    •Worked with developers to create ProTax from the ground up, Identifying bugs , payload errors and validating tax forms for accuracy.<br><br>
-                    •Was responsible for developing over 350 T1 tax forms and PDFs on ProTax’s webplatform; exceeded expectation by completing a record number of forms eachtax season.<br><br>
-                    •Recognized for having self-initiated projects that improved workflow andoutput quality within the team by over 40%.<br>
-
-
-
-
+                <p> 
+                    <ul id="experience-bullets">
+                    <li>Development of Tax software suite.
+                    </li>
+                    <li>Researched tax laws and Tax form updates and implemented the calculation of algorithms within the tax software suite.
+                    </li>
+                    <li>Significant QA experience with Intuit tax filing software  with a focus on SLDC based workflow.
+                    </li>
+                    <li>Worked with developers to create ProTax from the ground up, Identifying bugs , payload errors and validating tax forms for accuracy.
+                    </li>
+                </ul>
 
                 </p>
             </div>
@@ -152,17 +153,11 @@
             <h3>FullStackOpen.com</h3>
             <span class="education-date">In Progress</span>
             <h4>Full Stack Web development</h4>
-            <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul>
+        </div>
+        <div class="education-block">
+            <h3>HarvardX</h3>
+            <span class="education-date">In Progress</span>
+            <h4>Programing courses in Python, JS, C+</h4>
         </div>
         <!-- End .education-block -->
     </div>
@@ -174,44 +169,49 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/MonteCarloSim.PNG" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Monte Carlo Investment Simulation</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            Built a Python based investment calculator that uses Monte Carlo methods to simulate varied contribution amounts and interest rates using Random Numbers.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://github.com/nmpereira/MonteCarloSim">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
 
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
     <!-- End #projects -->
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
+            <li>PowerShell</li>
+            <li>WinForms</li>
+            <li>.NET</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>Lua</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Excel VBA</li>
             <li>JavaScript</li>
+            <li>GitHub</li>
+            <li>Postman API</li>
+            <li>Android Studio</li>
+            <li>SSH</li>
+            <li>VNC</li>
+            <li>Selenium</li>
+            <li>DNS</li>
+            <li>DHCP</li>
+            <li>TCP/IP</li>
+            <li>VMWare</li>
+
+
+
+            <!-- <li>JavaScript</li>
             <li>Python</li>
             <li>Ruby</li>
             <li>Go</li>
@@ -236,7 +236,7 @@
             <li>C</li>
             <li>C#</li>
             <li>C++</li>
-            <li>Ruby on Rails</li>
+            <li>Ruby on Rails</li> -->
         </ul>
     </div>
     <!-- End #skills -->
@@ -260,7 +260,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2020 YOUR NAME
+                        Copyright &copy; 2020 NMPEREIRA
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -271,23 +271,24 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/nmpereira" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                            <a href="https://stackoverflow.com/users/15442504/nmpereira" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://https://www.linkedin.com/in/nikhilpereira25/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="mailto:nikhilpereira125@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="tel:6476687184" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>

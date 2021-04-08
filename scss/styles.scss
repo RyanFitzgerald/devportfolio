@@ -45,8 +45,8 @@ $background-alt: #232935a8;
 $border: #dcd9d9;
 
 // Define text colors
-$heading: #74898a;
-$text: #74898a;
+$heading: #91b4b6;
+$text: #8c9797;
 
 /*
     ---------------------
@@ -370,7 +370,7 @@ footer {
     }
 
     h1 {
-        color: $background;
+        color: $text;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -534,6 +534,12 @@ footer {
         color: $text;
         font-size: 0.9em;
         margin: 0;
+    }
+    li {
+        color: $text;
+        font-size: 0.9em;
+        margin: 0;
+
     }
 }
 
