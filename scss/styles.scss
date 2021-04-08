@@ -46,7 +46,7 @@ $border: #dcd9d9;
 
 // Define text colors
 $heading: #91b4b6;
-$text: #8c9797;
+$text: #e5ecec;
 
 /*
     ---------------------
@@ -173,7 +173,7 @@ header {
         padding: 10px;
 
         &:hover {
-            color: $base-color-hover;
+            color: lighten($base-color, 25%);
             text-decoration: none;
             background: $background-alt;
             border-radius: 4px;
@@ -302,7 +302,7 @@ footer {
     @include transition();
 
     &:hover {
-        color: $base-color-hover;
+        color: darken($text, 50%);
         background: $background;
         text-decoration: none;
     }
@@ -370,7 +370,7 @@ footer {
     }
 
     h1 {
-        color: $text;
+        color: lighten($base-color, 35%);
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
