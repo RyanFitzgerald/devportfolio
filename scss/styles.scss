@@ -48,6 +48,9 @@ $border: #dcd9d9;
 $heading: #91b4b6;
 $text: #e5ecec;
 
+//background image
+$backgroundImage: url(../images/galaxy.jpg);
+
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -242,10 +245,13 @@ footer {
 
 .copyright {
     padding-top: 20px;
-
+    
     p {
         margin: 0;
-        color: $text;
+        color: $heading;
+    }
+    .copyrighttext{
+        color: $heading;
     }
 }
 
@@ -351,8 +357,9 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/galaxy.jpg);
-    background-size: cover;
+    background: $backgroundImage;
+    background-attachment: fixed;
+    
     padding: 15px;
     overflow: hidden;
 }
@@ -394,7 +401,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.28);
+    background: rgba($base-color-hover, 0.01);
     z-index: 1;
 }
 
@@ -448,16 +455,34 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
-    border-bottom: 1px solid $border;
+    //padding: 75px 15px;
+    
+    background: $backgroundImage;
+    background-attachment: fixed;
+    padding: 15px;
+    overflow: hidden;
+    
+    .heading{
+       
+        text-align: center;
+    }
+    
 
     h2 {
         color: $heading;
+        
     }
 
     p {
         color: $text;
-        margin: 0;
+        
+        max-width: 650px;
+        
+        padding: 25px;
+        border: 1px solid $border;
+        
+        background: $background;
+        
     }
 }
 
@@ -470,7 +495,12 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid $border;
+    
+    background: $backgroundImage;
+    background-attachment: fixed;
+    
+    padding: 15px;
+    overflow: hidden;
 
     h2 {
         color: $heading;
@@ -478,7 +508,7 @@ footer {
 }
 
 #experience-timeline {
-    margin: 30px auto 0 auto;
+    margin: 30px auto 0 27.5%;
     position: relative;
     max-width: 1000px;
 
@@ -586,8 +616,15 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
+    
     text-align: center;
+    background: $backgroundImage;
+    background-attachment: fixed;
+    
+    padding: 15px;
+    overflow: hidden;
+    
+
 
     h2 {
         color: $heading;
@@ -601,6 +638,7 @@ footer {
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
+    background: $background;
 
     h3 {
         font-weight: 500;
@@ -640,8 +678,14 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    
     text-align: center;
+    
+
+    background: $backgroundImage;
+    background-attachment: fixed;
+    padding: 15px;
+    overflow: hidden;
 
     h2 {
         color: $heading;
@@ -727,7 +771,7 @@ footer {
         margin: 7px;
         padding: 5px 10px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        background: darken($background, 5%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
@@ -744,6 +788,10 @@ footer {
     padding: 50px 15px;
     background: $base-color;
     text-align: center;
+    background: $backgroundImage;
+    background-attachment: fixed;
+    padding: 15px;
+    overflow: hidden;
 
     h2 {
         margin: 0 0 15px 0;
@@ -763,7 +811,7 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
+        background:  $background;
         color: $background;
         @include transition();
         @include placeholder {
@@ -784,7 +832,7 @@ footer {
     button {
         display: block;
         width: 100%;
-        background:$background-alt;
+        background: $background;
         border-radius: 4px;
         padding: 5px 10px;
         border: none;
@@ -809,6 +857,7 @@ footer {
     padding: 50px 15px;
     text-align: center;
     border-top: 1px solid $border;
+    
 
     h2 {
         color: $heading;
@@ -909,6 +958,7 @@ footer {
 
     #about {
         text-align: center;
+        
 
         p {
             text-align: left;
