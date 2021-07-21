@@ -1,0 +1,8 @@
+@font-face {
+  font-family: vazir;
+  src: url(../../fonts/Vazir-Regular.ttf);
+}
+
+* {
+  font-family: vazir, tahoma;
+}
