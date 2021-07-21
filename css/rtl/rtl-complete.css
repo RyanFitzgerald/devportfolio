@@ -1,7 +1,7 @@
-li {
+* {
   direction: rtl;
 }
 
 .social {
-  text-align: right;
+  text-align: left;
 }
