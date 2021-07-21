@@ -6,3 +6,7 @@
 * {
   font-family: vazir, tahoma;
 }
+
+#lead {
+  background: url(../../images/lead-bg.jpg);
+}
