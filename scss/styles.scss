@@ -673,6 +673,11 @@ footer {
 
 .project-image {
   float: left;
+  width: 300px;
+}
+
+.project-image img {
+  max-width: 100%;
 }
 
 .project-info {
