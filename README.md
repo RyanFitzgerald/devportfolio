@@ -1,3 +1,4 @@
+# Can We mention License agreement on the top of the page so any one can get know about it easily
 # Dev Portfolio
 
 🚀 **[Dev Portfolio V2 has arrived. Meet Devfolio, a modern portfolio + blog template built with GatsbyJS and TailwindCSS](https://github.com/RyanFitzgerald/devfolio)** 🚀
