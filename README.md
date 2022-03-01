@@ -8,6 +8,13 @@ To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio/
 
 Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgerald/devblog).
 
+## TODO
+
+* Add the roadmap with my professional skills
+* Add courses
+* Add the map of the places where I have been
+* Think of a mobile version
+
 ## Features
 
 * Gulp ready (compiles Sass and minifies JS)
