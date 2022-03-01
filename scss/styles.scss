@@ -1,15 +1,3 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
-    Description: This file contains all the styles associated with the page
-    that don't come from third party libraries. This file gets compiled using
-    Gulp and send to the /css folder which is then loaded on the page.
-*/
 /*
     File Contents:
 
@@ -339,6 +327,11 @@ footer {
     background: $background-alt;
 }
 
+a.deco-none {
+    color: inherit;
+    text-decoration:none;
+}
+
 /*
     --------------------------
     ----- 4. Lead Styles -----
@@ -621,6 +614,10 @@ footer {
 
     ul {
         padding: 0 0 0 15px;
+    }
+
+    hr {
+        clear: both;
     }
 }
 
