@@ -10,6 +10,8 @@
     that don't come from third party libraries. This file gets compiled using
     Gulp and send to the /css folder which is then loaded on the page.
 */
+
+
 /*
     File Contents:
 
@@ -27,6 +29,7 @@
         12. Media Queries
 */
 
+
 /*
     ------------------------
     ----- 1. Variables -----
@@ -36,14 +39,11 @@
 // Define base and accent colors
 $base-color: #3498db;
 $base-color-hover: darken($base-color, 10%);
-
 // Define background colors
 $background: #fff;
 $background-alt: #f2f2f5;
-
 // Define border colors
 $border: #dcd9d9;
-
 // Define text colors
 $heading: #374054;
 $text: #74808a;
@@ -62,21 +62,19 @@ $text: #74808a;
     &::-webkit-input-placeholder {
         @content;
     }
-
     &:-moz-placeholder {
         @content;
         opacity: 1;
     }
-
     &::-moz-placeholder {
         @content;
         opacity: 1;
     }
-
     &:-ms-input-placeholder {
         @content;
     }
 }
+
 
 /*
     ----------------------------
@@ -87,7 +85,6 @@ $text: #74808a;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-
     &.active {
         overflow: hidden;
         z-index: -1;
@@ -97,12 +94,11 @@ body {
 // No JS styles
 .no-js {
     #experience-timeline {
-        > div {
+        >div {
             background: $background;
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid $border;
-
             h3 {
                 font-size: 1.5em;
                 font-weight: 300;
@@ -110,34 +106,32 @@ body {
                 display: inline-block;
                 margin: 0;
             }
-
             h4 {
                 font-size: 1.2em;
                 font-weight: 300;
                 color: #7e8890;
                 margin: 0 0 15px 0;
             }
-
             p {
                 color: $text;
                 font-size: 0.9em;
                 margin: 0;
             }
         }
-
-        &:before, &:after {
+        &:before,
+        &:after {
             content: none;
         }
     }
 }
 
 @keyframes dropHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -151,7 +145,6 @@ header {
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-duration: 0.75s;
-
     ul {
         display: inline-block;
         background: $background;
@@ -161,33 +154,27 @@ header {
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
     }
-
     li {
         display: inline-block;
     }
-
     a {
         display: block;
         color: $base-color;
         padding: 10px;
-
         &:hover {
             color: $base-color-hover;
             text-decoration: none;
             background: #eee;
             border-radius: 4px;
         }
-
         &:focus {
             color: $base-color;
             text-decoration: none;
         }
     }
-
     &.active {
         display: block;
     }
-
     &.sticky {
         position: fixed;
         z-index: 999;
@@ -224,12 +211,10 @@ header {
     padding-top: 10px;
     cursor: pointer;
     color: $base-color;
-
     span {
         font-size: 0.5em;
         text-transform: uppercase;
     }
-
     i {
         vertical-align: middle;
     }
@@ -241,7 +226,6 @@ footer {
 
 .copyright {
     padding-top: 20px;
-
     p {
         margin: 0;
         color: $text;
@@ -250,7 +234,6 @@ footer {
 
 .top {
     text-align: center;
-
     span {
         cursor: pointer;
         display: block;
@@ -259,9 +242,8 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($text, 25%);
-        text-align:center;
+        text-align: center;
     }
-
     i {
         color: $text;
     }
@@ -269,23 +251,19 @@ footer {
 
 .social {
     text-align: right;
-
     ul {
         margin: 5px 0 0 0;
         padding: 0;
     }
-
     li {
         display: inline-block;
         font-size: 1.25em;
         list-style: none;
     }
-
     a {
         display: block;
         color: $text;
         padding: 10px;
-
         &:hover {
             color: $base-color;
         }
@@ -299,7 +277,6 @@ footer {
     border: 3px solid #fff;
     border-radius: 30px;
     @include transition();
-
     &:hover {
         color: $base-color;
         background: #fff;
@@ -308,11 +285,11 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .shadow-large {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
@@ -321,7 +298,6 @@ footer {
     font-size: 2em;
     font-weight: 300;
     margin: 0 0 30px 0;
-
     &:after {
         position: absolute;
         content: '';
@@ -338,6 +314,7 @@ footer {
 .background-alt {
     background: $background-alt;
 }
+
 
 /*
     --------------------------
@@ -363,11 +340,10 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
-    h1, h2 {
+    h1,
+    h2 {
         margin: 0;
     }
-
     h1 {
         color: #fff;
         font-weight: 900;
@@ -376,7 +352,6 @@ footer {
         letter-spacing: 0.05em;
         line-height: 0.9em;
     }
-
     h2 {
         color: lighten($base-color, 25%);
         font-weight: 500;
@@ -406,7 +381,6 @@ footer {
     z-index: 10;
     bottom: 15px;
     color: #fff;
-
     span {
         cursor: pointer;
         display: block;
@@ -415,13 +389,13 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($base-color, 25%);
-        text-align:center;
+        text-align: center;
     }
-
     i {
         animation: pulsate 1.5s ease;
         animation-iteration-count: infinite;
-        padding-top: 5px;;
+        padding-top: 5px;
+        ;
     }
 }
 
@@ -429,15 +403,14 @@ footer {
     0% {
         transform: scale(1, 1);
     }
-
     50% {
         transform: scale(1.2, 1.2);
     }
-
     100% {
         transform: scale(1, 1);
     }
 }
+
 
 /*
     ---------------------------
@@ -448,16 +421,21 @@ footer {
 #about {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
-
     h2 {
         color: $heading;
     }
-
     p {
         color: $text;
         margin: 0;
     }
+    ul {
+        color: $text;
+    }
+    li {
+        color: $text;
+    }
 }
+
 
 /*
     --------------------------------
@@ -469,7 +447,6 @@ footer {
     padding: 50px 15px;
     text-align: center;
     border-bottom: 1px solid $border;
-
     h2 {
         color: $heading;
     }
@@ -479,7 +456,6 @@ footer {
     margin: 30px auto 0 auto;
     position: relative;
     max-width: 1000px;
-
     &:before {
         position: absolute;
         content: '';
@@ -492,7 +468,6 @@ footer {
         background: $base-color;
         z-index: 0;
     }
-
     &:after {
         position: absolute;
         content: '';
@@ -512,7 +487,6 @@ footer {
     padding: 15px;
     border-radius: 3px;
     text-align: left;
-
     h3 {
         font-size: 1.5em;
         font-weight: 300;
@@ -520,14 +494,12 @@ footer {
         display: inline-block;
         margin: 0;
     }
-
     h4 {
         font-size: 1.2em;
         font-weight: 300;
         color: #7e8890;
         margin: 0 0 15px 0;
     }
-
     p {
         color: $text;
         font-size: 0.9em;
@@ -552,7 +524,6 @@ footer {
     float: left;
     z-index: 99;
     margin-left: 280px;
-
     i {
         display: block;
         font-size: 2em;
@@ -570,6 +541,7 @@ footer {
     color: #374054;
 }
 
+
 /*
     -------------------------------
     ----- 7. Education Styles -----
@@ -580,7 +552,6 @@ footer {
     padding: 50px 15px 20px 15px;
     border-bottom: 1px solid $border;
     text-align: center;
-
     h2 {
         color: $heading;
         margin-bottom: 50px;
@@ -593,36 +564,33 @@ footer {
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
-
     h3 {
         font-weight: 500;
         float: left;
         margin: 0;
         color: $heading;
     }
-
     span {
         color: $text;
         float: right;
     }
-
     h4 {
         color: $text;
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
     }
-
-    p, ul {
+    p,
+    ul {
         margin: 0;
         color: $text;
         font-size: 0.9em;
     }
-
     ul {
         padding: 0 0 0 15px;
     }
 }
+
 
 /*
     -------------------------------
@@ -634,7 +602,6 @@ footer {
     padding: 50px 15px;
     border-bottom: 1px solid $border;
     text-align: center;
-
     h2 {
         color: $heading;
         margin-bottom: 50px;
@@ -660,14 +627,12 @@ footer {
     transform: translateY(-50%);
     margin-left: 300px;
     padding: 15px;
-
     h3 {
         font-size: 1.5em;
         font-weight: 300;
         color: $heading;
         margin: 0 0 15px 0;
     }
-
     p {
         color: $text;
         margin: 0 0 15px 0;
@@ -688,6 +653,7 @@ footer {
     display: none;
 }
 
+
 /*
     -------------------------------
     ----- 9. Skills Styles -----
@@ -697,19 +663,16 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
-
     h2 {
         color: $heading;
         margin-bottom: 50px;
     }
-
     ul {
         display: block;
         margin: 0 auto;
         padding: 0;
         max-width: 800px;
     }
-
     li {
         display: inline-block;
         margin: 7px;
@@ -722,6 +685,7 @@ footer {
     }
 }
 
+
 /*
     -------------------------------
     ----- 10. Contact Styles -----
@@ -732,7 +696,6 @@ footer {
     padding: 50px 15px;
     background: $base-color;
     text-align: center;
-
     h2 {
         margin: 0 0 15px 0;
         color: #fff;
@@ -743,8 +706,8 @@ footer {
 #contact-form {
     max-width: 500px;
     margin: 0 auto;
-
-    input, textarea {
+    input,
+    textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -757,18 +720,15 @@ footer {
         @include placeholder {
             color: #fff;
         }
-
         &:focus {
             outline: none;
             background: darken($base-color, 25%);
         }
     }
-
     textarea {
         height: 150px;
         resize: none;
     }
-
     button {
         display: block;
         width: 100%;
@@ -778,14 +738,14 @@ footer {
         border: none;
         color: $base-color;
         font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         @include transition();
-
         &:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
     }
 }
+
 
 /*
     ---------------------------------------
@@ -797,7 +757,6 @@ footer {
     padding: 50px 15px;
     text-align: center;
     border-top: 1px solid $border;
-
     h2 {
         color: $heading;
     }
@@ -810,30 +769,28 @@ footer {
     border: 1px solid $border;
     background: #fff;
     text-align: left;
-
     h3 {
         font-weight: 500;
         margin: 0 0 15px 0;
         color: $heading;
     }
-
     h4 {
         color: $text;
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
     }
-
-    p, ul {
+    p,
+    ul {
         margin: 0 0 15px 0;
         color: $text;
         font-size: 0.9em;
     }
-
     ul {
         padding: 0 0 0 15px;
     }
 }
+
 
 /*
     -----------------------------
@@ -843,14 +800,12 @@ footer {
 
 // Collapse timeline
 @media only screen and (max-width: 750px) {
-
     #experience-timeline {
-        &:before, &:after {
+        &:before,
+        &:after {
             left: 23px;
         }
-
     }
-
     .vtimeline-date {
         width: auto;
         text-align: left;
@@ -859,55 +814,44 @@ footer {
         display: block;
         margin-left: 70px;
     }
-
     .vtimeline-icon {
         margin-left: 0;
     }
-
     .vtimeline-content {
         margin-left: 70px;
     }
-
 }
 
 // Medium Devices
-@media only screen and (max-width : 992px) {
-
+@media only screen and (max-width: 992px) {
     #lead {
         height: auto;
         min-height: auto;
         max-height: auto;
         padding: 100px 15px;
     }
-
     #lead-content {
         position: relative;
         transform: none;
         left: auto;
         top: auto;
-
         h1 {
             font-size: 3em;
         }
-
         h2 {
             font-size: 1.75em;
         }
     }
-
     #about {
         text-align: center;
-
         p {
             text-align: left;
         }
     }
-
 }
 
 // Small Devices
-@media only screen and (max-width : 768px) {
-
+@media only screen and (max-width: 768px) {
     header {
         position: fixed;
         display: none;
@@ -916,52 +860,44 @@ footer {
         bottom: 0;
         height: 100%;
     }
-
-    #mobile-menu-open, #mobile-menu-close {
+    #mobile-menu-open,
+    #mobile-menu-close {
         display: block;
     }
-
     #menu {
         height: 100%;
         overflow-y: auto;
         box-shadow: none;
         border-radius: 0;
         width: 100%;
-
         li {
             display: block;
             margin-bottom: 10px;
         }
     }
-
     #lead-content {
         h1 {
             font-size: 2em;
         }
-
         h2 {
             font-size: 1.3em;
         }
-
         a {
             padding: 10px 20px;
         }
     }
-
     #lead-down {
         display: none;
     }
-
     .education-block {
-        h3, span {
+        h3,
+        span {
             float: none;
         }
     }
-
     .project-image {
         display: none;
     }
-
     .project-info {
         position: relative;
         margin: 0;
@@ -969,33 +905,26 @@ footer {
         top: auto;
         transform: none;
     }
-
     footer {
         text-align: center;
     }
-
     .social {
         text-align: center;
     }
-
 }
 
 // Extra Small Devices
-@media only screen and (max-width : 480px) {
-
+@media only screen and (max-width: 480px) {
     #lead-content {
         h1 {
             font-size: 1.5em;
         }
-
         h2 {
             font-size: 1em;
         }
-
         a {
             font-size: 0.9em;
             padding: 5px 10px;
         }
     }
-
 }
