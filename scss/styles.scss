@@ -424,14 +424,10 @@ footer {
     h2 {
         color: $heading;
     }
-    p {
+    p,
+    ul {
         color: $text;
         margin: 0;
-        ul {
-            li {
-                color: $text;
-            }
-        }
     }
 }
 
