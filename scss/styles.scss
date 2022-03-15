@@ -40,6 +40,7 @@ $base-color-hover: darken($base-color, 10%);
 // Define background colors
 $background: #fff;
 $background-alt: #f2f2f5;
+$background-alt-nth: #ececec;
 
 // Define border colors
 $border: #dcd9d9;
@@ -339,6 +340,15 @@ footer {
     background: $background-alt;
 }
 
+.background-alt-nth:nth-child(odd){
+    background: $background-alt;
+}
+
+.background-alt-nth:nth-child(even){
+    background: $background-alt-nth;
+}
+
+
 /*
     --------------------------
     ----- 4. Lead Styles -----
@@ -350,7 +360,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../assets/lead-bg.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -448,12 +458,25 @@ footer {
 #about {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
+    text-align: center;
+
+    .container{
+        margin-top: 1rem;
+    }
+
+    .portrait{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
 
     h2 {
         color: $heading;
     }
 
     p {
+        text-align: left;
         color: $text;
         margin: 0;
     }
@@ -639,9 +662,27 @@ footer {
         color: $heading;
         margin-bottom: 50px;
     }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .project {
+    position: relative;
+    min-width: 300px;
+    height: 300px;
+    max-width: 900px;
+    margin:0 15px 30px 15px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.project-game {
     position: relative;
     max-width: 900px;
     margin: 0 auto 30px auto;
@@ -650,7 +691,7 @@ footer {
     border-radius: 4px;
 }
 
-.project-image {
+.project-game .project-image{
     float: left;
 }
 
@@ -687,6 +728,84 @@ footer {
 #more-projects {
     display: none;
 }
+
+/* Style the Image Used to Trigger the Modal */
+.project-image{
+    .image {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .image:hover {opacity: 0.7;}
+}
+.project-video{
+    .image {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .image:hover {opacity: 0.7;}
+}
+
+/* The Modal (background) */
+.overlay-viewer{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 85%;
+    max-width: 1200px;
+}
+.modal-content { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.glb-content{
+    margin: auto;
+    display: block;
+    width: 85%;
+    height: 85%;
+    max-width: 1200px;
+    background: #fff;
+
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+.overlay-viewer .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.overlay-viewer .close:hover,
+.overlay-viewer .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
 
 /*
     -------------------------------
@@ -743,6 +862,7 @@ footer {
 #contact-form {
     max-width: 500px;
     margin: 0 auto;
+    text-align: left;
 
     input, textarea {
         display: block;
@@ -783,6 +903,15 @@ footer {
 
         &:hover {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    }
+
+    article{
+        font-size: 2rem;
+        color: #f2f2f5;
+
+        span{
+            margin-left: 2rem;
         }
     }
 }
@@ -958,16 +1087,16 @@ footer {
         }
     }
 
-    .project-image {
-        display: none;
-    }
-
     .project-info {
         position: relative;
         margin: 0;
         padding: 30px 15px;
         top: auto;
         transform: none;
+    }
+
+    .project-game .project-image{
+        display: none;
     }
 
     footer {
