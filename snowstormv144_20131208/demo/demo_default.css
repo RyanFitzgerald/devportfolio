@@ -1,0 +1,223 @@
+/*
+
+ SnowStorm demo page CSS
+ -----------------------
+
+ None of this is needed for the snow effect to work - it's strictly to make the demo/documentation look pretty.
+
+*/
+
+body {
+ margin:0px;
+ padding:0px;
+ background:#333 url(../lights/image/bg-strip-dark.png);
+ color:#eeeeee;
+ font-family:helvetica,verdana,arial,tahoma,"sans serif";
+ font-weight: 300;
+ font-size:100%;
+ text-shadow: 0 0 0 #000; /* safari is lame. */
+}
+
+a {
+ color:#aaaa00;
+ text-decoration:none;
+}
+
+a:hover {
+ color:#ffff33;
+}
+
+h1, h2, h3 {
+ font-family:"helvetica neue",helvetica,verdana,arial,tahoma,"sans serif";
+ margin:0px;
+ font-weight: 200;
+ color:#fff;
+}
+
+h1 {
+ font-size:2.5em;
+ font-weight: 100;
+}
+
+h2 {
+ font-size:1.8em;
+ font-weight: 100;
+ margin-top:1em;
+ color:#fff;
+}
+
+h3 {
+ font-size:1.4em;
+ margin-top:1em;
+ margin-bottom:0.5em;
+ letter-spacing: 0.01em;
+ color:#99ccff;
+}
+
+h3 + p {
+ margin-top:0px;
+}
+
+p {
+ margin:1em 0px 0px 0px;
+}
+
+dd,
+p {
+ line-height:1.6em;
+}
+
+p.first {
+ margin-top:0.25em;
+}
+
+.noTop {
+ margin-top:0px !important;
+ padding-top:0px !important;
+ line-height:1em;
+}
+
+pre {
+ font-size:1.2em;
+ *font-size:1em;
+ color:#33cc33;
+}
+
+pre span {
+ color: #999;
+}
+
+pre {
+ font-size:1.25em;
+}
+
+ul {
+ margin-left:16px;
+ padding-left:0px;
+ margin-top:5px;
+ margin-bottom:5px;
+}
+
+.bright {
+ color:#ff6666;
+}
+
+dl {
+ margin-left:1em;
+}
+
+dl dt {
+ font-weight:bold;
+ border-bottom:1px dotted #555;
+ padding-bottom:4px;
+ margin-top:1.5em;
+ margin-right:2%;
+}
+
+dl dd {
+ margin-top:4px;
+ margin-left:0px;
+ margin-bottom:0.5em;
+}
+
+code,
+dl dt code {
+ color:#33cc33;
+ font-weight:normal;
+}
+
+dl dd code {
+ color:#ccc;
+}
+
+dl em {
+ color:#fff;
+ font-weight:normal;
+ padding-top:2px;
+ padding-bottom:0.5em;
+}
+
+code {
+ font-family:monaco,"VT-100","lucida console",terminal,monospace,courier,system,sans-serif;
+ font-size:1em;
+ font-weight:light;
+}
+
+#container {
+ position:relative;
+ background-color:#222;
+ padding:32px 16px 16px 16px;
+ border:1px solid #111;
+ max-width:60em;
+ _width:50em;
+ margin:0px auto;
+}
+
+#content {
+ position:relative;
+ z-index:2;
+}
+
+.alt {
+ color:#ccc;
+}
+
+/* seasonal decorations */
+
+#lights {
+ position:absolute;
+ border-top:1px solid #006600;
+ left:0px;
+ top:0px;
+ width:100%;
+ height:275px;
+ overflow:hidden;
+ z-index:1;
+ display:none;
+}
+
+.xlsf-light {
+ position:absolute;
+ margin-top:-1px;
+}
+
+.xlsf-fragment {
+ position:absolute;
+ background:transparent url(../lights/image/bulbs-50x50-fragments.png) no-repeat 0px 0px;
+ width:50px;
+ height:50px;
+}
+
+.xlsf-fragment-box {
+ position:absolute;
+ left:0px;
+ top:0px;
+ width:50px;
+ height:50px;
+ *width:100%;
+ *height:100%;
+ display:none;
+}
+
+.xlsf-cover {
+ position:fixed;
+ left:0px;
+ top:0px;
+ width:100%;
+ height:100%;
+ background:#fff;
+ opacity:1;
+ z-index:999;
+ display:none;
+}
+
+.special {
+ display:none;
+ _display: block; /* just you, IE 6. */
+ font-size:x-small;
+ color:#999;
+}
+
+ul li {
+ line-height:1.75em;
+}
