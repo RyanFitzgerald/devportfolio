@@ -101,6 +101,11 @@ justify-content: space-around;
     width: 300px;
 }
 
+.project_image >img {
+    height: 300px;
+    width: 300px;
+}
+
 .project_info {
     height: 300px;
     width: 600px;
