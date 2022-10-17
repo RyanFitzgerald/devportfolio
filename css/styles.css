@@ -963,4 +963,13 @@ footer {
   }
 }
 
+blockquote
+{
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 32px;
+    border-left: 4px solid #CCC;
+    padding-left: 8px;
+}
+
 /*# sourceMappingURL=styles.css.map */
