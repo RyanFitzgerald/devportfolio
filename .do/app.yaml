@@ -1,0 +1,8 @@
+name: portfolio
+statis_sites:
+  - environment_slug: html
+    github:
+      branch: main
+      deploy_on_push: true
+      repo:  OskarDuda/portfolio
+    name: portfolio
