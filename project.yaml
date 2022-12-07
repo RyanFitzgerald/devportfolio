@@ -1,5 +1,0 @@
-packages:
-  - name: portfolio
-    actions:
-      - name: app.py
-        runtime: 'python:default'
