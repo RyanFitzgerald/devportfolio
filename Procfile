@@ -1,1 +1,1 @@
-web: PYTHONPATH=`pwd`/.. && gunicorn --worker-tmp-dir /dev/shm --config gunicorn_config.py app:app
+web: export PYTHONPATH="$PWD && gunicorn --worker-tmp-dir /dev/shm --config gunicorn_config.py app:app
