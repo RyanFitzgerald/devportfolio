@@ -1,8 +1,7 @@
 name: portfolio
-static_sites:
-  - environment_slug: html
-    github:
-      branch: main
-      deploy_on_push: true
-      repo:  OskarDuda/portfolio
-    name: portfolio
+services:
+- name: web
+  github:
+    repo: OskarDuda/portfolio
+    deploy_on_push: true
+    branch: main
