@@ -1,5 +1,5 @@
 name: portfolio
-statis_sites:
+static_sites:
   - environment_slug: html
     github:
       branch: main
