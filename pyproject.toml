@@ -7,6 +7,7 @@ authors = ["Oskar Duda <oskar.duda.pl@gmail.com"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Flask = "^2.0.2"
+gunicorn = "^20.1.0"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
