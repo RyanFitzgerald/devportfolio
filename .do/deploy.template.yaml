@@ -1,5 +1,5 @@
 spec:
-  name: johnjoe
+  name: portfolio
   services:
     - name: web
       git:

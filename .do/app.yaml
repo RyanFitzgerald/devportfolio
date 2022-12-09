@@ -1,4 +1,4 @@
-name: johndoe
+name: portfolio
 services:
 - name: web
   github:
