@@ -28,13 +28,13 @@
                 <a href="#about">About</a>
             </li>
             <li>
-                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
             </li>
             <li>
                 <a href="#experience">Experience</a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
             </li>
             <li>
                 <a href="#skills">Skills</a>
@@ -77,7 +77,7 @@
                     </p>
                     <br>
                     <p>
-                        I’m originally from Tucson Arizona and moved to Los Angeles in 2006. Currently a senior at California State University, Northridge 
+                        I’m originally from Tucson Arizona and moved to Los Angeles in 2006. Currently a senior at California State University, Northridge (CSUN)
                         pursuing a bachelor’s degree in computer engineering with a minor in computer science. I have a 
                         strong passion for science and enjoy teaching myself and others new things because I believe 
                         anyone can learn anything.
@@ -103,7 +103,49 @@
     </div>
     <!-- End #about -->
 
-    <div id="experience" class="background-alt">
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/dmsp.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Sonar Integration - Drone Modular Smart Pallet</h3>
+                        <h5>NASA JPL – CSUN Autonomy Research Center</h5>
+                        <p>
+                            The project revolves around aggregating data from several different sensors, and fusing this information together using the Robot Operating System (ROS) to guide a roomba or drone successfully through obstacles. Sensors used for this project include lidar, sonar, and Noir Pi camera (implementing object detection). See experience section to learn about my contribution. 
+                        </p>
+                        <a href="https://github.com/CSUN-D-MSP-Team/Sonar">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/pr3-main-form.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>PR3 Hotel Management System</h3>
+                        <h5> CSUN CS Department</h5>
+                        <p>
+                            This application allows the front desk employee to perform necessary operations such as check-in/check-out of a guest, view a report of available/occupied rooms, and look up the name of a particular guest along with their room number. In terms of limitations, the hotel’s capacity is only 40 rooms, and it accepts guests who are 18 years or older. All the required information will be stored in a local and in Google's FireBase Realtime Database. See experience section to learn about my contribution.
+                        </p>
+                        <a href="https://github.com/PR3-Hotel-Manager/PR3">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="experience">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
             <div data-date="February 2022 – Present">
@@ -128,11 +170,34 @@
                     <li>Prepared lab equipment for upcoming lab experiments by calculating required circuit component values. </li>
                 </ul>
             </div>
+
+            <div data-date="June 2021 – Present">
+                <h3>NASA JPL – CSUN Autonomy Research Center</h3>
+                <h4>Co-Lead on Drone Modular Smart Pallet Project</h4>
+                <ul>
+                    <li>Developed software in python to acquire range data from a sonar that utilized the I2C bus on a Raspberry Pi. </li>
+                    <li>Integrated a sonar with ROS (Robot Operating System) by developing publisher and subscriber nodes and launch files. </li>
+                    <li>Held weekly office hours and tutorial sessions on designing fundamental BJT and MOSFET amplifiers. </li>
+                    <li>Managed a sub-team of 4 members whose responsibilities consisted of sonar, radar, GPS, and IMU ROS integration. </li>
+                    <li>Created presentations to share and discuss progress, issues, and goals with the team. </li>
+                </ul>
+            </div>
+
+            <div data-date="August 2022 – December 2022">
+                <h3>PR3 Hotel Management System – CSUN CS Department</h3>
+                <h4>Lead Software Engineer</h4>
+                <ul>
+                    <li>Developed a hotel management system using C#, WinForms, and Google Firebase Realtime Database. </li>
+                    <li>Managed a team of 3 members by delegating tasks, reviewing their code, and offering feedback. </li>
+                    <li>Created UML class diagrams, CRC cards, and a system use case diagram to plan software development. </li>
+                    <li>Used Agile software engineering methodologies, Jira project management system, GIT, and GitHub to develop software. </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- End #experience -->
 
-    <div id="education">
+    <div id="education"  class="background-alt">
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>California State University, Northridge</h3>
@@ -178,53 +243,6 @@
     </div>
     <!-- End #education -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/dmsp.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Co-Lead on Drone Modular Smart Pallet Project</h3>
-                        <h4>NASA JPL – California State University, Northridge Autonomy Research Center</h4>
-                        <p>
-                            Developed software in python to acquire range data from a sonar that utilized the I2C bus on a Raspberry Pi.
-                            Integrated a sonar with ROS (Robot Operating System) by developing publisher and subscriber nodes and launch files.
-                            Managed a sub-team of 4 members whose responsibilities consisted of sonar, radar, GPS, and IMU ROS integration.
-                            Created presentations to share and discuss progress, issues, and goals with the team.
-                        </p>
-                        <a href="https://github.com/CSUN-D-MSP-Team/Sonar">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/pr3-main-form.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Lead Software Engineer</h3>
-                        <h4>PR3 Hotel Management System – California State University, Northridge CS Department</h4>
-                        <p>
-                            Developed a hotel management system using C#, WinForms, and Google Firebase Realtime Database.
-                            Managed a team of 3 members by delegating tasks, reviewing their code, and offering feedback.
-                            Created UML class diagrams, CRC cards, and a system use case diagram to plan software development.
-                            Used Agile software engineering methodologies, Jira project management system, GIT, and GitHub to develop software.
-                        </p>
-                        <a href="https://github.com/PR3-Hotel-Manager/PR3">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
