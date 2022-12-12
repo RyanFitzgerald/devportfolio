@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Michael Granberry</h1>
+            <h2>Computer / Software Engineer</h2>
+            <a href="https://drive.google.com/file/d/10msQKqfhkUXIWoL5C_iH2ALsO8dNmpr1/view?usp=sharing" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                    <div class="profile-container">
+                        <image id="profileImage" src="images/me.jpg" />
+                     </div>
+                     <br>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Hi, I’m Michael Granberry and welcome to my portfolio site. 👨🏽‍💻
+                    </p>
+                    <br>
+                    <p>
+                        I’m originally from Tucson Arizona and moved to Los Angeles in 2006. Currently a senior at California State University, Northridge (CSUN)
+                        pursuing a bachelor’s degree in computer engineering with a minor in computer science. I have a 
+                        strong passion for science and enjoy teaching myself and others new things because I believe 
+                        anyone can learn anything.
+                    </p>
+                    <br>
+                    <p>
+                        I work as an instructional student assistant for two electrical 
+                        engineering labs, where I assist in teaching students how to design and build analog and digital 
+                        circuits. I also like to get lost in code and have developed software in C#, Swift, R, and Python 
+                        for personal and school projects. Furthermore, I’m involved in a NASA-JPL funded drone modular 
+                        smart palette project, which is currently my senior design project. We won 3rd place in the Fall 
+                        2022 senior design competition and hope to win first place in Spring 2023. 
+                    </p>
+                    <br>
+                    <p>
+                        Outside of school, I 
+                        love to fulfill my artistic side through skateboarding and playing guitar. But even then, I always 
+                        find myself back on my computer trying to learn a new programming language or technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/dmsp.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h4>Sonar Integration - Drone Modular Smart Pallet</h4>
+                        <h6>Python, ROS, Sonar Sensor, I2C Bus, Raspberry Pi</h6>
+                        <p>
+                            The project revolves around aggregating data from several different sensors, and fusing this information together using the Robot Operating System (ROS) to guide a roomba successfully through obstacles. I was responsible for developing software to aquire range data from three sonars that utilized the I2C bus on a Raspberry Pi. In addition, I integrated the sonars with ROS by developing publisher and subscriber nodes and launch files. See experience section to learn more about my contributions. 
+                        </p>
+                        <a href="https://github.com/CSUN-D-MSP-Team/Sonar">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/pr3-main-form.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h4>PR3 Hotel Management System</h4>
+                        <h6>C#, .NET, Window Forms, MSTest, JSON, Firebase Database</h6>
+                        <p>
+                            This application allows the front desk employee to perform necessary operations such as check-in/check-out of a guest, view a report of available/occupied rooms, and look up the name of a particular guest along with their room number. In terms of limitations, the hotel’s capacity is only 40 rooms, and it accepts guests who are 18 years or older. All the required information will be stored in a local and in Google's FireBase Realtime Database. See experience section to learn about my contributions.
+                        </p>
+                        <a href="https://github.com/PR3-Hotel-Manager/PR3">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/nor-rom.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h4>NOR ROM Array with Shift Register Design</h4>
+                        <h6>CD4007 CMOS Transistors, 7474 D-FlipFlop, Function Generator, Oscilloscope</h6>
+                        <p>
+                            Under Construction! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit. Leo a diam sollicitudin tempor id eu nisl nunc mi. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/stepper-motor.JPG" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h4>Stepper Motor</h4>
+                        <h6>ARMv7, Keil uVision4, LPC2148 Microprocessor</h6>
+                        <p>
+                            Under Construction! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit. Leo a diam sollicitudin tempor id eu nisl nunc mi. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/vhdl-div.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h4>Unsigned Integer Division by Constant Circuit</h4>
+                        <h6>VHDL, Vivado</h6>
+                        <p>
+                            Under Construction! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit. Leo a diam sollicitudin tempor id eu nisl nunc mi. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="experience">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="February 2022 – Present">
+                <h3>California State University, Northridge ECE Department</h3>
+                <h4>ECE Instructional Student Assistant – Theory of Digital Systems Lab</h4>
+                <ul>
+                    <li>Assisted 20 students in building combinational and sequential digital circuits that met specific design requirements. </li>
+                    <li>Performed schematic design and simulations in PSPICE for circuit verification with students. </li>
+                    <li>Helped students debug their digital logic circuits. </li>
+                    <li>Developed lab experiments for the professor and prepared lab equipment for upcoming experiments. </li>
+                </ul>
+            </div>
+
+            <div data-date="February 2022 – Present">
+                <h3>California State University, Northridge ECE Department</h3>
+                <h4>ECE Instructional Student Assistant – Electronics 1 Lab</h4>
+                <ul>
+                    <li>Assisted 20 students in building circuits using diodes, BJTs, and MOSFETs that met specific design requirements. </li>
+                    <li>Performed schematic design and simulations in PSPICE for circuit verification with students. </li>
+                    <li>Held weekly office hours and tutorial sessions on designing fundamental BJT and MOSFET amplifiers. </li>
+                    <li>Helped students debug their analog circuits. </li>
+                    <li>Prepared lab equipment for upcoming lab experiments by calculating required circuit component values. </li>
+                </ul>
+            </div>
+
+            <div data-date="June 2021 – Present">
+                <h3>NASA JPL – CSUN Autonomy Research Center</h3>
+                <h4>Co-Lead on Drone Modular Smart Pallet Project</h4>
+                <ul>
+                    <li>Developed software in python to acquire range data from a sonar that utilized the I2C bus on a Raspberry Pi. </li>
+                    <li>Integrated a sonar with ROS (Robot Operating System) by developing publisher and subscriber nodes and launch files. </li>
+                    <li>Held weekly office hours and tutorial sessions on designing fundamental BJT and MOSFET amplifiers. </li>
+                    <li>Managed a sub-team of 4 members whose responsibilities consisted of sonar, radar, GPS, and IMU ROS integration. </li>
+                    <li>Created presentations to share and discuss progress, issues, and goals with the team. </li>
+                </ul>
+            </div>
+
+            <div data-date="August 2022 – December 2022">
+                <h3>PR3 Hotel Management System – CSUN CS Department</h3>
+                <h4>Lead Software Engineer</h4>
+                <ul>
+                    <li>Developed a hotel management system using C#, WinForms, and Google Firebase Realtime Database. </li>
+                    <li>Managed a team of 3 members by delegating tasks, reviewing their code, and offering feedback. </li>
+                    <li>Created UML class diagrams, CRC cards, and a system use case diagram to plan software development. </li>
+                    <li>Used Agile software engineering methodologies, Jira project management system, GIT, and GitHub to develop software. </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education"  class="background-alt">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>California State University, Northridge</h3>
+            <span class="education-date">Expected Graduation: Fall 2023</span>
+            <h4>Bachelor of Science: Computer Engineering - GPA: 3.85</h4>
+            <ul>
+                <li> Deans List
+                    <ul>
+                        <li>Fall 2020, Fall 2021, Spring 2022</li>
+                    </ul>
+                </li>
+                <li> Scholarship
+                    <ul>
+                        <li>Associated Students General Scholarship, Fall 2021 - Spring 2022</li>
+                    </ul>
+                </li>
+                <li> Classes:
+                    <ul>
+                        <li>Microprocessor Systems, Design of Digital Computers, Theory of Digital Systems, Digital Electronics, Semiconductor Electronics, VHDL, Differential Equations, Linear Systems and Signals</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>California State University, Northridge</h3>
+            <span class="education-date">Expected Graduation: Fall 2023</span>
+            <h4>Minor: Computer Science - GPA: 3.85</h4>
+            <ul>
+                <li> Classes:
+                    <ul>
+                        <li>Software Engineering, Advanced Data Structures with Java, Computer Organization, MATLAB Numerical Analysis</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- End .education-block -->
+        <div class="education-block">
+            <h3>Santa Monica College</h3>
+            <span class="education-date">Fall 2016 - Spring 2020</span>
+            <h4> Associate of Arts: General Sciecne - GPA: 3.22</h4>
+            <ul>
+                <li> Honors
+                    <ul>
+                        <li>Graduated with Honors</li>
+                    </ul>
+                </li>
+                <li> Classes:
+                    <ul>
+                        <li>C, C++, Intro to Data Structures with C++, Calculus 1 2 & 3, Linear Algebra</li>
+                      </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>C#</li>
+            <li>C/C++</li>
+            <li>Swift</li>
+            <li>Java</li>
+            <li>ARMv7</li>
+            <li>VHDL</li>
+            <li>Unit Testing</li>
+            <li>GIT</li>
+            <li>GitHub</li>
+            <li>MATLAB</li>
+            <li>Vivado</li>
+            <li>Linux</li>
+            <li>ROS (Robot Operating System</li>
+            <li>OrCAD Capture PSPICE</li>
+            <li>LaTeX</li>
+            <li>Breadboarding</li>
+            <li>Oscilloscope</li>
+            <li>Function Generator</li>
+            <li>DMM</li>
+            <li>DC Power Supply</li>
+            <li>Circuit Components Familiarity</li>
+            <li>Arduino</li>
+            <li>Raspberry Pi</li>
+            <li>Tutoring / Teaching</li>
+            <li>Agile Development Process</li>
+            <li>JIRA</li>
+            <li>Project Management</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formsubmit.co/el/nakesa">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2022</span> Michael Granberry
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/michaelgranberryii/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/michaelgranberryii" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/mikegranberryii/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
