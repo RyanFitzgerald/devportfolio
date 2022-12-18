@@ -1,0 +1,24 @@
+
+{{ partial "sub_footer.html" . }}
+</div>
+
+{{ with .Site.Params.extra }}
+{{ if .highlightjs }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  {{ range .highlightjslanguages }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{.}}.min.js"></script>
+  {{ end }}
+
+<script type="text/javascript">
+hljs.initHighlightingOnLoad();
+</script>
+{{ end }}
+{{ end }}
+
+{{ template "_internal/google_analytics_async.html" . }}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+<script src="/js/custom.js"></script>
+</body>
+</html>

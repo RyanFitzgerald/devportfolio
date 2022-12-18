@@ -1,0 +1,28 @@
+<section id="list-pane" class="list">
+  <ul >
+    {{ range .Data.Pages.ByPublishDate.Reverse }}
+    <li class="list-entry">
+      <a class="list-entry-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <p class="meta">
+        {{ if not .Date.IsZero }} {{ .Date.Format .Site.Params.dateformat | upper }} {{end}}
+	- {{ math.Round (div (countwords .Content) 220.0) }} MIN READ 
+        <span class="category">
+        {{ if isset .Params "categories" }}
+        {{ $total := len .Params.categories }}
+        {{ if gt $total 0 }}
+        —
+        {{ $total := sub $total 1 }}
+        {{ range $i, $cat := sort .Params.categories }}
+        <a class="category" href="{{ "/categories/" | relURL }}{{ $cat | humanize | urlize }}">{{ $cat | upper }}</a>{{ if lt $i $total }}, {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        </span>
+      </p>
+      <p class="excerpt">
+      {{ .Description }}
+      </p>
+    </li>
+    {{ end }}
+  </ul>
+</section>

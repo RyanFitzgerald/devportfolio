@@ -1,0 +1,11 @@
+<footer class="text-center footer">
+  {{ with .Site.Params.extra }}
+  <h6 class="text-center copyright">{{ .copyright | markdownify }}</h6>
+  {{ if ne .poweredby false }}
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo  v{{ hugo.Version }}</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  {{ end }}
+      {{ if ne .displayrssicon false }}
+      <h6><a href="{{ .RSSLink }}" aria-label="RSS Feed"><i class="fas fa-rss" aria-hidden="true"></i></a></h6>
+    {{ end }}
+  {{ end }}
+</footer>

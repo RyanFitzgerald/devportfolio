@@ -1,0 +1,14 @@
+<section id="info-pane" class="text-center info">
+  {{ with .Site.Params.intro }}
+  <h3 class="intro">{{ . | markdownify }}</h3>
+  {{ end }}
+    <br/>
+    {{ with .Site.Params.current }}
+    <h4 class="description"><u>Current status</u>: <i>{{ . | markdownify }}</i></h4>
+    {{ end }}
+    <br/>
+  {{ with .Site.Params.description }}
+  <h4 class="description">{{ . | markdownify }}</h4>
+  {{ end }}
+    <hr />
+</section>

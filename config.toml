@@ -1,0 +1,38 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Teiva Harsanyi'
+theme = 'hugo-goa'
+[params]
+author = 'Teiva Harsanyi'
+intro = 'Senior Software Engineer at Docker'
+current = 'Reading [The Rust Programming Language](https://doc.rust-lang.org/book/) and doing the [2022 Advent of Code](https://github.com/teivah/advent-of-code-2022/) (Rust & Go).'
+description = """
+I'm a software engineer specializing in reliability, performance, scalability, and observability topics. I have extensive experience designing and implementing resilient, responsive, scalable, and maintainable systems. I love learning, sharing, and facing challenges. Meanwhile, I speak English and French (native).
+
+My life philosophy is based on [改善](https://en.wikipedia.org/wiki/Kaizen) (continuous improvement). In a nutshell, it's not important how fast you can be; what's essential is to keep a regular and steady progression.
+
+Work-wise, I have 11 years of experience in software engineering with a focus on backend development and distributed systems. I'm currently working at Docker in the registry team. Prior to that, I worked in different companies. At Beat, I was a staff engineer in the matching domain, where I designed, implemented, and operated critical services with a strong focus on reliability and observability. At Utility Warehouse, I refactored the company's notification platform from a distributed monolith to a microservice paradigm leading to an elastic architecture and an average latency reduction of +90%. At SkySoft-ATM, I worked in a safety-critical environment in the context of the Swiss air navigation service provider where I designed and implemented the central data repository used to store and compute all the flight events. Before, I worked as an architect and tech lead at Axa and Airbus Helicopters on integration platforms.
+
+In 2022, I published 📖 [100 Go Mistakes and How to Avoid Them](https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them). In summary, the book shows common programming mistakes in Go and how to fix them using idiomatic code. So far, the book has a nice 4.7/5 rating (avg on [Amazon.com](https://www.amazon.com/100-Mistakes-How-Avoid-Them/dp/1617299596), [Goodreads.com](https://www.goodreads.com/book/show/58571862-100-go-mistakes-and-how-to-avoid-them), and [Manning.com](https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them)) and I'm delighted that it helped that many people. Meanwhile, I keep writing on my blog: [blog.teivah.io](http://blog.teivah.io) (+45 posts, half a million visits).
+
+I gave a few talks in the past:
+- [Reliability?](https://www.slideshare.net/TeivaHarsanyi/reliability-251744387) (2022)
+- [How to make mistakes in Go](https://changelog.com/gotime/190) - Go Time episode #190 (2021)
+- [Mechanical Sympathy in Go](https://www.youtube.com/watch?v=cetmDfqr2BU&ab_channel=GoT%C3%BCrkiye) - GopherCon Turkey (2020)
+
+I also love open-source. I'm available on GitHub [@teivah](https://github.com/teivah). Here are a few examples of repositories that I created:
+- [Algo Deck](https://github.com/teivah/algodeck) and [Design Deck](https://github.com/teivah/designdeck): a collection of flash cards to help people preparing their algorithm and system design interviews.
+- [100 Go Mistakes](https://github.com/teivah/100-go-mistakes): source code and summary of my book.
+- [Broadcast](https://github.com/teivah/broadcast): A notification broadcaster in Go.
+- [Majorana](https://github.com/teivah/majorana): A RISC-V virtual processor, written in Rust.
+
+Furthermore, I'm also available on [Codementor](https://www.codementor.io/@teivaharsanyi), an online platform providing instant one-on-one help for software developers.
+
+Besides work, I love reading, traveling and baking.
+"""
+authorimage = '934784.jpg'
+[params.social]
+github = 'teivah'
+linkedin = 'teiva-harsanyi'
+twitter = 'teivah'
+medium = '@teivah'
