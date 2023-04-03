@@ -603,6 +603,9 @@
 .fa-trophy:before {
   content: "\f091";
 }
+.fa-buymeacoffee-square:before {
+  content: "\f33d";
+}
 .fa-github-square:before {
   content: "\f092";
 }
@@ -630,6 +633,9 @@
 .fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
+}
+.fa-buymeacoffee:before {
+  content: "\f33d";
 }
 .fa-github:before {
   content: "\f09b";
