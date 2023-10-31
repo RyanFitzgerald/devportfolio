@@ -10,8 +10,8 @@ As an enthusiastic Diploma 4 graduate in Computer Engineering from Politeknik Ne
 
 If you're interested in collaborating or want to discuss further, feel free to reach out to me via:
 
-- Email: [mrizkymaulidhan46@gmail.com]
-- LinkedIn: [https://www.linkedin.com/in/mrizkymaulidhan/]
+- Email: mrizkymaulidhan46@gmail.com
+- LinkedIn: https://www.linkedin.com/in/mrizkymaulidhan/
 
 Thank you for visiting my repository. I hope you find the projects and work I've shared to be beneficial. If you have any questions or comments, don't hesitate to get in touch!
 
