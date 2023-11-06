@@ -16,14 +16,22 @@ header ul {
 }
 
 header ul li a {
-    font-family:'Lato', sans-serif;
-    font-size:20px;
+    font-size: 17px;
+    font-weight: bold;
     color: #fff;
 }
 
 .shadow {
-    border: None;
-    box-shadow: None;
+    max-width: 700px;
+}
+
+header.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+header.active ul li a {
+    font-size: 15px;
+    color: #1d6fa5;
 }
 
 #lead a {
@@ -105,12 +113,11 @@ li {
 }
 
 .skills-block {
-    width: 53%;
-    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
     background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
+    border: 1px solid #dcd9d9;
+    padding: 15px;
 }
 
 .sub-heading {
@@ -126,7 +133,7 @@ li {
 }
 
 .skills-block-img {
-    width: 53%;
+    max-width: 700px;
     margin-bottom: 20px;
     background-color: white;
     border: 1px solid #ddd;
@@ -158,7 +165,7 @@ li {
 #certifs .slider-container {
     position: relative;
     overflow: hidden;
-    width: 53%;
+    max-width: 700px;
     margin: 10px auto;
     padding-bottom: 29px;
     border: 1px solid #74808a;
