@@ -23,6 +23,7 @@ header ul li a {
 
 .shadow {
     max-width: 700px;
+    box-shadow: none;
 }
 
 header.active {
