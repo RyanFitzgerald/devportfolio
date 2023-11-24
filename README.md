@@ -15,6 +15,10 @@ Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgeral
 * Fully responsive
 * Comes with Bootstrap grid system
 * Easy colour changes can be done through simple variable edits
+* Easy to customise skills and projects
+
+## Notes
+To customize the data of skills and projects, edit the data in `js/custom.js` file.
 
 ## Contents
 

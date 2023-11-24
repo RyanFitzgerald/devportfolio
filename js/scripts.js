@@ -10,7 +10,7 @@
     portfolio website.
 */
 
-(function($) {
+(function ($) {
 
     // Show current year
     $("#current-year").text(new Date().getFullYear());
@@ -19,7 +19,7 @@
     $('html').removeClass('no-js');
 
     // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+    $('header a').click(function (e) {
 
         // Treat as normal link if no-scroll class
         if ($(this).hasClass('no-scroll')) return;
@@ -39,14 +39,14 @@
     });
 
     // Scroll to top
-    $('#to-top').click(function() {
+    $('#to-top').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
     });
 
     // Scroll to first element
-    $('#lead-down span').click(function() {
+    $('#lead-down span').click(function () {
         var scrollDistance = $('#lead').next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
@@ -54,47 +54,74 @@
     });
 
     // Create timeline
-    $('#experience-timeline').each(function() {
+    $('#experience-timeline').each(function () {
 
         $this = $(this); // Store reference to this
         $userContent = $this.children('div'); // user content
 
         // Create each timeline block
-        $userContent.each(function() {
+        $userContent.each(function () {
             $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
         });
 
         // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
+        $this.find('.vtimeline-point').each(function () {
             $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
         });
 
         // Add dates to the timeline if exists
-        $this.find('.vtimeline-content').each(function() {
+        $this.find('.vtimeline-content').each(function () {
             var date = $(this).data('date');
             if (date) { // Prepend if exists
-                $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
+                $(this).parent().prepend('<span class="vtimeline-date">' + date + '</span>');
             }
         });
 
     });
 
     // Open mobile menu
-    $('#mobile-menu-open').click(function() {
+    $('#mobile-menu-open').click(function () {
         $('header, body').addClass('active');
     });
 
     // Close mobile menu
-    $('#mobile-menu-close').click(function() {
+    $('#mobile-menu-close').click(function () {
         $('header, body').removeClass('active');
     });
 
     // Load additional projects
-    $('#view-more-projects').click(function(e){
+    $('#view-more-projects').click(function (e) {
         e.preventDefault();
-        $(this).fadeOut(300, function() {
+        $(this).fadeOut(300, function () {
             $('#more-projects').fadeIn(300);
         });
     });
 
 })(jQuery);
+
+//DISPLAY DYNAMICLY THE DATA
+const skills = document.querySelector('#skills ul');
+const projects = document.querySelector('#projects .container .row');
+
+SKILLS.forEach(skill => {
+    skills.innerHTML += `<li>${skill.name}</li>`;
+});
+
+PROJECTS.forEach(project => {
+    projects.innerHTML += `
+    <div class="project shadow-large">
+    <div class="project-image">
+        <img src="${project.image}" alt="${project.name}">
+    </div>
+    <!-- End .project-image -->
+    <div class="project-info">
+        <h3>${project.name}</h3>
+        <p>
+            ${project.description}
+        </p>
+        <a href="${project.url}" target="_blank">View Project</a>
+    </div>
+    <!-- End .project-info -->
+</div>`;
+});
+
