@@ -1,4 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+
+from backend import hello
+
 app = Flask(__name__,
             static_url_path='',
             static_folder='static',
@@ -8,3 +11,8 @@ app = Flask(__name__,
 @app.route("/")
 def home():
     return render_template('index.html')
+
+
+@app.route("/rest/hello")
+def hello():
+    return hello.hello_world(request)
