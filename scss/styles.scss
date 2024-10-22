@@ -356,6 +356,28 @@ footer {
     overflow: hidden;
 }
 
+#profile-container {
+    position: absolute;
+    z-index: 10;
+    top: 22.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #E4ECE4;
+}
+
+.profile-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the container */
+    object-position: top;  /* Adjusts the image positioning */
+}
+
 #lead-content {
     position: absolute;
     z-index: 10;
