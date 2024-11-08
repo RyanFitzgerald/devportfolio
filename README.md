@@ -303,4 +303,4 @@ The optional section blocks have styling for h3 (the block title), h4, p, and ul
 ## Changelog
 
 ## 참고
-8 참고 사항 URL = https://finlife.fss.or.kr/finlife/ldng/lfstsFunds/list.do
+참고 사항 URL = https://finlife.fss.or.kr/finlife/ldng/lfstsFunds/list.do
