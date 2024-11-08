@@ -162,6 +162,10 @@ Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgeral
 - **데이터 계산**: 월 상환액 계산 및 최고, 최저, 평균 금리 등의 계산은 애플리케이션 로직에서 처리하며, 필요한 데이터는 각 옵션 테이블에서 가져옵니다.
 - **확장성**: 새로운 대출 상품이나 옵션이 추가될 경우, 해당 테이블에 새로운 레코드를 추가하면 되므로 확장성이 좋습니다.
 
+## 수정
+
+### 1차 ERD 수정 24.11.08 
+![LoanCalculator](https://github.com/user-attachments/assets/f13d3eb6-6588-4631-932c-bdcb318aef21)
 
 
 ### Making Edits / Customizing the Template
@@ -420,6 +424,7 @@ The template comes with an optional section that can be added to the page markup
 You can copy .optional-section-block for each new item you wish you have in the optional section. Also, the background-alt class may need to be removed depending on where the optional section is placed in your layout as this adds the grey background. If you play it at the bottom after "Skills", it can be used as is. Also, by default the border is applied at the top, but this can also be adjusted as needed.
 
 The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
+
 
 
 ## 참고
