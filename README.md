@@ -37,11 +37,100 @@ Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgeral
 - [Changelog](#changelog)
 - [License](#license)
 
-## Setup and Configuration
+## ERD 구성
 
-The setup required can be broken into two types:
-1. If you want to make edits or customize the template
-2. If you just want to add your information as use as is
+### 1. 금융회사 테이블 (FinancialCompany)
+설명: 금융회사에 대한 기본 정보를 저장합니다.
+컬럼:
+fin_co_no (PK): 금융회사 번호
+kor_co_nm: 금융회사명
+### 2. 금융상품 테이블 (FinancialProduct)
+설명: 금융상품의 기본 정보를 저장하는 테이블로, 주택담보대출, 전세자금대출, 개인신용대출을 모두 포함합니다.
+컬럼:
+fin_prdt_cd (PK): 금융상품 코드
+fin_co_no (FK): 금융회사 번호 (FinancialCompany.fin_co_no 참조)
+fin_prdt_nm: 금융상품명
+join_way: 가입 방법
+loan_inci_expn: 부대 비용
+erly_rpay_fee: 중도상환수수료
+dly_rate: 연체 이자율
+loan_lmt: 대출 한도
+dcls_month: 공시 제출 월
+dcls_strt_day: 공시 시작일
+dcls_end_day: 공시 종료일
+fin_co_subm_day: 금융회사 제출일
+prdt_div: 상품 구분 (M: 주택담보대출, R: 전세자금대출, C: 개인신용대출)
+개인신용대출 전용 컬럼:
+crdt_prdt_type: 신용대출 상품 구분
+crdt_prdt_type_nm: 신용대출 상품 구분명
+###3. 주택담보대출 옵션 테이블 (MortgageOption)
+설명: 주택담보대출 상품의 세부 옵션 정보를 저장합니다.
+컬럼:
+id (PK): 옵션 ID
+fin_prdt_cd (FK): 금융상품 코드 (FinancialProduct.fin_prdt_cd 참조)
+dcls_month: 공시 제출 월
+mrtg_type: 담보 종류 코드
+mrtg_type_nm: 담보 종류명
+rpay_type: 상환 방식 코드
+rpay_type_nm: 상환 방식명
+lend_rate_type: 금리 유형 코드
+lend_rate_type_nm: 금리 유형명
+lend_rate_min: 최소 금리
+lend_rate_max: 최대 금리
+lend_rate_avg: 평균 금리
+### 4. 전세자금대출 옵션 테이블 (JeonseOption)
+설명: 전세자금대출 상품의 세부 옵션 정보를 저장합니다.
+컬럼:
+id (PK): 옵션 ID
+fin_prdt_cd (FK): 금융상품 코드 (FinancialProduct.fin_prdt_cd 참조)
+dcls_month: 공시 제출 월
+rpay_type: 상환 방식 코드
+rpay_type_nm: 상환 방식명
+lend_rate_type: 금리 유형 코드
+lend_rate_type_nm: 금리 유형명
+lend_rate_min: 최소 금리
+lend_rate_max: 최대 금리
+lend_rate_avg: 평균 금리
+### 5. 개인신용대출 옵션 테이블 (CreditLoanOption)
+설명: 개인신용대출 상품의 세부 옵션 정보를 저장합니다.
+컬럼:
+id (PK): 옵션 ID
+fin_prdt_cd (FK): 금융상품 코드 (FinancialProduct.fin_prdt_cd 참조)
+dcls_month: 공시 제출 월
+crdt_prdt_type: 신용대출 상품 구분
+crdt_lend_rate_type: 금리 구분 코드
+crdt_lend_rate_type_nm: 금리 구분명
+crdt_grad_1: 신용 등급 1등급 금리
+crdt_grad_4: 신용 등급 4등급 금리
+crdt_grad_5: 신용 등급 5등급 금리
+crdt_grad_6: 신용 등급 6등급 금리
+crdt_grad_10: 신용 등급 10등급 금리
+crdt_grad_11: 신용 등급 11등급 금리
+crdt_grad_12: 신용 등급 12등급 금리
+crdt_grad_13: 신용 등급 13등급 금리
+crdt_grad_avg: 평균 금리
+ERD 관계
+FinancialCompany 1 --- N FinancialProduct
+하나의 금융회사는 여러 금융상품을 가질 수 있습니다.
+FinancialProduct 1 --- N MortgageOption
+주택담보대출 상품은 여러 옵션을 가질 수 있습니다.
+FinancialProduct 1 --- N JeonseOption
+전세자금대출 상품은 여러 옵션을 가질 수 있습니다.
+FinancialProduct 1 --- N CreditLoanOption
+개인신용대출 상품은 여러 옵션을 가질 수 있습니다.
+키(Key) 구성
+기본 키(PK):
+FinancialCompany.fin_co_no
+FinancialProduct.fin_prdt_cd
+각 옵션 테이블의 id
+외래 키(FK):
+FinancialProduct.fin_co_no → FinancialCompany.fin_co_no
+각 옵션 테이블의 fin_prdt_cd → FinancialProduct.fin_prdt_cd
+### 추가 고려 사항
+상품 구분 (prdt_div): FinancialProduct 테이블에서 상품의 종류를 구분하기 위해 prdt_div 컬럼을 사용한다. 이를 통해 특정 상품 유형에 따라 해당하는 옵션 테이블과 연계할 수 있다.
+데이터 계산: 월 상환액 계산 및 최고, 최저, 평균 금리 등의 계산은 애플리케이션 로직에서 처리하며, 필요한 데이터는 각 옵션 테이블에서 가져온다.
+확장성: 새로운 대출 상품이나 옵션이 추가될 경우, 해당 테이블에 새로운 레코드를 추가하면 되므로 확장성이 좋다.
+
 
 ### Making Edits / Customizing the Template
 
