@@ -300,7 +300,6 @@ You can copy .optional-section-block for each new item you wish you have in the 
 
 The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
 
-## Changelog
 
 ## 참고
 참고 사항 URL = https://finlife.fss.or.kr/finlife/ldng/lfstsFunds/list.do
