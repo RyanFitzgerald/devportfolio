@@ -1,0 +1,12 @@
+asgiref==3.8.1
+certifi==2024.2.2
+charset-normalizer==3.3.2
+Django==4.2.11
+django-environ==0.11.2
+djangorestframework==3.15.1
+idna==3.7
+requests==2.31.0
+sqlparse==0.5.0
+typing-extensions==4.11.0
+tzdata==2024.1
+urllib3==2.2.1
