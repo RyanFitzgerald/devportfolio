@@ -1,52 +1,55 @@
 from rest_framework import serializers
-from .models import FinancialCompany, FinancialProduct, MortgageOption, JeonseOption
+from .models import FinancialCompany, FinancialProduct, MortgageOption, JeonseOption, CreditLoanOption
 
-
+# FinancialCompany Serializer
 class FinancialCompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = FinancialCompany
-        fields = ['pk', 'field']
+        fields = ['company_id', 'company_name']
 
 
+# FinancialProduct Serializer
 class FinancialProductSerializer(serializers.ModelSerializer):
-    class FinancialProductSerializer(serializers.ModelSerializer):
-        user = serializers.StringRelatedField(
-            read_only=True)  # 사용자 필드를 읽기 전용으로 설정
-        financial_company = serializers.StringRelatedField(
-            source='fin_co_no', read_only=True)
-
-        class Meta:
-            model = FinancialProduct
-            fields = [
-                'fin_prdt_cd', 'fin_prdt_nm', 'join_way', 'loan_inci_expn',
-                'erly_rpay_fee', 'dly_rate', 'loan_lmt', 'dcls_month',
-                'dcls_strt_day', 'dcls_end_day', 'fin_co_subm_day', 'prdt_div',
-                'financial_company', 'user'  # 추가된 user 필드
-            ]
-            read_only_fields = ['user']  # user 필드를 읽기 전용으로 설정
+    class Meta:
+        model = FinancialProduct
+        fields = [
+            'product_id', 'user', 'product_name', 'join_way', 'loan_inci_expn',
+            'erly_rpay_fee', 'dly_rate', 'loan_lmt', 'dcls_month', 
+            'dcls_strt_day', 'dcls_end_day', 'fin_co_subm_day', 
+            'prdt_div', 'fin_co_no'
+        ]
+        read_only_fields = ['user']
 
 
+# MortgageOption Serializer
 class MortgageOptionSerializer(serializers.ModelSerializer):
-    financial_product = FinancialProductSerializer(
-        source='fk', read_only=True)  # 외래키 필드
-
     class Meta:
         model = MortgageOption
         fields = [
-            'pk', 'field', 'field2', 'field3', 'field4', 'field5',
-            'field6', 'field7', 'field8', 'field9', 'field10',
-            'financial_product'
+            'option_id', 'dcls_month', 'mrtg_type', 'mrtg_type_nm', 
+            'rpay_type', 'rpay_type_nm', 'lend_rate_type', 'lend_rate_type_nm',
+            'lend_rate_min', 'lend_rate_max', 'lend_rate_avg', 'fin_prdt_cd'
         ]
 
 
+# JeonseOption Serializer
 class JeonseOptionSerializer(serializers.ModelSerializer):
-    financial_product = FinancialProductSerializer(
-        source='fk', read_only=True)  # 외래키 필드
-
     class Meta:
         model = JeonseOption
         fields = [
-            'pk', 'field', 'field2', 'field3', 'field4', 'field5',
-            'field6', 'field7', 'field8',
-            'financial_product'
+            'option_id', 'dcls_month', 'rpay_type', 'rpay_type_nm', 
+            'lend_rate_type', 'lend_rate_type_nm', 'lend_rate_min', 
+            'lend_rate_max', 'lend_rate_avg', 'fin_prdt_cd'
+        ]
+
+
+# CreditLoanOption Serializer
+class CreditLoanOptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CreditLoanOption
+        fields = [
+            'option_id', 'dcls_month', 'crdt_prdt_type', 'crdt_lend_rate_type', 
+            'crdt_lend_rate_type_nm', 'crdt_grad_1', 'crdt_grad_4', 'crdt_grad_5', 
+            'crdt_grad_6', 'crdt_grad_10', 'crdt_grad_11', 'crdt_grad_12', 
+            'crdt_grad_13', 'crdt_grad_avg', 'fin_prdt_cd'
         ]
