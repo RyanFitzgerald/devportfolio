@@ -7,17 +7,21 @@ export const useBankStore = defineStore("bank", () => {
 
   // 회원가입 요청 액션
   const SignUp = function (payload) {
-    const { name, password1, password2, email } = payload;
+    const { username, password1, password2, email } = payload;
     axios({
       method: "post",
       url: `${API_URL}/accounts/signup/`,
       data: {
-        name,
+        username,
         password1,
         password2,
         email,
       },
-    }).then((res) => {});
+    })
+      .then((res) => {
+        console.log("회원가입이 완료 되었습니다.");
+      })
+      .catch((err) => console.log(err));
   };
-  return {};
+  return { SignUp };
 });
