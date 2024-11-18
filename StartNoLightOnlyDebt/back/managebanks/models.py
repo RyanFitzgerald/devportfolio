@@ -12,7 +12,6 @@ class FinancialCompany(models.Model):
 
 class FinancialProduct(models.Model):
     product_id = models.CharField(max_length=255, primary_key=True)  # 'pk'를 'product_id'로 변경
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # 사용자와의 연결
     product_name = models.CharField(max_length=255, null=True)           # 상품명
     join_way = models.CharField(max_length=255, null=True)               # 가입 방법
     loan_inci_expn = models.TextField(null=True)                         # 부대 비용
