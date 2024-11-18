@@ -22,7 +22,11 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink, RouterView } from "vue-router";
+import { ref, onMounted } from "vue";
+import axios from "axios";
+
+// 데이터 상태 정의
 </script>
 
 <style scoped></style>

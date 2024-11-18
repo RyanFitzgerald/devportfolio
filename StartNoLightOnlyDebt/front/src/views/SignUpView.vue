@@ -28,7 +28,7 @@
       <br />
 
       <input type="submit" value="Sign Up" />
-    </form>
+    </form>``
   </div>
 </template>
 
