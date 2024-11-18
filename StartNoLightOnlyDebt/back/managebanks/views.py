@@ -11,27 +11,68 @@ def parse_date(date_str):
     except (ValueError, TypeError):
         return None
 
-class FetchFinancialData(APIView):
-    def get(self, request):
-        # 로그인 확인
-        # if not request.user.is_authenticated:
-        #     return Response(
-        #         {"error": "Authentication required to fetch financial data."},
-        #         status=status.HTTP_403_FORBIDDEN
-        #     )
 
-        # API 엔드포인트와 인증키
+class FetchFinancialCompanyData(APIView):
+    """
+    금융회사 API를 통해 회사 데이터를 가져오고 저장합니다.
+    """
+    def get(self, request):
+        url = "https://finlife.fss.or.kr/finlifeapi/companySearch.json"
+        auth_key = 'a9151a31e6015873973e2a2402878959'
+        params = {'auth': auth_key}
+
+        try:
+            # API 호출
+            response = requests.get(url, params=params)
+            if response.status_code != 200:
+                return Response(
+                    {"error": f"Failed to fetch data: {response.status_code}", "details": response.text},
+                    status=response.status_code
+                )
+            
+            # JSON 데이터 파싱
+            data = response.json()
+            base_list = data.get('result', {}).get('baseList', [])
+            if not base_list:
+                return Response({"message": "No company data found in API response."}, status=status.HTTP_200_OK)
+
+            # 데이터 저장
+            for company_data in base_list:
+                fin_co_no = company_data.get('fin_co_no')
+                kor_co_nm = company_data.get('kor_co_nm')
+                homp_url = company_data.get('homp_url', None)  # 홈페이지 주소
+                if not fin_co_no or not kor_co_nm:
+                    continue  # 필수 데이터가 없으면 건너뜀
+
+                # 데이터베이스에 저장 또는 업데이트
+                FinancialCompany.objects.update_or_create(
+                    company_id=fin_co_no,
+                    defaults={
+                        'company_name': kor_co_nm,
+                        'homepage': homp_url  # null 값도 허용
+                    }
+                )
+
+            return Response({"message": "Financial company data saved successfully."}, status=status.HTTP_200_OK)
+
+        except requests.RequestException as e:
+            # 요청 오류 처리
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class FetchFinancialData(APIView):
+    """
+    대출 API를 통해 금융상품과 옵션 데이터를 가져오고 저장합니다.
+    """
+    def get(self, request):
+        # 대출 API 엔드포인트
         endpoints = {
             'credit': 'https://finlife.fss.or.kr/finlifeapi/creditLoanProductsSearch.json',
             'jeonse': 'https://finlife.fss.or.kr/finlifeapi/rentHouseLoanProductsSearch.json',
             'mortgage': 'https://finlife.fss.or.kr/finlifeapi/mortgageLoanProductsSearch.json',
         }
         auth_key = 'a9151a31e6015873973e2a2402878959'
-        params = {
-            'auth': auth_key,
-            'topFinGrpNo': '020000',
-            'pageNo': 1
-        }
+        params = {'auth': auth_key, 'topFinGrpNo': '020000', 'pageNo': 1}
 
         all_responses = {}
         for key, url in endpoints.items():
@@ -40,7 +81,7 @@ class FetchFinancialData(APIView):
                 if response.status_code == 200:
                     data = response.json()
                     all_responses[key] = data
-                    self.process_data(key, data)  # self를 사용하여 메서드 호출
+                    self.process_data(key, data)
                 else:
                     all_responses[key] = {
                         "error": f"Failed to fetch data: {response.status_code}",
@@ -52,21 +93,23 @@ class FetchFinancialData(APIView):
         return Response(all_responses, status=status.HTTP_200_OK)
 
     def process_data(self, key, data):
+        """
+        대출 API 데이터를 처리합니다.
+        """
         result = data.get('result', {})
         base_list = result.get('baseList', [])
         option_list = result.get('optionList', [])
-        
+
         for product_data in base_list:
             fin_co_no = product_data.get('fin_co_no')
             fin_co_name = product_data.get('kor_co_nm')
             if not fin_co_no:
-                print(f"Missing fin_co_no for product {product_data.get('fin_prdt_cd')}")
                 continue
 
-            financial_company, _ = FinancialCompany.objects.get_or_create(
-                company_id=fin_co_no,
-                defaults={'company_name': fin_co_name}
-            )
+            financial_company = FinancialCompany.objects.filter(company_id=fin_co_no).first()
+            if not financial_company:
+                print(f"Financial company with ID {fin_co_no} not found.")
+                continue
 
             FinancialProduct.objects.update_or_create(
                 product_id=product_data['fin_prdt_cd'],
@@ -89,10 +132,11 @@ class FetchFinancialData(APIView):
         self.process_options(key, option_list)
 
     def process_options(self, key, option_list):
+        """
+        대출 옵션 데이터를 처리합니다.
+        """
         for option_data in option_list:
-            product = FinancialProduct.objects.filter(
-                product_id=option_data.get('fin_prdt_cd')
-            ).first()
+            product = FinancialProduct.objects.filter(product_id=option_data.get('fin_prdt_cd')).first()
             if not product:
                 continue
 

@@ -5,6 +5,7 @@ from django.conf import settings
 class FinancialCompany(models.Model):
     company_id = models.CharField(max_length=255, primary_key=True)  # 'pk'를 'company_id'로 변경
     company_name = models.CharField(max_length=255, null=True)       # 회사명
+    homepage = models.URLField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.company_name
