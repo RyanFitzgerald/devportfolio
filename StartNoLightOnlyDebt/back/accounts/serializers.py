@@ -9,7 +9,7 @@ User = get_user_model()
 
 
 class CustomRegisterSerializer(RegisterSerializer):
-    name = serializers.CharField(required=True)  # 추가 필드
+    username = serializers.CharField(required=True)  # 추가 필드
     preferred_banks = serializers.PrimaryKeyRelatedField(
         queryset=FinancialCompany.objects.all(), many=True, required=False
     )
