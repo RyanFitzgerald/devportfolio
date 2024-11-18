@@ -64,6 +64,7 @@ Pygments==2.18.0
 pyparsing==3.1.4
 PySocks==1.7.1
 python-dateutil==2.9.0.post0
+python-decouple==3.8
 pytz==2023.3.post1
 pywin32==308
 pyzmq==26.2.0
