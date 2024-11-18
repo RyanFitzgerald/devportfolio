@@ -7,7 +7,7 @@ export const useBankStore = defineStore("bank", () => {
 
   // 회원가입 요청 액션
   const SignUp = function (payload) {
-    const { username, password1, password2, email } = payload;
+    const { username, password1, password2, email, name } = payload;
     axios({
       method: "post",
       url: `${API_URL}/accounts/signup/`,
@@ -16,6 +16,7 @@ export const useBankStore = defineStore("bank", () => {
         password1,
         password2,
         email,
+        name,
       },
     })
       .then((res) => {

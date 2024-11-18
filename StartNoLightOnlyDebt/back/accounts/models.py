@@ -5,7 +5,6 @@ from managebanks.models import FinancialCompany
 
 class User(AbstractUser):
     name = models.CharField(max_length=100)
-    credit_grade = models.IntegerField(null=True, blank=True)     # 신용 등급
     email = models.EmailField(unique=True)
     date_joined = models.DateTimeField(auto_now_add=True)
 
