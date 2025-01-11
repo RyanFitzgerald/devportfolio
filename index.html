@@ -66,7 +66,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Drew Galbraith</h1>
-            <h2>Machine Learning Engineer</h2>
+            <h2>Machine Learning Student</h2>
             <a href="#" class="btn-rounded-white">Download Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -78,6 +78,26 @@
                 <i class="fa fa-chevron-down fa-4x" aria-hidden="true"></i>
             </span>
         </div>
+
+        <style>
+        .lead-overlay {
+            display: inline-block; /* Ensures the circle wraps the icon */
+            position: relative; /* Positions the circle around the icon */
+            width: 1.5em; /* Relative to font size (adjust as needed) */
+            height: 1.5em; /* Same as width for a perfect circle */
+            background-color: lightgray; /* Circle's color */
+            border-radius: 50%; /* Makes the element round */
+        }
+        
+        .lead-overlay {
+            position: absolute; /* Centers the icon within the circle */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: inherit; /* Ensures the icon scales with the circle */
+        }
+        </style>
+
         <!-- End #lead-down -->
     </div>
     <!-- End #lead -->
