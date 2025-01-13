@@ -1,5 +1,5 @@
 {
-  "name": "devportfolio-template",
+  "name": "yogeshbansalportfolio",
   "version": "1.2.2",
   "description": "",
   "main": "js/scripts.js",
@@ -14,7 +14,7 @@
     "coding",
     "dev"
   ],
-  "author": "Ryan Fitzgerald",
+  "author": "Yogesh Bansal",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.0",
