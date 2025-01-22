@@ -58,13 +58,13 @@ header.sticky{position:fixed;z-index:999}
 #projects h2{color:#374054;margin-bottom:50px}
 .project{position:relative;max-width:900px;margin:0 auto 30px auto;overflow:hidden;background:#fff;border-radius:4px}
 
-/* .profile-pic { */
-/*     width: 175; /* Adjust width as needed */
-/*     height: 175; /* Adjust height as needed */ 
-/*     border-radius: 50%; /* Makes the image circular  */
-/*     object-fit: cover; /* Ensures the image is cropped properly */
-/*     display: block; /* Optional: Ensures proper layout */ 
-/*     margin: 0 auto; /* Optional: Centers the image */
+.profile-pic { */
+    width: 175; /* Adjust width as needed */
+    height: 175; /* Adjust height as needed */ 
+    border-radius: 50%; /* Makes the image circular  */
+    object-fit: cover; /* Ensures the image is cropped properly */
+    display: block; /* Optional: Ensures proper layout */ 
+    margin: 0 auto; /* Optional: Centers the image */
 }
 .profile-pic{float:left}
 
