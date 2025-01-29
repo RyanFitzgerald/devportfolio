@@ -275,7 +275,7 @@ footer {
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background: url(../images/IMG_3210\ 2\ Medium.jpeg);
+  background: url(../images/IMG_3210.jpeg);
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -291,6 +291,9 @@ footer {
 }
 #lead-content h1, #lead-content h2 {
   margin: 0;
+  background: pink;
+  padding: 10px;
+  display: inline-block;
 }
 #lead-content h1 {
   color: #fff;
@@ -301,7 +304,7 @@ footer {
   line-height: 0.9em;
 }
 #lead-content h2 {
-  color: white;
+  color: #fff;
   font-weight: 500;
   font-size: 2.25em;
   margin-bottom: 15px;
@@ -315,7 +318,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(244.8082191781, 141.1917808219, 217.6301369863, 0.8);
+  background: rgba(244.8082191781, 141.1917808219, 217.6301369863, 0);
   z-index: 1;
 }
 

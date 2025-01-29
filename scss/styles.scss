@@ -350,7 +350,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/IMG_3210\ 2\ Medium.jpeg);
+    background: url(../images/IMG_3210.jpeg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -366,6 +366,9 @@ footer {
 
     h1, h2 {
         margin: 0;
+        background: pink; // Pink box behind text
+        padding: 10px; // Adjust padding for spacing
+        display: inline-block; // Makes sure the background fits the text size
     }
 
     h1 {
@@ -378,7 +381,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: #fff;
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +396,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0);
     z-index: 1;
 }
 
