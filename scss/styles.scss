@@ -34,19 +34,19 @@
 */
 
 // Define base and accent colors
-$base-color: #2563EB;
+$base-color: #3498db;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #FFFFFF;
-$background-alt: #F9FAFB;
+$background: #fff;
+$background-alt: #f2f2f5;
 
 // Define border colors
-$border: #E5E7EB;
+$border: #dcd9d9;
 
 // Define text colors
-$heading: #1F2937;
-$text: #4B5563;
+$heading: #374054;
+$text: #74808a;
 
 /*
     ---------------------
@@ -350,7 +350,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: #base-color;
     background-size: cover;
     padding: 15px;
     overflow: hidden;
