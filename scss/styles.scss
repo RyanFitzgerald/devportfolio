@@ -96,7 +96,7 @@ body {
 
 // No JS styles
 .no-js {
-    #experience-timeline {
+    #experience-timeline, #extracurricular-timeline {
         > div {
             background: $background;
             padding: 10px;
@@ -570,6 +570,96 @@ footer {
     color: #374054;
 }
 
+// Extracurricular Section Styles
+#extracurricular {
+  padding: 4em 0;
+
+  .heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+    color: $text;
+  }
+
+  #extracurricular-timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 2em 0;
+    max-width: 900px;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      left: 40px;
+      width: 4px;
+      height: 100%;
+      background: $base-color;
+    }
+
+    .vtimeline-point {
+      position: relative;
+      margin: 2em 0;
+      padding-left: 100px;
+
+      &:before {
+        content: attr(data-date);
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 120px;
+        text-align: right;
+        font-size: 0.9em;
+        color: $base-color;
+      }
+
+      .vtimeline-icon {
+        position: absolute;
+        left: 30px;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background: $base-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          color: white;
+          font-size: 1.2em;
+        }
+      }
+
+      .vtimeline-content {
+        background: $background;
+        padding: 1.5em;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          margin-top: 0;
+          font-size: 1.4em;
+          color: $base-color;
+        }
+
+        h4 {
+          margin: 0.5em 0;
+          font-size: 1.1em;
+          color:#base-color;
+        }
+
+        p {
+          margin: 0.5em 0;
+          line-height: 1.6em;
+          color: $text;
+        }
+      }
+    }
+  }
+}
+
+
+
 /*
     -------------------------------
     ----- 7. Education Styles -----
@@ -787,11 +877,10 @@ footer {
     }
 }
 
-/*
+
     ---------------------------------------
-    ----- 11. Optional Section Styles -----
+    /*----- 11. Optional Section Styles -----*/
     ---------------------------------------
-*/
 
 .optional-section {
     padding: 50px 15px;

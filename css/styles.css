@@ -50,31 +50,31 @@ body.active {
   z-index: -1;
 }
 
-.no-js #experience-timeline > div {
+.no-js #experience-timeline > div, .no-js #extracurricular-timeline > div {
   background: #fff;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #dcd9d9;
 }
-.no-js #experience-timeline > div h3 {
+.no-js #experience-timeline > div h3, .no-js #extracurricular-timeline > div h3 {
   font-size: 1.5em;
   font-weight: 300;
   color: #374054;
   display: inline-block;
   margin: 0;
 }
-.no-js #experience-timeline > div h4 {
+.no-js #experience-timeline > div h4, .no-js #extracurricular-timeline > div h4 {
   font-size: 1.2em;
   font-weight: 300;
   color: #7e8890;
   margin: 0 0 15px 0;
 }
-.no-js #experience-timeline > div p {
+.no-js #experience-timeline > div p, .no-js #extracurricular-timeline > div p {
   color: #74808a;
   font-size: 0.9em;
   margin: 0;
 }
-.no-js #experience-timeline:before, .no-js #experience-timeline:after {
+.no-js #experience-timeline:before, .no-js #experience-timeline:after, .no-js #extracurricular-timeline:before, .no-js #extracurricular-timeline:after {
   content: none;
 }
 
@@ -275,7 +275,7 @@ footer {
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background: #3498db;
+  background: #base-color;
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -474,6 +474,82 @@ footer {
   top: 10px;
   font-weight: 300;
   color: #374054;
+}
+
+#extracurricular {
+  padding: 4em 0;
+}
+#extracurricular .heading {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 2em;
+  color: #74808a;
+}
+#extracurricular #extracurricular-timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2em 0;
+  max-width: 900px;
+}
+#extracurricular #extracurricular-timeline:before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  width: 4px;
+  height: 100%;
+  background: #3498db;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point {
+  position: relative;
+  margin: 2em 0;
+  padding-left: 100px;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point:before {
+  content: attr(data-date);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 120px;
+  text-align: right;
+  font-size: 0.9em;
+  color: #3498db;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-icon {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: #3498db;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-icon i {
+  color: white;
+  font-size: 1.2em;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content h3 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #3498db;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content h4 {
+  margin: 0.5em 0;
+  font-size: 1.1em;
+  color: #base-color;
+}
+#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content p {
+  margin: 0.5em 0;
+  line-height: 1.6em;
+  color: #74808a;
 }
 
 /*
@@ -680,17 +756,12 @@ footer {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/*
-    ---------------------------------------
-    ----- 11. Optional Section Styles -----
-    ---------------------------------------
-*/
-.optional-section {
+--------------------------------------- --------------------------------------- .optional-section {
   padding: 50px 15px;
   text-align: center;
   border-top: 1px solid #dcd9d9;
 }
-.optional-section h2 {
+--------------------------------------- --------------------------------------- .optional-section h2 {
   color: #374054;
 }
 
