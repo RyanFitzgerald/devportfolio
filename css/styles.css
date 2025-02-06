@@ -148,7 +148,7 @@ header.sticky{position:fixed;z-index:999}
                                           #menu li{display:block;margin-bottom:10px}
                                           #lead-content h1{font-size:2em}
                                           #lead-content h2{font-size:1.3em}
-                                          #lead-content a{padding:10px 20px;;border:3px solid #eee}
+                                          #lead-content a{padding:10px 20px;border:3px solid #eee}
                                           #lead-down{display:none}
 .education-block h3,.education-block span{float:none}
                                           .project-image{display:none}
