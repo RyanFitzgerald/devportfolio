@@ -66,10 +66,12 @@ header.sticky{position:fixed;z-index:999}
 .vtimeline-content{margin-left:350px;background:#fff;border:1px solid #e6e6e6;padding:15px;border-radius:3px;text-align:left}
 .vtimeline-content h3{font-size:1.5em;font-weight:300;color:#374054;display:inline-block;margin:0}
 .vtimeline-content h4{font-size:1.2em;font-weight:300;color:#7e8890;margin:0 0 15px 0}
+.vtimeline-content ul{margin:0;color:#74808a;font-size:0.9em}
 .vtimeline-content p{color:#74808a;font-size:0.9em;margin:0}
 .vtimeline-point{position:relative;display:block;vertical-align:top;margin-bottom:30px}
 .vtimeline-icon{position:relative;color:#fff;width:50px;height:50px;background:#3498db;border-radius:50%;float:left;z-index:99;margin-left:280px}
 .vtimeline-icon i{display:block;font-size:2em;margin-top:10px}.vtimeline-date{width:260px;text-align:right;position:absolute;left:0;top:10px;font-weight:300;color:#374054}
+
 #education{padding:50px 15px 20px 15px;border-bottom:1px solid #dcd9d9;text-align:center}
 #education h2{color:#374054;margin-bottom:50px}
 .education-block{max-width:700px;margin:0 auto 30px auto;padding:15px;border:1px solid #dcd9d9;text-align:left}
