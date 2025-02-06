@@ -265,6 +265,8 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border: none;
+  margin-bottom: 5px;
 }
 
 a {
