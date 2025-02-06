@@ -50,31 +50,31 @@ body.active {
   z-index: -1;
 }
 
-.no-js #experience-timeline > div, .no-js #extracurricular-timeline > div {
+.no-js #experience-timeline > div {
   background: #fff;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #dcd9d9;
 }
-.no-js #experience-timeline > div h3, .no-js #extracurricular-timeline > div h3 {
+.no-js #experience-timeline > div h3 {
   font-size: 1.5em;
   font-weight: 300;
   color: #374054;
   display: inline-block;
   margin: 0;
 }
-.no-js #experience-timeline > div h4, .no-js #extracurricular-timeline > div h4 {
+.no-js #experience-timeline > div h4 {
   font-size: 1.2em;
   font-weight: 300;
   color: #7e8890;
   margin: 0 0 15px 0;
 }
-.no-js #experience-timeline > div p, .no-js #extracurricular-timeline > div p {
-  color: #74808a;
+.no-js #experience-timeline > div p {
+  color: #4f4f4f;
   font-size: 0.9em;
   margin: 0;
 }
-.no-js #experience-timeline:before, .no-js #experience-timeline:after, .no-js #extracurricular-timeline:before, .no-js #extracurricular-timeline:after {
+.no-js #experience-timeline:before, .no-js #experience-timeline:after {
   content: none;
 }
 
@@ -179,7 +179,7 @@ footer {
 }
 .copyright p {
   margin: 0;
-  color: #74808a;
+  color: #4f4f4f;
 }
 
 .top {
@@ -192,11 +192,11 @@ footer {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 3px solid rgb(185.1850393701, 191.2559055118, 196.3149606299);
+  border: 3px solid rgb(142.75, 142.75, 142.75);
   text-align: center;
 }
 .top i {
-  color: #74808a;
+  color: #4f4f4f;
 }
 
 .social {
@@ -213,7 +213,7 @@ footer {
 }
 .social a {
   display: block;
-  color: #74808a;
+  color: #4f4f4f;
   padding: 10px;
 }
 .social a:hover {
@@ -369,7 +369,7 @@ footer {
   color: #374054;
 }
 #about p {
-  color: #74808a;
+  color: #4f4f4f;
   margin: 0;
 }
 
@@ -437,7 +437,7 @@ footer {
   margin: 0 0 15px 0;
 }
 .vtimeline-content p {
-  color: #74808a;
+  color: #4f4f4f;
   font-size: 0.9em;
   margin: 0;
 }
@@ -476,80 +476,119 @@ footer {
   color: #374054;
 }
 
+/*
+    -------------------------------
+    ----- Extracurricular Styles -----
+    -------------------------------
+*/
 #extracurricular {
-  padding: 4em 0;
-}
-#extracurricular .heading {
+  padding: 50px 15px;
   text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 2em;
-  color: #74808a;
+  border-bottom: 1px solid #dcd9d9;
 }
-#extracurricular #extracurricular-timeline {
+
+#extracurricular h2 {
+  color: #374054;
+}
+
+#extracurricular-timeline {
+  margin: 20px auto 0 auto;
   position: relative;
-  margin: 0 auto;
-  padding: 2em 0;
-  max-width: 900px;
+  max-width: 1000px;
 }
-#extracurricular #extracurricular-timeline:before {
+
+#extracurricular-timeline:before {
+  position: absolute;
   content: "";
-  position: absolute;
-  left: 40px;
-  width: 4px;
-  height: 100%;
-  background: #3498db;
-}
-#extracurricular #extracurricular-timeline .vtimeline-point {
-  position: relative;
-  margin: 2em 0;
-  padding-left: 100px;
-}
-#extracurricular #extracurricular-timeline .vtimeline-point:before {
-  content: attr(data-date);
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 120px;
-  text-align: right;
-  font-size: 0.9em;
-  color: #3498db;
-}
-#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-icon {
-  position: absolute;
-  left: 30px;
   top: 0;
-  width: 40px;
+  bottom: 0;
+  left: 273px;
+  right: auto;
+  height: 100%;
+  width: 3px;
+  background: #3498db;
+  z-index: 0;
+}
+
+#extracurricular-timeline:after {
+  position: absolute;
+  content: "";
+  width: 3px;
   height: 40px;
   background: #3498db;
+  background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
+  top: 100%;
+  left: 273px;
+}
+
+/* Each timeline point */
+#extracurricular .vtimeline-point {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+/* Display the date from the data-date attribute */
+#extracurricular .vtimeline-point:before {
+  content: attr(data-date);
+  position: absolute;
+  left: 90px; /* Adjust this value to position the date as needed */
+  top: 12px; /* Adjust vertical alignment */
+  font-size: 1em;
+  font-weight: 300;
+  color: #374054;
+  white-space: nowrap;
+}
+
+/* Icon styling */
+#extracurricular .vtimeline-icon {
+  position: relative;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  background: #3498db;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  float: left;
+  z-index: 99;
+  margin-left: 250px; /* Adjust to align with the timeline line */
 }
-#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-icon i {
-  color: white;
-  font-size: 1.2em;
+
+#extracurricular .vtimeline-icon i {
+  display: block;
+  font-size: 2em;
+  margin-top: 10px;
 }
-#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content {
+
+/* Content box styling */
+#extracurricular .vtimeline-content {
+  margin-left: 330px; /* Adjust this to move the content left/right */
   background: #fff;
-  padding: 1.5em;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e6e6e6;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: left;
 }
-#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content h3 {
-  margin-top: 0;
-  font-size: 1.4em;
-  color: #3498db;
+
+#extracurricular .vtimeline-content h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #374054;
+  display: inline-block;
+  margin: 0;
 }
-#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content h4 {
-  margin: 0.5em 0;
-  font-size: 1.1em;
-  color: #base-color;
+
+#extracurricular .vtimeline-content h4 {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #7e8890;
+  margin: 0 0 15px 0;
 }
-#extracurricular #extracurricular-timeline .vtimeline-point .vtimeline-content p {
-  margin: 0.5em 0;
-  line-height: 1.6em;
-  color: #74808a;
+
+#extracurricular .vtimeline-content p {
+  color: #4f4f4f;
+  font-size: 0.9em;
+  margin: 0;
 }
 
 /*
@@ -581,18 +620,18 @@ footer {
   color: #374054;
 }
 .education-block span {
-  color: #74808a;
+  color: #4f4f4f;
   float: right;
 }
 .education-block h4 {
-  color: #74808a;
+  color: #4f4f4f;
   clear: both;
   font-weight: 500;
   margin: 0 0 15px 0;
 }
 .education-block p, .education-block ul {
   margin: 0;
-  color: #74808a;
+  color: #4f4f4f;
   font-size: 0.9em;
 }
 .education-block ul {
@@ -641,7 +680,7 @@ footer {
   margin: 0 0 15px 0;
 }
 .project-info p {
-  color: #74808a;
+  color: #4f4f4f;
   margin: 0 0 15px 0;
   font-size: 0.9em;
 }
@@ -657,6 +696,56 @@ footer {
   display: none;
 }
 
+/* Certification Section Styles */
+#certifications {
+  padding: 50px 15px;
+  text-align: center;
+  background: #fff; /* Optional: use your background variable or a specific color */
+}
+
+#certifications h2 {
+  color: #374054;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+/* Container for multiple certification items */
+/* Certification Section Styles */
+#certifications {
+  padding: 50px 15px;
+  text-align: center;
+  background: #fff; /* Optional: use your background variable or a specific color */
+}
+
+#certifications h2 {
+  color: #374054;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+}
+
+/* Container for multiple certification items */
+.certification-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adds consistent spacing between items */
+}
+
+/* Certification item styling */
+.certification-item {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  color: #374054;
+  margin: 0 auto 20px auto;
+  width: auto; /* Makes the box adjust to content */
+  max-width: 400px; /* Set a maximum width */
+  min-width: 250px;
+}
+
 /*
     -------------------------------
     ----- 9. Skills Styles -----
@@ -670,15 +759,25 @@ footer {
   color: #374054;
   margin-bottom: 50px;
 }
-#skills ul {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 800px;
+#skills .skill-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 550px;
+  font-size: 1em;
 }
-#skills li {
+#skills .skill-group strong {
+  margin-right: 1px;
+  white-space: nowrap;
+  font-size: 1.3em;
+}
+#skills .skill-list {
+  display: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#skills .skill-list li {
   display: inline-block;
-  margin: 7px;
   padding: 5px 10px;
   color: #374054;
   background: rgb(227.5869565217, 227.5869565217, 233.9130434783);
@@ -779,14 +878,14 @@ footer {
   color: #374054;
 }
 .optional-section-block h4 {
-  color: #74808a;
+  color: #4f4f4f;
   clear: both;
   font-weight: 500;
   margin: 0 0 15px 0;
 }
 .optional-section-block p, .optional-section-block ul {
   margin: 0 0 15px 0;
-  color: #74808a;
+  color: #4f4f4f;
   font-size: 0.9em;
 }
 .optional-section-block ul {
