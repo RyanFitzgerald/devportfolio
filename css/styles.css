@@ -49,7 +49,7 @@ header.sticky{position:fixed;z-index:999}
 #lead-content{position:absolute;z-index:10;top:50%;left:50%;transform:translate(-50%, -50%);text-align:center}
 #lead-content h1,#lead-content h2{margin:0}
 #lead-content h1{color:#fff;font-weight:900;font-size:5em;text-transform:uppercase;letter-spacing:0.05em;line-height:0.9em}
-#lead-content h2{color:#eee;font-weight:500;font-size:2.25em;margin-bottom:15px;margin-top:10px}
+#lead-content h2{color:#fff;font-weight:500;font-size:2.25em;margin-bottom:15px;margin-top:10px}
 #lead-overlay{position:absolute;height:100%;width:100%;top:0;right:0;bottom:0;left:0;background:#4d90fe63;z-index:1}
 #lead-down{position:absolute;left:0;right:0;width:100%;text-align:center;z-index:10;bottom:15px;color:#fff}
 #lead-down span{cursor:pointer;display:block;margin:0 auto;width:65px;height:65px;border-radius:50%;border:3px solid #a0cfee;text-align:center}
@@ -146,7 +146,7 @@ header.sticky{position:fixed;z-index:999}
                                           #menu li{display:block;margin-bottom:10px}
                                           #lead-content h1{font-size:2em}
                                           #lead-content h2{font-size:1.3em}
-                                          #lead-content a{padding:10px 20px}
+                                          #lead-content a{padding:10px 20px;;border:3px solid #eee}
                                           #lead-down{display:none}
 .education-block h3,.education-block span{float:none}
                                           .project-image{display:none}
@@ -155,4 +155,4 @@ header.sticky{position:fixed;z-index:999}
                                           .social{text-align:center}}
 @media only screen and (max-width: 480px){#lead-content h1{font-size:1.5em}
                                           #lead-content h2{font-size:1em}
-                                          #lead-content a{font-size:0.9em;padding:5px 10px}}
+                                          #lead-content a{font-size:0.9em;padding:5px 10px;border:2px solid #eee}}
