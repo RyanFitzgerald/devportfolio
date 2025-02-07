@@ -150,6 +150,8 @@ header {
     right: 0;
     text-align: center;
     z-index: 10;
+    width: 100%;
+
     animation-name: dropHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease;
@@ -163,6 +165,7 @@ header {
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+
     }
 
     li {
@@ -198,10 +201,14 @@ header {
 }
 
 #menu {
-    &.active {
-        display: block;
-    }
+    display: flex;  /* Ensure items stay in one row */
+    justify-content: center;  /* Center items horizontally */
+    width: 100%;  /* Make sure it covers the full width */
+    max-width: 700px;  /* Adjust to fit content */
+    margin: 0 auto;  /* Center the menu */
+    padding: 10px 0;
 }
+
 
 #mobile-menu-open {
     display: none;
@@ -220,7 +227,7 @@ header {
 #mobile-menu-close {
     display: none;
     text-align: right;
-    width: 100%;
+    width: 120%;
     background: $background;
     font-size: 1.5em;
     padding-right: 15px;
@@ -323,7 +330,7 @@ footer {
     display: inline-block;
     font-size: 2em;
     font-weight: 300;
-    margin: 0 0 30px 0;
+    margin: 0 0 50px 0;
 
     &:after {
         position: absolute;
@@ -517,9 +524,9 @@ footer {
     text-align: left;
 
     h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        color: $heading;
+    font-size: 1.5em;  /* Same as project title */
+    font-weight: bold;  /* Same bold weight */
+    color: #2C3E50;
         display: inline-block;
         margin: 0;
     }
@@ -536,6 +543,9 @@ footer {
         font-size: 0.9em;
         margin: 0;
     }
+}
+#experience-timeline ul {
+    margin-left: -25px; /* Adjust bullet list */
 }
 
 .vtimeline-point {
@@ -667,9 +677,10 @@ footer {
 }
 
 #extracurricular .vtimeline-content h3 {
+
   font-size: 1.5em;
-  font-weight: 300;
-  color: #374054;
+  font-weight: bold;
+  color: #2D3748;
   display: inline-block;
   margin: 0;
 }
@@ -713,10 +724,12 @@ footer {
     text-align: left;
 
     h3 {
-        font-weight: 500;
+    font-size: 1.4em;
+  font-weight: bold;
+  color: #2D3748;
         float: left;
         margin: 0;
-        color: $heading;
+
     }
 
     span {
@@ -742,21 +755,19 @@ footer {
     }
 }
 
-/*
-    -------------------------------
-    ----- 8. Project Styles -----
-    -------------------------------
-*/
 
+    /*-------------------------------
+    ----- 8. Project Styles -----
+    -------------------------------*/
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid #dcd9d9;
     text-align: center;
+}
 
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
-    }
+#projects h2 {
+    color: #374054;
+    margin-bottom: 50px;
 }
 
 .project {
@@ -766,46 +777,50 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
-}
-
-.project-image {
-    float: left;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
-
-    h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        color: $heading;
-        margin: 0 0 15px 0;
-    }
-
-    p {
-        color: $text;
-        margin: 0 0 15px 0;
-        font-size: 0.9em;
-    }
+    position: relative;
+    padding: 20px;
 }
 
-.no-image {
-    .project-info {
-        position: relative;
-        margin: 0;
-        padding: 30px 15px;
-        transform: none;
-    }
+.project-info h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #374054;
+    margin-bottom: 15px;
 }
 
-#more-projects {
-    display: none;
+.project-info p {
+    color: #4f4f4f;
+    font-size: 1em;
+    margin-bottom: 15px;
 }
 
+.project-info ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #4f4f4f;
+    font-size: 1em;
+}
+
+.project-info .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    background: #3498db;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.project-info .btn:hover {
+    background: #2980b9;
+}
 
 /* Certification Section Styles */
 #certifications {
