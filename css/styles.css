@@ -601,6 +601,30 @@ footer {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  #extracurricular-timeline:before {
+    left: 50%; /* Centers the timeline line */
+    transform: translateX(-50%);
+  }
+  #extracurricular .vtimeline-icon {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+  #extracurricular .vtimeline-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+  }
+  #extracurricular .vtimeline-date {
+    position: relative;
+    text-align: center;
+    left: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
 /*
     -------------------------------
     ----- 7. Education Styles -----
@@ -765,6 +789,13 @@ footer {
   min-width: 250px;
 }
 
+@media (max-width: 768px) {
+  .certification-item {
+    display: block; /* Makes each item full width on mobile */
+    width: 90%;
+    margin: 10px auto; /* Centers each item */
+  }
+}
 /*
     -------------------------------
     ----- 9. Skills Styles -----
@@ -805,6 +836,19 @@ footer {
   font-size: 1.2em;
 }
 
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .skill-category {
+    flex-direction: column; /* Stacks category title and skills */
+    align-items: center;
+  }
+  .skill-category h3 {
+    text-align: center;
+  }
+  .skill-list {
+    justify-content: center;
+  }
+}
 /*
     -------------------------------
     ----- 10. Contact Styles -----
