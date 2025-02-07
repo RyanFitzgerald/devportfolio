@@ -770,25 +770,11 @@ footer {
   background: #2980b9;
 }
 
-/* Certification Section Styles */
+/* Certification Section */
 #certifications {
   padding: 50px 15px;
   text-align: center;
-  background: #fff; /* Optional: use your background variable or a specific color */
-}
-
-#certifications h2 {
-  color: #374054;
-  margin-bottom: 30px;
-  font-size: 2.5em;
-}
-
-/* Container for multiple certification items */
-/* Certification Section Styles */
-#certifications {
-  padding: 50px 15px;
-  text-align: center;
-  background: #fff; /* Optional: use your background variable or a specific color */
+  background: #fff; /* Optional background color */
 }
 
 #certifications h2 {
@@ -797,15 +783,15 @@ footer {
   font-size: 2.2em;
 }
 
-/* Container for multiple certification items */
+/* Container for multiple certifications */
 .certification-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adds consistent spacing between items */
+  gap: 20px; /* Adds spacing between certification items */
 }
 
-/* Certification item styling */
+/* Certification item box */
 .certification-item {
   background: #fff;
   border: 1px solid #e6e6e6;
@@ -814,19 +800,39 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 1.2em;
   color: #374054;
+  text-align: center; /* Ensures text stays centered */
   margin: 0 auto 20px auto;
-  width: auto; /* Makes the box adjust to content */
-  max-width: 400px; /* Set a maximum width */
+  width: auto; /* Allows flexibility */
+  max-width: 400px; /* Prevents it from stretching too much */
   min-width: 250px;
 }
 
+/* Ensures proper alignment on mobile */
 @media (max-width: 768px) {
+  .certification-container {
+    flex-direction: column; /* Stack items on small screens */
+    align-items: center;
+  }
   .certification-item {
-    display: block; /* Makes each item full width on mobile */
-    width: 90%;
-    margin: 10px auto; /* Centers each item */
+    width: 90%; /* Full width but with some padding */
+    margin: 10px auto;
   }
 }
+/* Styling for the Tableau Certification Link */
+.certification-item a {
+  color: #1f77b4; /* Tableau Blue */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.certification-item a:hover {
+  color: #145a8b; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
 /*
     -------------------------------
     ----- 9. Skills Styles -----
