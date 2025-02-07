@@ -105,8 +105,9 @@ header ul {
   text-align: center;
   padding: 10px;
   margin: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added slight shadow for depth */
 }
 header li {
   display: inline-block;
@@ -114,13 +115,16 @@ header li {
 header a {
   display: block;
   color: #3498db;
-  padding: 10px;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 header a:hover {
   color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
   text-decoration: none;
-  background: #eee;
-  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
 }
 header a:focus {
   color: #3498db;
@@ -132,17 +136,24 @@ header.active {
 header.sticky {
   position: fixed;
   z-index: 999;
-}
-
-#menu {
-  display: flex; /* Ensure items stay in one row */
-  justify-content: center; /* Center items horizontally */
-  width: 100%; /* Make sure it covers the full width */
-  max-width: 700px; /* Adjust to fit content */
-  margin: 0 auto; /* Center the menu */
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent effect */
   padding: 10px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Centered Menu */
+#menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 10px 0;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Mobile Menu Open Button */
 #mobile-menu-open {
   display: none;
   cursor: pointer;
@@ -152,30 +163,44 @@ header.sticky {
   color: #3498db;
   font-size: 1.5em;
   z-index: 20;
-  padding: 0 7px;
-  border-radius: 4px;
+  padding: 0 10px;
+  border-radius: 6px;
   background: #fff;
 }
+@media (max-width: 768px) {
+  #mobile-menu-open {
+    display: block;
+  }
+}
 
+/* Mobile Menu Close Button */
 #mobile-menu-close {
   display: none;
   text-align: right;
-  width: 120%;
+  width: 100%;
   background: #fff;
   font-size: 1.5em;
-  padding-right: 15px;
-  padding-top: 10px;
+  padding: 10px;
   cursor: pointer;
   color: #3498db;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #mobile-menu-close span {
-  font-size: 0.5em;
+  font-size: 0.8em;
   text-transform: uppercase;
 }
 #mobile-menu-close i {
   vertical-align: middle;
 }
+@media (max-width: 768px) {
+  #mobile-menu-close {
+    display: block;
+  }
+}
 
+/* Footer */
 footer {
   padding: 50px 0;
 }
@@ -188,6 +213,7 @@ footer {
   color: #4f4f4f;
 }
 
+/* Scroll-to-top Button */
 .top {
   text-align: center;
 }
@@ -205,6 +231,7 @@ footer {
   color: #4f4f4f;
 }
 
+/* Social Icons */
 .social {
   text-align: right;
 }
@@ -226,6 +253,7 @@ footer {
   color: #3498db;
 }
 
+/* Button Styling */
 .btn-rounded-white {
   display: inline-block;
   color: #fff;
@@ -240,6 +268,7 @@ footer {
   text-decoration: none;
 }
 
+/* Shadows */
 .shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -248,6 +277,7 @@ footer {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Heading */
 .heading {
   position: relative;
   display: inline-block;
@@ -267,6 +297,7 @@ footer {
   background: #3498db;
 }
 
+/* Background */
 .background-alt {
   background: #f2f2f5;
 }
@@ -802,6 +833,9 @@ footer {
     -------------------------------
 */
 #skills {
+  /* Centers the entire skills section */
+  max-width: 800px;
+  margin: 0 auto;
   padding: 50px 15px;
   text-align: center;
 }
@@ -810,21 +844,42 @@ footer {
   margin-bottom: 50px;
 }
 #skills .skill-group {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr; /* First column (label) is auto-sized, second takes remaining space */
+  gap: 15px; /* Spacing between label and list */
   align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
-  margin-left: 550px;
-  font-size: 1em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
-#skills .skill-group strong {
-  margin-right: 1px;
-  white-space: nowrap;
+@media (max-width: 768px) {
+  #skills .skill-group {
+    grid-template-columns: 1fr; /* Stack label above list on smaller screens */
+    text-align: center;
+  }
+}
+#skills .skill-label {
   font-size: 1.3em;
+  font-weight: bold;
+  text-align: right; /* Aligns labels properly */
+}
+@media (max-width: 768px) {
+  #skills .skill-label {
+    text-align: center; /* Center text on mobile */
+  }
 }
 #skills .skill-list {
-  display: center;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: wrap; /* Ensures wrapping if needed */
   gap: 10px;
+  justify-content: flex-start; /* Ensures proper left alignment */
+}
+@media (max-width: 768px) {
+  #skills .skill-list {
+    justify-content: center; /* Center list on smaller screens */
+  }
 }
 #skills .skill-list li {
   display: inline-block;
@@ -836,19 +891,6 @@ footer {
   font-size: 1.2em;
 }
 
-/* Mobile Fix */
-@media (max-width: 768px) {
-  .skill-category {
-    flex-direction: column; /* Stacks category title and skills */
-    align-items: center;
-  }
-  .skill-category h3 {
-    text-align: center;
-  }
-  .skill-list {
-    justify-content: center;
-  }
-}
 /*
     -------------------------------
     ----- 10. Contact Styles -----

@@ -163,9 +163,9 @@ header {
         text-align: center;
         padding: 10px;
         margin: 0;
-        border-bottom-right-radius: 4px;
-        border-bottom-left-radius: 4px;
-
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added slight shadow for depth */
     }
 
     li {
@@ -175,13 +175,16 @@ header {
     a {
         display: block;
         color: $base-color;
-        padding: 10px;
+        padding: 10px 15px;
+        font-size: 1.2em;
+        font-weight: 500;
+        transition: background 0.3s ease, color 0.3s ease;
 
         &:hover {
             color: $base-color-hover;
             text-decoration: none;
-            background: #eee;
-            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
         }
 
         &:focus {
@@ -197,19 +200,25 @@ header {
     &.sticky {
         position: fixed;
         z-index: 999;
+        background: rgba(255, 255, 255, 0.95); /* Semi-transparent effect */
+        padding: 10px 0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
     }
 }
 
+/* Centered Menu */
 #menu {
-    display: flex;  /* Ensure items stay in one row */
-    justify-content: center;  /* Center items horizontally */
-    width: 100%;  /* Make sure it covers the full width */
-    max-width: 700px;  /* Adjust to fit content */
-    margin: 0 auto;  /* Center the menu */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
     padding: 10px 0;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-
+/* Mobile Menu Open Button */
 #mobile-menu-open {
     display: none;
     cursor: pointer;
@@ -219,32 +228,44 @@ header {
     color: $base-color;
     font-size: 1.5em;
     z-index: 20;
-    padding: 0 7px;
-    border-radius: 4px;
+    padding: 0 10px;
+    border-radius: 6px;
     background: $background;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
+/* Mobile Menu Close Button */
 #mobile-menu-close {
     display: none;
     text-align: right;
-    width: 120%;
+    width: 100%;
     background: $background;
     font-size: 1.5em;
-    padding-right: 15px;
-    padding-top: 10px;
+    padding: 10px;
     cursor: pointer;
     color: $base-color;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     span {
-        font-size: 0.5em;
+        font-size: 0.8em;
         text-transform: uppercase;
     }
 
     i {
         vertical-align: middle;
     }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
+/* Footer */
 footer {
     padding: 50px 0;
 }
@@ -258,6 +279,7 @@ footer {
     }
 }
 
+/* Scroll-to-top Button */
 .top {
     text-align: center;
 
@@ -269,7 +291,7 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($text, 25%);
-        text-align:center;
+        text-align: center;
     }
 
     i {
@@ -277,6 +299,7 @@ footer {
     }
 }
 
+/* Social Icons */
 .social {
     text-align: right;
 
@@ -302,6 +325,7 @@ footer {
     }
 }
 
+/* Button Styling */
 .btn-rounded-white {
     display: inline-block;
     color: #fff;
@@ -317,6 +341,7 @@ footer {
     }
 }
 
+/* Shadows */
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -325,6 +350,7 @@ footer {
     box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
 }
 
+/* Heading */
 .heading {
     position: relative;
     display: inline-block;
@@ -345,9 +371,12 @@ footer {
     }
 }
 
+/* Background */
 .background-alt {
     background: $background-alt;
 }
+
+
 
 /*
     --------------------------
@@ -914,60 +943,67 @@ footer {
 */
 
 #skills {
-    padding: 50px 15px;
-    text-align: center;
+  /* Centers the entire skills section */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  text-align: center;
 
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
+  h2 {
+    color: $heading;
+    margin-bottom: 50px;
+  }
+
+  .skill-group {
+    display: grid;
+    grid-template-columns: auto 1fr; /* First column (label) is auto-sized, second takes remaining space */
+    gap: 15px; /* Spacing between label and list */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; /* Stack label above list on smaller screens */
+      text-align: center;
     }
+  }
 
-    .skill-group {
-        display: flex;
-        align-items: center;
+  .skill-label {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: right; /* Aligns labels properly */
 
-        margin-bottom: 20px;
-        margin-left: 550px;
-        font-size: 1em;
+    @media (max-width: 768px) {
+      text-align: center; /* Center text on mobile */
     }
+  }
 
-    .skill-group strong {
-        margin-right: 1px;
-        white-space: nowrap;
-        font-size: 1.3em;
-    }
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping if needed */
+    gap: 10px;
+    justify-content: flex-start; /* Ensures proper left alignment */
 
-    .skill-list {
-        display: center;
-        flex-wrap: nowrap;
-        gap: 10px;
+    @media (max-width: 768px) {
+      justify-content: center; /* Center list on smaller screens */
     }
+  }
 
-    .skill-list li {
-        display: inline-block;
-        padding: 5px 10px;
-        color: $heading;
-        background: darken($background-alt, 5%);
-        list-style: none;
-        cursor: default;
-        font-size: 1.2em;
-    }
+  .skill-list li {
+    display: inline-block;
+    padding: 5px 10px;
+    color: $heading;
+    background: darken($background-alt, 5%);
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+  }
 }
-/* Mobile Fix */
-@media (max-width: 768px) {
-    .skill-category {
-        flex-direction: column; /* Stacks category title and skills */
-        align-items: center;
-    }
 
-    .skill-category h3 {
-        text-align: center;
-    }
-
-    .skill-list {
-        justify-content: center;
-    }
-}
 /*
     -------------------------------
     ----- 10. Contact Styles -----
