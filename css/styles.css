@@ -31,7 +31,7 @@ header.sticky{position:fixed;z-index:999}
 #menu.active{display:block}
 #mobile-menu-open{display:none;cursor:pointer;position:fixed;right:15px;top:10px;color:#eee;font-size:1.5em;z-index:20;padding:0 7px;border-radius:4px;background:#3498db}
 #mobile-menu-close{display:none;text-align:right;width:100%;background:#217dbb;font-size:1.5em;padding-right:15px;padding-top:10px;cursor:pointer;color:#eee}
-#mobile-menu-close span{font-size:0.5em;text-transform:uppercase}
+#mobile-menu-close span{font-size:0.7em;text-transform:uppercase}
 #mobile-menu-close i{vertical-align:middle}footer{padding:50px 0}
 .copyright{padding-top:20px}
 .copyright p{margin:0;color:#74808a}
