@@ -155,11 +155,12 @@ header.sticky{position:fixed;z-index:999}
 @media only screen and (max-width: 768px){
     header{position:fixed;display:none;z-index:999;animation:none;bottom:0;height:100%}
     #mobile-menu-open,#mobile-menu-close{display:block}#menu{color:#A0CFEE;height:100%;overflow-y:auto;box-shadow:none;border-radius:0;width:100%}
-    #menu li{display:block;margin-bottom:10px}
+    #menu li{display:block;margin-bottom:10px; background: #217dbb;}
     #lead-content h1{font-size:2em}
     #lead-content h2{font-size:1.3em}
-    #lead-content a{padding:10px 20px;border:3px solid #eee;background: #217dbb;}
-    #lead-down{display:none}.education-block h3,
+    #lead-content a{padding:10px 20px;border:3px solid #eee;}
+    #lead-down{display:none}
+    .education-block h3,
     .education-block span{float:none}
     .project-image{display:none}
     .project-info{position:relative;margin:0;padding:30px 15px;top:auto;transform:none}
