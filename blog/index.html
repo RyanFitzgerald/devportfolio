@@ -12,106 +12,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="/favicons/site.webmanifest" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js?render=6LckPbsqAAAAAEqC0hVLX9u8tW1pW8A8mf2kwnvx" async defer></script>
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="False"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-<!--             <li> -->
-<!--                 <a href="#projects">Projects</a> -->
-<!--             </li> -->
-<!--             <li> -->
-<!--                 <a href="#skills">Skills</a> -->
-<!--             </li> -->
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
 
-    <style>
-        header {
-            background-color: transparent;
-            color: #74b9e4;
-        }
-    
-        header ul#menu li a {
-            color: white;
-            text-decoration: none;
-        }
-    
-        header ul#menu li a:hover {
-            color: #b0aeae; /* Optional: Slightly lighter color on hover */
-        }
-    </style>
-    
-    <!-- End header -->
-
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Drew Galbraith</h1>
-            <h2>CS PhD Student | ML Emphasis</h2>
-            <a href="/resume/Resume_Drew_Galbraith.pdf" class="btn-rounded-white">View Resume</a>
-        </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
-            </span>
-        </div>
-
-        <style>
-        .lead-overlay {
-            display: inline-block; /* Ensures the circle wraps the icon */
-            position: relative; /* Positions the circle around the icon */
-            width: 3em; /* Relative to font size (adjust as needed) */
-            height: 3em; /* Same as width for a perfect circle */
-            background-color: lightgray; /* Circle's color */
-            border-radius: 50%; /* Makes the element round */
-        }
-        
-        .lead-overlay {
-            position: absolute; /* Centers the icon within the circle */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: inherit; /* Ensures the icon scales with the circle */
-        }
-        </style>
-
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
+    <div id="Books">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-		    <img src="images/dg.jpeg" class="profile-pic" alt="Profile Picture" />
+                    <h2 class="heading">My Book List</h2>
+		    <img src="/images/dg.jpeg" class="profile-pic" alt="Profile Picture" />
                 </div>
                 <div class="col-md-8">
                     <p>
@@ -134,51 +48,15 @@
 	
 
     <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
+        <h2 class="heading">Books to Read</h2>
         <div id="experience-timeline">
             <div data-date="Dec. 2022 – Present">
-                <h3>BYU DRAGN Labs</h3>
-                <h4>Graduate/Undergraduate Researcher | <a href="https://dragn.ai/">Lab Site</a></h4>
-                <ul>
-			<li>
-                		Led several small research teams (1-4 people) exploring various mechanisms underlying LLMs including retrieval-augmented generation control and properties of transformer-alternative architectures.
-                	</li>
-		</ul>
+                <h3>Title</h3>
+                <h4>Author | <a href="https://dragn.ai/">Lab Site</a></h4>
+                    <p>
+                        Why it's on my list
+                    </p>
             </div>
-
-            <div data-date="May 2024 – Aug. 2024">
-                <h3>UMD ARLIS (Applied Research Laboratory for Intelligence and Security)</h3>
-                <h4>LLM Research Intern | <a href="https://www.arlis.umd.edu/">ARLIS Site</a></h4>
-                <ul>
-			<li>
-                		Led a small team in analyzed current research and then desigining and delivering an LLM research tool, including automated evaluation.
-                	</li>
-		</ul>
-            </div>
-	
-	    <div data-date="Sept. 2023 – May 2024">
-                <h3>BYU Computer Science Deptartment</h3>
-                <h4>Teaching Assistant</h4>
-                <ul>
-			<li>
-                		Assisted professor in course designing and teaching an upper-division course.
-			</li>
-			<li>
-				Mentored 17 students in language modelling concepts and research design.
-			</li>
-                </ul>
-	    </div>
-		
-            <div data-date="Oct. 2021 – Sept. 2022">
-                <h3>BYU Neurolinguistics Lab</h3>
-                <h4>Research Assistant</h4>
-                <ul>
-			<li>
-                    		Designed EEG experiment to examine linguistic phenomena among multilingual speakers.
-			</li>
-		</ul>
-            </div>
-        </div>
     </div>
     <!-- End #experience -->
 
