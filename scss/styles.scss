@@ -194,13 +194,6 @@ header {
     }
 }
 
-#description {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
 #menu {
     &.active {
         display: block;
@@ -458,11 +451,24 @@ footer {
 
     h2 {
         color: $heading;
+        text-align: center;
     }
 
     p {
         color: $text;
         margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    div.col-md-8 {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15rem;
+    }
+
+    div.col-md-4 {
+        text-align: center;
     }
 }
 
