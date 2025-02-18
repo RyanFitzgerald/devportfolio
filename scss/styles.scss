@@ -449,6 +449,13 @@ footer {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
 
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
     h2 {
         color: $heading;
         text-align: center;
@@ -461,14 +468,18 @@ footer {
         margin-bottom: auto;
     }
 
-    div.col-md-8 {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 15rem;
-    }
-
     div.col-md-4 {
         text-align: center;
+    }
+
+    div.col-md-8 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        margin-top: 0;
     }
 }
 
