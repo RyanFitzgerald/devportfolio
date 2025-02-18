@@ -73,7 +73,7 @@ header.sticky{position:fixed;z-index:999}
 .vtimeline-icon i{display:block;font-size:2em;margin-top:10px}.vtimeline-date{width:260px;text-align:right;position:absolute;left:0;top:10px;font-weight:300;color:#374054}
 
 /* #books{position:relative;height:100vh;min-height:500px;max-height:1080px;background:url(../images/oregon.jpeg);background-size:cover;padding:15px;} */
-#books{padding:50px 15px 20px 15px;border-bottom:1px solid #dcd9d9;text-align:center}
+#books{background-image: linear-gradient(to bottom, white, black);padding:50px 15px 20px 15px;border-bottom:1px solid #dcd9d9;text-align:center}
 #books h2{color:#374054;margin-top:40px;margin-bottom:40px}
 
 .books-block{max-width:700px;margin:0 auto 30px auto;padding:15px;border:1px solid #dcd9d9;background:white;text-align:left}
