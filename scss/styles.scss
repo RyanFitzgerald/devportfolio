@@ -450,7 +450,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 50vh;
     padding: 0;
 
     .container {
@@ -929,7 +929,8 @@ footer {
     #about {
         text-align: center;
         display: block;
-        height: 100vh;
+        height: 90vh;
+        padding-top: 20px;
 
         p {
             text-align: left;
@@ -1020,7 +1021,7 @@ footer {
     }
 
     #about {
-        height: 110vh;
+        height: 105vh;
     }
 
 }
