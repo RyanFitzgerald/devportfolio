@@ -42,9 +42,6 @@
             <li>
                 <a href="#contact">Contact</a>
             </li>
-            <li>
-                <a href="https://github.com/chanteriam" target="_blank">GitHub</a>
-            </li>
         </ul>
     </header>
     <!-- End header -->
@@ -219,7 +216,7 @@
                         <p>
                             Designed and implemented an NLP-based pipeline leveraging transformer-based models and LSTMs to summarize over 15,000 climate research articles.
                         </p>
-                        <a href="https://github.com/ehabich/climate-conversations">View Project</a>
+                        <a href="https://github.com/ehabich/climate-conversations" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -235,7 +232,7 @@
                         <p>
                             Employed clustering, graphical analysis, and topic modeling algorithms to create a framework to analyze cultural shifts in legal discourse related to US healthcare legislation.
                         </p>
-                        <a href="https://github.com/chanteriam/abortion-legislation-analysis">View Project</a>
+                        <a href="https://github.com/chanteriam/abortion-legislation-analysis" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info --> 
                 </div>
@@ -251,7 +248,7 @@
                         <p>
                             Developed a web application designed to combat social isolation by connecting individuals through local events. Built and implemented the frontend using Angular, conducting multiple rounds of Figma wireframing, UX interviews, and feature testing to refine the user experience. Configured and maintained the application's infrastructure, hosting it on an AWS LightSail server and managing an AWS PostgreSQL relational database to ensure secure and reliable performance.
                         </p>
-                        <a href="https://github.com/uchicago-capp-30320/ShoulderToShoulder">View Project</a>
+                        <a href="https://github.com/uchicago-capp-30320/ShoulderToShoulder" target="_blank">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -306,7 +303,7 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/chanteria.milner@gmail.com">
+            <form method="POST" action="https://formspree.io/f/mvgzdodk">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
@@ -333,22 +330,10 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/chanteriam" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="https://linkedin.com/in/chanteria-milner" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -362,3 +347,32 @@
 </body>
 
 </html>
+
+<!-- Form submission script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("#contact-form form");
+  
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+  
+            // Submit form via Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Thank you! Your message has been sent.");
+                    form.reset(); // Clears the form after successful submission
+                } else {
+                    alert("Oops! There was a problem submitting your form.");
+                }
+            }).catch(error => {
+                alert("Error: " + error.message);
+            });
+        });
+    });
+  </script>

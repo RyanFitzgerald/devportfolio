@@ -32,10 +32,11 @@
     ----- 1. Variables -----
     ------------------------
 */
+@use "sass:color";
 
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
+$base-color: #9A7AA0;
+$base-color-hover: color.adjust($base-color, $lightness: -10%);
 
 // Define background colors
 $background: #fff;
@@ -258,7 +259,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid color.adjust($text, $lightness: 25%);
         text-align:center;
     }
 
@@ -347,10 +348,10 @@ footer {
 
 #lead {
     position: relative;
-    height: 100vh;
+    height: 80vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/lead-bg2.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -378,7 +379,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: color.adjust($base-color, $lightness: 25%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -414,7 +415,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid color.adjust($base-color, $lightness: 25%);
         text-align:center;
     }
 
@@ -446,45 +447,46 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
-    border-bottom: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .row {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-    }
-
-    h2 {
-        color: $heading;
-        text-align: center;
-    }
-
-    p {
-        color: $text;
-        margin: 0;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    div.col-md-4 {
-        display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
     }
 
-    div.col-md-8 {
+    .col-md-4 {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 100%;
-        margin-top: 0;
+    }
+
+    img {
+        border-radius: 8%;
+        width: 285px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .col-md-8 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -744,7 +746,7 @@ footer {
         margin: 7px;
         padding: 5px 10px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        background: color.adjust($background-alt, $lightness: -5%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
@@ -780,7 +782,7 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
+        background: color.adjust($base-color, $lightness: -15%);
         color: #fff;
         @include transition();
         @include placeholder {
@@ -789,7 +791,7 @@ footer {
 
         &:focus {
             outline: none;
-            background: darken($base-color, 25%);
+            background: color.adjust($base-color, $lightness: -25%);
         }
     }
 
