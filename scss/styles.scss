@@ -450,7 +450,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 60vh;
     padding: 0;
 
     .container {
@@ -928,6 +928,8 @@ footer {
 
     #about {
         text-align: center;
+        display: block;
+        height: 100vh;
 
         p {
             text-align: left;
@@ -1015,6 +1017,10 @@ footer {
 
     .social {
         text-align: center;
+    }
+
+    #about {
+        height: 110vh;
     }
 
 }
