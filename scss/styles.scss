@@ -469,11 +469,16 @@ footer {
     }
 
     div.col-md-4 {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
     }
 
     div.col-md-8 {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -925,6 +930,14 @@ footer {
         p {
             text-align: left;
         }
+
+        div.col-md-4 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
     }
 
 }
@@ -1020,6 +1033,10 @@ footer {
             font-size: 0.9em;
             padding: 5px 10px;
         }
+    }
+
+    .col-md-8 {
+        text-align: center;
     }
 
 }
