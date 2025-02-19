@@ -21,10 +21,11 @@
         6. Experience Styles
         7. Education Styles
         8. Project Styles
-        9. Skills Styles
-        10. Contact Styles
-        11. Optional Section Styles
-        12. Media Queries
+        9. Presentation Styles
+        10. Skills Styles
+        11. Contact Styles
+        12. Optional Section Styles
+        13. Media Queries
 */
 
 /*
@@ -308,6 +309,21 @@ footer {
     }
 }
 
+.btn-rounded-base {
+    display: inline-block;
+    color: $base-color;
+    padding: 15px 25px;
+    border: 3px solid $base-color;
+    border-radius: 30px;
+    @include transition();
+
+    &:hover {
+        color: $base-color-hover;
+        background: #fff;
+        text-decoration: none;
+    }
+}
+
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -450,7 +466,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 60vh;
     padding: 0;
 
     .container {
@@ -720,8 +736,90 @@ footer {
 }
 
 /*
+    ---------------------------------------
+    ----- 9. Presentation Styles -----
+    ---------------------------------------
+*/
+#presentations {
+    padding: 50px 15px;
+    text-align: center;
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: color.adjust($base-color, $lightness: 30%);
+        width: 75%;
+    }
+
+    .heading {
+        color: #374054;
+        margin-bottom: 40px;
+    }
+
+    i {
+        color: $base-color;
+    }
+}
+
+.presentation {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.presentation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.presentation-header h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+    color: #374054;
+}
+
+.presentation-header .presentation-info {
+    font-size: 1em;
+    color: #74808a;
+}
+
+.presentation-info {
+    text-align: right;
+    width: 23rem;
+}
+
+.presentation-icon-block {
+    text-align: right;
+    width: 5rem;
+}
+
+
+.presentation p {
+    font-size: 0.95em;
+    color: #74808a;
+    margin: 10px 0 0 0;
+}
+
+.presentation-icon {
+    font-size: 1.6em;
+    position: relative;
+    margin-left: 10px;
+    left: -20px;
+}
+
+// .presentation-icon.left {
+//     left: -40px;
+// }
+
+
+/*
     -------------------------------
-    ----- 9. Skills Styles -----
+    ----- 10. Skills Styles -----
     -------------------------------
 */
 
@@ -745,8 +843,8 @@ footer {
         display: inline-block;
         margin: 7px;
         padding: 5px 10px;
-        color: $heading;
-        background: color.adjust($background-alt, $lightness: -5%);
+        color: color.adjust($background-alt, $lightness: 5%);
+        background: $heading;
         list-style: none;
         cursor: default;
         font-size: 1.2em;
@@ -755,7 +853,7 @@ footer {
 
 /*
     -------------------------------
-    ----- 10. Contact Styles -----
+    ----- 11. Contact Styles -----
     -------------------------------
 */
 
@@ -820,7 +918,7 @@ footer {
 
 /*
     ---------------------------------------
-    ----- 11. Optional Section Styles -----
+    ----- 12. Optional Section Styles -----
     ---------------------------------------
 */
 
@@ -868,7 +966,7 @@ footer {
 
 /*
     -----------------------------
-    ----- 12. Media Queries -----
+    ----- 13. Media Queries -----
     -----------------------------
 */
 
