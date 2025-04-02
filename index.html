@@ -143,85 +143,146 @@
     </div>
     <!-- End #education -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Mobile Tilt Balance Game</h3>
-                        <p>
-                            Built a React Native mobile game using gyroscope tilt tracking with 100ms latency. Flask backend streamed 10,000+ motion samples/minute via WebSockets.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Popeyes Arm</h3>
-                        <p>
-                            Built a YOLO-powered UR5e robot with ROS and Gazebo to sort recyclables. Qualified for RoboCup 2024 Finals among 300+ global teams.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Real-Time Locomotion Control</h3>
-                        <p>
-                            Developed a low-latency WebSocket control loop for MuJoCo bipedal locomotion. Implemented IK/ID models to reduce oscillations by 40%.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>NavBot</h3>
-                        <p>
-                            Created a Unity-based RL training setup with ML-Agents and TensorFlow. Visualized 1000+ agents using Three.js and Docker.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Joint Depth Estimation</h3>
-                        <p>
-                            Implemented monocular depth estimation using MiDaS in PyTorch. Integrated with MediaPipe Pose to track human joints with 30 FPS precision.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Feed Shakira</h3>
-                        <p>
-                            🏆 1st in QHacks 2023. Built an NLP-based Arduino Nano project with Edge Impulse. Created a 3D-printed servo system to physically respond to voice commands.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="project shadow-large">
-                    <div class="project-info">
-                        <h3>Room Tone</h3>
-                        <p>
-                            Used Snapdragon HDK8450 to capture 3D point clouds. Performed ray tracing on triangulated geometry and visualized results on a custom-built web dashboard.
-                            <!-- Link: <a href="#">View Project</a> -->
-                        </p>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
+    <!-- Projects Section -->
+
+    <style>
+        /* Responsive image styling */
+        .project-image {
+          width: 300px;
+          height: 200px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .project-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* This maintains aspect ratio while filling the container */
+          transition: transform 0.3s ease; /* Optional: smooth zoom effect on hover */
+        }
+        
+        /* Optional: add a hover zoom effect */
+        .project-image img:hover {
+          transform: scale(1.05);
+        }
+        
+        /* Make projects responsive */
+        @media screen and (max-width: 768px) {
+          .project {
+            display: block;
+          }
+          
+          .project-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+          }
+        }
+      </style>
+      
+      <div id="projects" class="background-alt">
+       <h2 class="heading">Projects</h2>
+      <div class="container">
+      <div class="row">
+      <div class="project shadow-large">
+      <div class="project-image">
+      <img src="images/tilt-game.jpg" alt="Mobile Tilt Balance Game" />
+      </div>
+      <!-- End .project-image -->
+      <div class="project-info">
+      <h3>Mobile Tilt Balance Game</h3>
+      <p>
+       Built a React Native mobile game using gyroscope tilt tracking with 100ms latency. Flask backend streamed 10,000+ motion samples/minute via WebSockets.
+      </p>
+      <a href="https://github.com/ChahitUppal/516_final_project.git">View Project</a>
+      </div>
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      <div class="project shadow-large">
+      <div class="project-image">
+      <img src="images/arm.jpg" alt="Popeyes Arm" />
+      </div>
+      <!-- End .project-image -->
+      <div class="project-info">
+      <h3>Popeyes Arm</h3>
+      <p>
+       Built a YOLO-powered UR5e robot with ROS and Gazebo to sort recyclables. Qualified for RoboCup 2024 Finals among 300+ global teams.
+      </p>
+      <a href="https://github.com/ChahitUppal/RoboCup_Arm_2024_Submission.git">View Project</a>
+      </div>
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      <div class="project shadow-large">
+      <div class="project-image">
+      <img src="images/mujoco.jpg" alt="Real-Time Locomotion Control" />
+      </div>
+      <!-- End .project-image -->
+      <div class="project-info">
+      <h3>Real-Time Locomotion Control</h3>
+      <p>
+       Developed a low-latency WebSocket control loop for MuJoCo bipedal locomotion. Implemented IK/ID models to reduce oscillations by 40%.
+      </p>
+      <a href="https://github.com/ChahitUppal/Remote-Robot-Teleoperation.git">View Project</a>
+      </div>
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      <div class="project shadow-large">
+      <div class="project-image">
+      <img src="images/navbot.jpg" alt="NavBot" />
+      </div>
+      <!-- End .project-image -->
+      <div class="project-info">
+      <h3>NavBot</h3>
+      <p>
+       Created a Unity-based RL training setup with ML-Agents and TensorFlow. Visualized 1000+ agents in real-time using Three.js and Docker.
+      </p>
+      <a href="https://github.com/guninwasan/nexus-bots.git">View Project</a>
+      </div>
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      <div class="project shadow-large">
+      <div class="project-image">
+      <img src="images/joint.jpg" alt="Joint Depth Estimation" />
+      </div>
+      <!-- End .project-image -->
+      <div class="project-info">
+      <h3>Joint Depth Estimation</h3>
+      <p>
+       Implemented monocular depth estimation using MiDaS in PyTorch. Integrated with MediaPipe Pose to track human joints with 30 FPS precision.
+      </p>
+      <a href="https://github.com/ChahitUppal/Monocular-Depth-Estimation.git">View Project</a>
+      </div>
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      <div class="project shadow-large">
+      <div class="project-image">
+      <img src="images/fish.jpg" alt="Feed Shakira" />
+      </div>
+      <!-- End .project-image -->
+      <div class="project-info">
+      <h3>Feed Shakira</h3>
+      <p>
+       🏆 1st in QHacks 2023. Built an NLP-based Arduino Nano project with Edge Impulse. Created a 3D-printed servo system to physically respond to voice commands.
+      </p>
+      <a href="https://github.com/ChahitUppal/feed_shakira.git">View Project</a>
+      </div>
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      <!-- End .project-info -->
+      </div>
+      <!-- End .project -->
+      </div>
+      </div>
+      </div>
+      <!-- End #projects -->
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
