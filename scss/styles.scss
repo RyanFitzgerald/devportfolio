@@ -34,21 +34,29 @@
     ------------------------
 */
 @use "sass:color";
-
-// Define base and accent colors
-$base-color: #9A7AA0;
-$base-color-hover: color.adjust($base-color, $lightness: -10%);
-
-// Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap');
 
 // Define border colors
 $border: #dcd9d9;
 
-// Define text colors
-$heading: #374054;
-$text: #74808a;
+// Brand Colors
+$cream: #F2EFEA;
+$burnt-orange: #BA3F1D;
+$deep-plum: #33032F;
+$forest-green: #254441;
+
+// Typography
+$font-header: "Noto Sans Mono", monospace;
+$font-body: "Funnel Display", sans-serif;
+
+// update existing variables
+$base-color: $burnt-orange;
+$base-color-hover: color.adjust($forest-green, $lightness: -10%);
+$heading: $deep-plum;
+$text: $forest-green;
+$background: $cream;
+$header-background: $forest-green;
+$background-alt: color.adjust($cream, $lightness: 3%);
 
 /*
     ---------------------
@@ -85,6 +93,30 @@ $text: #74808a;
     ----- 3. Global Styles -----
     ----------------------------
 */
+body {
+    font-family: $font-body;
+    font-size: 16px;
+    background-color: $forest-green;
+    color: $text;
+}
+
+p {
+    font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-header;
+    color: $heading;
+}
+
+a {
+    color: $base-color;
+}
+
+a:hover {
+    color: color.adjust($forest-green, $lightness: 10%);
+    text-decoration: underline;
+}
 
 body {
     font-family: 'Lato', sans-serif;
@@ -93,43 +125,6 @@ body {
     &.active {
         overflow: hidden;
         z-index: -1;
-    }
-}
-
-// No JS styles
-.no-js {
-    #experience-timeline {
-        > div {
-            background: $background;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid $border;
-
-            h3 {
-                font-size: 1.5em;
-                font-weight: 300;
-                color: $heading;
-                display: inline-block;
-                margin: 0;
-            }
-
-            h4 {
-                font-size: 1.2em;
-                font-weight: 300;
-                color: #7e8890;
-                margin: 0 0 15px 0;
-            }
-
-            p {
-                color: $text;
-                font-size: 0.9em;
-                margin: 0;
-            }
-        }
-
-        &:before, &:after {
-            content: none;
-        }
     }
 }
 
@@ -155,13 +150,13 @@ header {
     animation-duration: 0.75s;
 
     ul {
-        display: inline-block;
-        background: $background;
+        background: $header-background;
         text-align: center;
         padding: 10px;
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+        border-radius: 0;
     }
 
     li {
@@ -170,19 +165,27 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: $cream;
         padding: 10px;
 
         &:hover {
-            color: $base-color-hover;
+            color: $cream;
             text-decoration: none;
-            background: #eee;
+            background: $base-color;
             border-radius: 4px;
+            cursor: pointer;
         }
 
         &:focus {
-            color: $base-color;
+            color: $cream;
             text-decoration: none;
+        }
+
+        &.highlight {
+            color: $cream;
+            text-decoration: none;
+            background: $base-color;
+            border-radius: 4px;
         }
     }
 
@@ -220,12 +223,12 @@ header {
     display: none;
     text-align: right;
     width: 100%;
-    background: $background;
+    background: $header-background;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: $base-color;
+    color: $cream;
 
     span {
         font-size: 0.5em;
@@ -238,7 +241,9 @@ header {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 20px 0;
+    background: $header-background;
+    color: $cream;
 }
 
 .copyright {
@@ -246,7 +251,7 @@ footer {
 
     p {
         margin: 0;
-        color: $text;
+        color: $cream;
     }
 }
 
@@ -285,7 +290,7 @@ footer {
 
     a {
         display: block;
-        color: $text;
+        color: $cream;
         padding: 10px;
 
         &:hover {
@@ -294,35 +299,39 @@ footer {
     }
 }
 
-.btn-rounded-white {
-    display: inline-block;
-    color: #fff;
-    padding: 15px 25px;
-    border: 3px solid #fff;
-    border-radius: 30px;
-    @include transition();
-
-    &:hover {
-        color: $base-color;
-        background: #fff;
-        text-decoration: none;
-    }
-}
-
 .btn-rounded-base {
     display: inline-block;
-    color: $base-color;
+    color: $cream;
     padding: 15px 25px;
     border: 3px solid $base-color;
-    border-radius: 30px;
+    border-radius: 15px;
+    background-color: $base-color;
     @include transition();
 
     &:hover {
-        color: $base-color-hover;
-        background: #fff;
+        color: $cream;
+        background: color.adjust($base-color, $lightness: 30%);
         text-decoration: none;
     }
 }
+
+.btn-brand {
+    display: inline-block;
+    background-color: $burnt-orange;
+    color: $cream;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-family: $font-body;
+    font-weight: bold;
+    text-decoration: none;
+    @include transition();
+  
+    &:hover {
+      background-color: $deep-plum;
+      color: $cream;
+    }
+  }
 
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -352,6 +361,40 @@ footer {
     }
 }
 
+.page-heading {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: $cream;
+    width: 100%;
+
+    h1 {
+        padding-top: 2rem;
+        font-size: 4em;
+        font-weight: 300;
+        margin-bottom: 0;
+        text-align: center;
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 100%;
+            height: 1px;
+            width: 50px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: $base-color;
+        }
+    }
+}
+
+.page-subheading {
+    background-color: $cream;
+    width: 100%;
+    padding-top: 2rem;
+}
+
 .background-alt {
     background: $background-alt;
 }
@@ -364,13 +407,12 @@ footer {
 
 #lead {
     position: relative;
-    height: 80vh;
-    min-height: 500px;
+    min-height: 400px;
     max-height: 1080px;
-    background: url(../images/lead-bg2.jpg);
-    background-size: cover;
-    padding: 15px;
+    padding: 1rem;
     overflow: hidden;
+    background-color: $cream;
+    margin-top: 5rem;
 }
 
 #lead-content {
@@ -380,65 +422,25 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 80%;
 
     h1, h2 {
         margin: 0;
     }
 
     h1 {
-        color: #fff;
-        font-weight: 900;
+        color: $base-color;
+        font-weight: 550;
         font-size: 5em;
-        text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
     }
 
     h2 {
-        color: color.adjust($base-color, $lightness: 25%);
+        color: $deep-plum;
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
-    }
-}
-
-#lead-overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba($base-color-hover, 0.8);
-    z-index: 1;
-}
-
-#lead-down {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-    bottom: 15px;
-    color: #fff;
-
-    span {
-        cursor: pointer;
-        display: block;
-        margin: 0 auto;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: 3px solid color.adjust($base-color, $lightness: 25%);
-        text-align:center;
-    }
-
-    i {
-        animation: pulsate 1.5s ease;
-        animation-iteration-count: infinite;
-        padding-top: 5px;;
     }
 }
 
@@ -466,8 +468,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 40vh;
     padding: 0;
+    background-color: $cream;
 
     .container {
         display: flex;
@@ -491,8 +494,9 @@ footer {
     }
 
     img {
-        border-radius: 8%;
-        width: 285px;
+        border-radius: 100%;
+        width: 250px;
+        height: 250px;
         object-fit: cover;
         display: block;
         margin: 0 auto;
@@ -512,110 +516,59 @@ footer {
     --------------------------------
 */
 
-#experience {
-    padding: 50px 15px;
+#experiences {
+    padding: 0 15px;
     text-align: center;
-    border-bottom: 1px solid $border;
+    justify-content: center;
+    display: grid;
+    background-color: $cream;
 
-    h2 {
-        color: $heading;
+    .heading {
+        color: #374054;
+        margin: 3rem 0 0 0;
     }
 }
 
-#experience-timeline {
+#experience {
     margin: 30px auto 0 auto;
     position: relative;
     max-width: 1000px;
+    margin-bottom: 2rem;
+    background-color: $cream;
 
-    &:before {
-        position: absolute;
-        content: '';
-        top: 0;
-        bottom: 0;
-        left: 303px;
-        right: auto;
-        height: 100%;
-        width: 3px;
-        background: $base-color;
-        z-index: 0;
+    h3, h4 {
+        margin: 0;
+        text-align: left;
     }
-
-    &:after {
-        position: absolute;
-        content: '';
-        width: 3px;
-        height: 40px;
-        background: $base-color;
-        background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
-        top: 100%;
-        left: 303px;
-    }
-}
-
-.vtimeline-content {
-    margin-left: 350px;
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    padding: 15px;
-    border-radius: 3px;
-    text-align: left;
 
     h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        color: $heading;
-        display: inline-block;
-        margin: 0;
+        color: $base-color;
+        font-size: 2.5rem;
     }
 
     h4 {
-        font-size: 1.2em;
-        font-weight: 300;
-        color: #7e8890;
-        margin: 0 0 15px 0;
+        font-size: 1.75rem;
     }
 
-    p {
-        color: $text;
-        font-size: 0.9em;
+    p.experience-date {
+        text-align: left;
         margin: 0;
+        font-weight: 100;
+        font-size: 1.75rem;
+    }
+
+    li {
+        text-align: left;
+        font-size: 1.65rem;
     }
 }
 
-.vtimeline-point {
-    position: relative;
-    display: block;
-    vertical-align: top;
-    margin-bottom: 30px;
+.experience-list {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.vtimeline-icon {
-    position: relative;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    background: $base-color;
-    border-radius: 50%;
-    float: left;
-    z-index: 99;
-    margin-left: 280px;
-
-    i {
-        display: block;
-        font-size: 2em;
-        margin-top: 10px;
-    }
-}
-
-.vtimeline-date {
-    width: 260px;
-    text-align: right;
-    position: absolute;
-    left: 0;
-    top: 10px;
-    font-weight: 300;
-    color: #374054;
-}
 
 /*
     -------------------------------
@@ -625,8 +578,8 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
     text-align: center;
+    background-color: $cream;
 
     h2 {
         color: $heading;
@@ -635,11 +588,11 @@ footer {
 }
 
 .education-block {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
+    width: 500px;
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
+    background: color.adjust($cream, $lightness: 5%);
 
     h3 {
         font-weight: 500;
@@ -679,8 +632,8 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
     text-align: center;
+    background-color: $cream;
 
     h2 {
         color: $heading;
@@ -690,22 +643,14 @@ footer {
 
 .project {
     position: relative;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
+    max-width: 300px;
     overflow: hidden;
-    background: #fff;
+    background: color.adjust($cream, $lightness: 5%);
     border-radius: 4px;
 }
 
-.project-image {
-    float: left;
-}
-
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    position: relative;
     padding: 15px;
 
     h3 {
@@ -743,6 +688,7 @@ footer {
 #presentations {
     padding: 50px 15px;
     text-align: center;
+    background-color: $background;
 
     hr {
         border: 0;
@@ -812,10 +758,6 @@ footer {
     left: -20px;
 }
 
-// .presentation-icon.left {
-//     left: -40px;
-// }
-
 
 /*
     -------------------------------
@@ -826,6 +768,7 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
+    background-color: $cream;
 
     h2 {
         color: $heading;
@@ -859,18 +802,30 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: $base-color;
+    background: $cream;
     text-align: center;
+    min-height: 80vh;
+    align-content: center;
 
     h2 {
         margin: 0 0 15px 0;
         color: #fff;
         font-weight: 500;
     }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    p.cta {
+        margin-top: 1.5rem;
+        color: $base-color;
+        font-size: 1.75rem;
+    }
 }
 
 #contact-form {
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
 
     input, textarea {
@@ -914,6 +869,120 @@ footer {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         }
     }
+}
+
+/*
+    -------------------------------
+    ----- 11. Random Styles -----
+    -------------------------------
+*/
+
+#random {
+    background-color: $cream;
+
+    .heading {
+        color: #374054;
+        margin: 3rem 0 0 0;
+        text-align: center;
+    }
+
+    .cta-btns {
+        justify-content: space-between;
+        display: flex;
+        width: 45%;
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+        padding-bottom: 5rem;
+    }
+
+    .project {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        width: 100%;
+        max-width: 480px;
+    
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+    
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+    
+        .project-info {
+          padding: 1.5rem;
+    
+          h3 {
+            font-family: $font-header;
+            color: $deep-plum;
+            margin-bottom: 0.5rem;
+          }
+    
+          p {
+            font-family: $font-body;
+            color: $text;
+            margin-bottom: 1rem;
+          }
+    
+          .tag {
+            display: inline-block;
+            background-color: $forest-green;
+            color: $cream;
+            font-size: 1rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+
+            &.tag-alt {
+                background-color: color.adjust($deep-plum, $lightness: 10%);
+            }
+          }
+    
+          .btn-demo {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 16px;
+            background-color: $burnt-orange;
+            color: $cream;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: background-color 0.3s ease;
+    
+            &:hover {
+              background-color: $deep-plum;
+            }
+          }
+
+          .btn-github {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 16px;
+            background-color: $forest-green;
+            color: $cream;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: background-color 0.3s ease;
+    
+            &:hover {
+              background-color: $deep-plum;
+            }
+          }
+        }
+      }
 }
 
 /*
@@ -970,35 +1039,6 @@ footer {
     -----------------------------
 */
 
-// Collapse timeline
-@media only screen and (max-width: 750px) {
-
-    #experience-timeline {
-        &:before, &:after {
-            left: 23px;
-        }
-
-    }
-
-    .vtimeline-date {
-        width: auto;
-        text-align: left;
-        position: relative;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: 70px;
-    }
-
-    .vtimeline-icon {
-        margin-left: 0;
-    }
-
-    .vtimeline-content {
-        margin-left: 70px;
-    }
-
-}
-
 // Medium Devices
 @media only screen and (max-width : 992px) {
 
@@ -1007,6 +1047,9 @@ footer {
         min-height: auto;
         max-height: auto;
         padding: 100px 15px;
+        justify-content: center;
+        display: flex
+;
     }
 
     #lead-content {
@@ -1092,7 +1135,29 @@ footer {
         display: none;
     }
 
+    #projects {
+        padding: 50px 15px 0 15px;
+        div.row {
+            flex-direction: column;
+        }
+
+        div.project {
+            max-width: none;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    #education {
+        div.row {
+            flex-direction: column;
+        }
+    }
+
     .education-block {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+
         h3, span {
             float: none;
         }
@@ -1119,7 +1184,14 @@ footer {
     }
 
     #about {
-        height: 105vh;
+        min-height: fit-content;
+        height: 70vh;
+    }
+
+    #contact {
+        dov.col-md-6{
+            margin-bottom: 3rem;
+        }
     }
 
 }
