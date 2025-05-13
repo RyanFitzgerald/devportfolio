@@ -94,7 +94,7 @@
                         <h3>Full Stack eCommerce Website - ShelfSpace</h3>
                         <p>
                            A mock digital eCommerce Website that sells eBooks to users. The website integrates full user functionality, such as, shopping cart management, PayPal Sandbox payment integration, Order Management, and Account Management. The website handles user authentication and secure data storage with password hashing, user IP tracking, email and account verification, and session management.
-			   <p>Security measures are also implement utilizing "Flask Firewall", a custom built firewall that I have developed to protect Flask applications from common web attacks such as, DDOS, brute forcing, payload injections, and CSRF attacks. A full overview of this project will be showcased next.</p>
+			   <p>Security measures are also implemented utilizing "Flask Firewall", a custom built firewall that I have developed to protect Flask applications from common web attacks such as, DDOS, brute forcing, payload injections, and CSRF attacks. A full overview of this project will be showcased next.</p>
 			    <p>Technologies used: HTML, CSS, JavaScript, Flask, SQLite, SQLAlchemy, Python</p>
 			  <p>Click below to view ShelfSpace's Github repository, where you can find the live demo link, source code, and demo videos. </p>
                         </p>
@@ -112,7 +112,7 @@
                     <div class="project-info">
                         <h3>Flask Firewall</h3>
                         <p>
-                           A firewall that was built with the purpose of protecting Flask web applications from common web vulnerabilities and attacks, such as DDoS, brute force, payload injections, and CSRF attacks. The firewall counters these attacks by instilling rate limits and login POST rate limits to prohibit denial of service attacks and brute forcing, input verification and output encoding to prohibit payload injections, and CSRF token generation and validation to incorporate into sensitive POST forms. If any user violates rate limits, the firewall temporarily blacklists the user for 30 minutes. If these offenses are repeated, the user is permanently blacklisted. Additionally, if a malicious payload injection is detected, the attacker's IP is permanently blacklisted. The firewall also handles IP whitelisting to allow special permissions for specific users.
+                           A firewall that was built with the purpose of protecting Flask web applications from common web vulnerabilities and attacks, such as DDoS, brute force, payload injections, and CSRF attacks through enforcing rate limits and login rate limits within login POST requests, input validation and output encoding, CSRF token generation and validation, and IP whitelisting and blacklisting for handling any offenders or granting specific access.
 		           <p>Technologies Used: Python, Burp Suite(penetration testing), Kali Linux(penetration testing) </p>
 			   <p>Click below to view the Flask Firewall's Github repository, where you can find installation and usage instructions.</p>
                         </p>
