@@ -20,36 +20,42 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           About
         </a>
       </li>
-      {hasProjects && (
-        <li>
-          <a
-            href="#projects"
-            class="text-gray-700 hover:text-black transition-colors font-medium"
-          >
-            Projects
-          </a>
-        </li>
-      )}
-      {hasExperience && (
-        <li>
-          <a
-            href="#experience"
-            class="text-gray-700 hover:text-black transition-colors font-medium"
-          >
-            Experience
-          </a>
-        </li>
-      )}
-      {hasEducation && (
-        <li>
-          <a
-            href="#education"
-            class="text-gray-700 hover:text-black transition-colors font-medium"
-          >
-            Education
-          </a>
-        </li>
-      )}
+      {
+        hasProjects && (
+          <li>
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Projects
+            </a>
+          </li>
+        )
+      }
+      {
+        hasExperience && (
+          <li>
+            <a
+              href="#experience"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Experience
+            </a>
+          </li>
+        )
+      }
+      {
+        hasEducation && (
+          <li>
+            <a
+              href="#education"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Education
+            </a>
+          </li>
+        )
+      }
     </ul>
   </nav>
 </header>
@@ -58,9 +64,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   window.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     if (window.scrollY > 0) {
-      header?.classList.add("bg-white/80", "backdrop-blur-md");
+      header?.classList.add("bg-white/80", "backdrop-blur-sm");
     } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-md");
+      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
     }
   });
 </script>

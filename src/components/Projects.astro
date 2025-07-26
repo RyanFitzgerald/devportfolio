@@ -15,7 +15,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
             <div
               class="w-[75px] h-[5px] mt-2 rounded-full"
               style={`background-color: ${siteConfig.accentColor}`}
-            ></div>
+            />
           </div>
 
           <div class="lg:col-span-8">
@@ -60,7 +60,10 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
                       <div class="space-y-4">
                         <div>
-                          <span class="text-sm font-mono text-gray-500">
+                          <span
+                            class="text-sm font-mono"
+                            style={{ color: siteConfig.accentColor }}
+                          >
                             0{index + 1}
                           </span>
                           <h3 class="text-2xl font-bold text-gray-900 mt-1">
