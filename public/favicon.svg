@@ -1,0 +1,13 @@
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon fill="#000000" fill-rule="nonzero" points="0 30.1184211 0 22.9226974 16 14 16 21.5657895 6.00369686 26.3766447 6.00369686 26.6644737 16 31.4753289 16 39"></polygon>
+        <polygon fill="#000000" fill-rule="nonzero" points="31 7 23.9756098 43 19 43 26.0243902 7"></polygon>
+        <polygon fill="#000000" fill-rule="nonzero" points="50 30.1184211 34 39 34 31.4753289 44.025878 26.6644737 44.025878 26.3766447 34 21.5657895 34 14 50 22.9226974"></polygon>
+    </g>
+     <style>
+        polygon { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            polygon { fill: #FFF; }
+        }
+    </style>
+</svg>

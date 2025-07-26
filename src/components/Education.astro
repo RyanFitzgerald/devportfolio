@@ -1,0 +1,58 @@
+---
+import { siteConfig } from "../config";
+const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+---
+
+{
+  hasEducation && (
+    <section id="education" class="p-16 md:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-5xl lg:text-7xl font-bold text-gray-900">
+              Education
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {siteConfig.education.map((edu) => (
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300">
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                    <div>
+                      <h3 class="text-xl font-semibold text-gray-900">
+                        {edu.degree}
+                      </h3>
+                      <p
+                        class="text-lg"
+                        style={`color: ${siteConfig.accentColor}`}
+                      >
+                        {edu.school}
+                      </p>
+                    </div>
+                    <span class="text-sm text-gray-500 mt-2 sm:mt-0">
+                      {edu.dateRange}
+                    </span>
+                  </div>
+
+                  <ul class="space-y-2">
+                    {edu.achievements.map((achievement) => (
+                      <li class="flex items-start">
+                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
+                        <span class="text-gray-600">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
