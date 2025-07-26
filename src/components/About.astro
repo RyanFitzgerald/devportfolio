@@ -5,16 +5,26 @@ import { siteConfig } from "../config";
 <section class="p-16 md:p-24">
   <div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <!-- Title Column -->
       <div class="lg:col-span-4">
         <h2 class="text-5xl lg:text-7xl font-bold text-gray-900">About Me</h2>
       </div>
 
-      <!-- Content Column -->
-      <div class="lg:col-span-8 space-y-6">
+      <div class="lg:col-span-8 space-y-8">
         <p class="text-2xl leading-relaxed text-gray-600">
           {siteConfig.aboutMe}
         </p>
+
+        <div class="pt-4">
+          <div class="flex flex-wrap gap-3">
+            {
+              siteConfig.skills.map((skill) => (
+                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
       </div>
     </div>
   </div>
