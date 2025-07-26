@@ -8,7 +8,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
   <div class="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+    <div
+      class="flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+    >
       <div class="flex flex-col gap-4">
         <h3 class="text-2xl font-bold text-gray-800">
           {siteConfig.name}
@@ -118,27 +120,53 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           </a>
         </div>
       </div>
-      
-      <div class="flex flex-col md:items-end gap-4">
+
+      <div class="hidden md:block flex flex-col md:items-end gap-4">
         <nav class="flex gap-x-8">
-          <a href="#about" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">About</a>
-          {hasProjects && (
-            <a href="#projects" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Projects</a>
-          )}
-          {hasExperience && (
-            <a href="#experience" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Experience</a>
-          )}
-          {hasEducation && (
-            <a href="#education" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Education</a>
-          )}
+          <a
+            href="#about"
+            class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+            >About</a
+          >
+          {
+            hasProjects && (
+              <a
+                href="#projects"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Projects
+              </a>
+            )
+          }
+          {
+            hasExperience && (
+              <a
+                href="#experience"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Experience
+              </a>
+            )
+          }
+          {
+            hasEducation && (
+              <a
+                href="#education"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Education
+              </a>
+            )
+          }
         </nav>
         <p class="text-sm text-gray-500">
-          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          © {new Date().getFullYear()}
+          {siteConfig.name}. All rights reserved.
         </p>
       </div>
     </div>
   </div>
-  
+
   <!-- Decorative pattern -->
   <div class="absolute inset-0 -z-10 overflow-hidden">
     <svg
@@ -158,10 +186,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           stroke="currentColor"
           stroke-width="0.5"
           fill="none"
-          opacity="0.4"
-        />
+          opacity="0.4"></path>
       </pattern>
-      <rect width="100%" height="100%" fill="url(#footer-pattern)" />
+      <rect width="100%" height="100%" fill="url(#footer-pattern)"></rect>
     </svg>
   </div>
 </footer>

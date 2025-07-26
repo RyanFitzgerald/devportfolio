@@ -2,11 +2,15 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-16 md:p-24">
+<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
   <div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
       <div class="lg:col-span-4">
-        <h2 class="text-5xl lg:text-7xl font-bold text-gray-900">About Me</h2>
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
+        >
+          About Me
+        </h2>
         <div
           class="w-[75px] h-[5px] mt-2 rounded-full"
           style={`background-color: ${siteConfig.accentColor}`}
@@ -15,7 +19,7 @@ import { siteConfig } from "../config";
       </div>
 
       <div class="lg:col-span-8 space-y-8">
-        <p class="text-2xl leading-relaxed text-gray-600">
+        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
           {siteConfig.aboutMe}
         </p>
 
@@ -23,7 +27,7 @@ import { siteConfig } from "../config";
           <div class="flex flex-wrap gap-3">
             {
               siteConfig.skills.map((skill) => (
-                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
+                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
                   {skill}
                 </span>
               ))
