@@ -1,0 +1,73 @@
+---
+import { siteConfig } from "../config";
+const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+---
+
+{hasProjects && (
+  <section class="p-16 md:p-24">
+    <div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <div class="lg:col-span-4">
+          <h2 class="text-5xl lg:text-7xl font-bold text-gray-900">Projects</h2>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div class="space-y-8">
+            {siteConfig.projects.map((project, index) => {
+              const Component = project.link ? 'a' : 'div';
+              const linkProps = project.link ? {
+                href: project.link,
+                target: "_blank",
+                rel: "noopener noreferrer"
+              } : {};
+              
+              return (
+                <div class="group relative">
+                  <Component
+                    {...linkProps}
+                    class={`block relative p-8 bg-gray-50 rounded-2xl border border-gray-200 transition-all duration-300 ${
+                      project.link ? 'hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1' : ''
+                    }`}
+                  >
+                    {project.link && (
+                      <div class="absolute top-8 right-8 w-12 h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
+                        <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                      </div>
+                    )}
+                    
+                    <div class="space-y-4">
+                      <div>
+                        <span class="text-sm font-mono text-gray-500">0{index + 1}</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mt-1">
+                          {project.name}
+                        </h3>
+                      </div>
+                      
+                      <p class={`text-lg text-gray-600 leading-relaxed ${project.link ? 'pr-16' : ''}`}>
+                        {project.description}
+                      </p>
+                      
+                      {project.skills && project.skills.length > 0 && (
+                        <div class="flex flex-wrap gap-2 pt-2">
+                          {project.skills.map((skill) => (
+                            <span class={`px-3 py-1.5 bg-gray-900 text-white rounded-lg text-sm font-medium transition-all duration-300 ${
+                              project.link ? 'group-hover:bg-gray-800' : ''
+                            }`}>
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </Component>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
