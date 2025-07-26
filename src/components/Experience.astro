@@ -12,6 +12,10 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
             <h2 class="text-5xl lg:text-7xl font-bold text-gray-900">
               Experience
             </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
           </div>
 
           <div class="lg:col-span-8">
@@ -21,7 +25,7 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
               {siteConfig.experience.map((exp) => (
                 <div class="relative flex items-start mb-12 last:mb-0 group">
                   <div
-                    class="absolute left-8 w-4 h-4 bg-white border-2 border-gray-300 rounded-full -translate-x-1/2 group-hover:border-[var(--accent-color)] transition-colors duration-300"
+                    class="absolute ml-0.5 left-8 w-4 h-4 bg-white border-2 border-gray-300 rounded-full -translate-x-1/2 group-hover:border-[var(--accent-color)] transition-colors duration-300"
                     style={`--accent-color: ${siteConfig.accentColor}`}
                   />
 
