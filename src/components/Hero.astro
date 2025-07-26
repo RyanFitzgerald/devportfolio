@@ -1,8 +1,8 @@
 ---
-
+import { siteConfig } from "../config";
 ---
 
-<div class="relative isolate overflow-hidden bg-white h-screen">
+<div class="relative isolate overflow-hidden bg-white h-screen" style={`--accent-color: ${siteConfig.accentColor}`}>
   <svg
     aria-hidden="true"
     class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -35,19 +35,21 @@
       <h1
         class="mt-10 text-pretty text-6xl font-bold tracking-tight text-gray-800 sm:text-8xl"
       >
-        I'm <span class="text-blue-500">Ryan Fitzgerald</span>
+        I'm <span style={{ color: siteConfig.accentColor }}
+          >{siteConfig.name}</span
+        >
       </h1>
       <p
         class="mt-8 text-pretty text-lg font-medium text-gray-600 sm:text-xl/8"
       >
-        Senior Software Engineer
+        {siteConfig.title}
       </p>
     </div>
   </div>
   <div
     class="absolute bottom-0 left-0 right-0 p-16 md:p-24 flex gap-x-8 text-gray-700"
   >
-    <a href="#">
+    <a href={`mailto:${siteConfig.social.email}`} aria-label="Email" class="transition-colors duration-300 hover:text-[var(--accent-color)]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -67,7 +69,13 @@
         <path d="M3 7l9 6l9 -6"></path>
       </svg>
     </a>
-    <a href="#">
+    <a
+      href={siteConfig.social.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -86,7 +94,13 @@
         ></path></svg
       >
     </a>
-    <a href="#">
+    <a
+      href={siteConfig.social.twitter}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Twitter"
+      class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -103,7 +117,13 @@
           d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
       >
     </a>
-    <a href="#">
+    <a
+      href={siteConfig.social.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+      class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
