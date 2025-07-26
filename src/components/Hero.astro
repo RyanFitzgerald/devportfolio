@@ -125,26 +125,26 @@ import { siteConfig } from "../config";
   <div class="h-full mx-auto p-16 md:p-24 flex items-center">
     <div>
       <h2
-        class="text-pretty text-2xl font-bold tracking-tight text-gray-700 sm:text-5xl"
+        class="text-pretty text-2xl font-bold tracking-tight text-gray-700 sm:text-5xl animate-fade-in"
       >
         Hello! 👋
       </h2>
       <h1
-        class="mt-10 text-pretty text-6xl font-bold tracking-tight text-gray-800 sm:text-8xl"
+        class="mt-10 text-pretty text-6xl font-bold tracking-tight text-gray-800 sm:text-8xl animate-fade-in animation-delay-200"
       >
         I'm <span style={{ color: siteConfig.accentColor }}
           >{siteConfig.name}</span
         >
       </h1>
       <p
-        class="mt-8 text-pretty text-lg font-medium text-gray-600 sm:text-xl/8"
+        class="mt-8 text-pretty text-lg font-medium text-gray-600 sm:text-xl/8 animate-fade-in animation-delay-400"
       >
         {siteConfig.title}
       </p>
     </div>
   </div>
   <div
-    class="absolute bottom-0 left-0 right-0 p-16 md:p-24 flex gap-x-8 text-gray-700"
+    class="absolute bottom-0 left-0 right-0 p-16 md:p-24 flex gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
   >
     <a
       href={`mailto:${siteConfig.social.email}`}
@@ -243,3 +243,33 @@ import { siteConfig } from "../config";
     </a>
   </div>
 </div>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+</style>
