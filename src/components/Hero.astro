@@ -2,7 +2,10 @@
 import { siteConfig } from "../config";
 ---
 
-<div class="relative isolate overflow-hidden bg-white h-screen" style={`--accent-color: ${siteConfig.accentColor}`}>
+<div
+  class="relative isolate overflow-hidden bg-white h-screen"
+  style={`--accent-color: ${siteConfig.accentColor}`}
+>
   <svg
     aria-hidden="true"
     class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -18,7 +21,101 @@ import { siteConfig } from "../config";
       >
         <path d="M.5 200V.5H200" fill="none"></path>
       </pattern>
+      <pattern
+        id="programming-symbols"
+        x="0"
+        y="0"
+        width="400"
+        height="400"
+        patternUnits="userSpaceOnUse"
+      >
+        <text
+          x="50"
+          y="50"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="24"
+          transform="rotate(-15)">&lt;/&gt;</text
+        >
+        <text
+          x="150"
+          y="100"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="20"
+          transform="rotate(10)">{}</text
+        >
+        <text
+          x="250"
+          y="80"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="18"
+          transform="rotate(-5)">=&gt;</text
+        >
+        <text
+          x="100"
+          y="200"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="22"
+          transform="rotate(15)">[]</text
+        >
+        <text
+          x="300"
+          y="180"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="20"
+          transform="rotate(-10)">&lt;&gt;</text
+        >
+        <text
+          x="200"
+          y="250"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="24"
+          transform="rotate(5)">()</text
+        >
+        <text
+          x="50"
+          y="320"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="18"
+          transform="rotate(-8)">::</text
+        >
+        <text
+          x="350"
+          y="300"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="22"
+          transform="rotate(12)">==</text
+        >
+        <text
+          x="150"
+          y="350"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="20"
+          transform="rotate(-15)">++</text
+        >
+        <text
+          x="250"
+          y="370"
+          fill={siteConfig.accentColor}
+          font-family="monospace"
+          font-size="24"
+          transform="rotate(8)">;</text
+        >
+      </pattern>
     </defs>
+    <rect
+      fill="url(#programming-symbols)"
+      width="100%"
+      height="100%"
+      opacity="0.2"></rect>
     <rect
       fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
       width="100%"
@@ -49,7 +146,11 @@ import { siteConfig } from "../config";
   <div
     class="absolute bottom-0 left-0 right-0 p-16 md:p-24 flex gap-x-8 text-gray-700"
   >
-    <a href={`mailto:${siteConfig.social.email}`} aria-label="Email" class="transition-colors duration-300 hover:text-[var(--accent-color)]">
+    <a
+      href={`mailto:${siteConfig.social.email}`}
+      aria-label="Email"
+      class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
