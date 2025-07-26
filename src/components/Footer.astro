@@ -1,5 +1,9 @@
 ---
 import { siteConfig } from "../config";
+
+const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
+const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -118,9 +122,15 @@ import { siteConfig } from "../config";
       <div class="flex flex-col md:items-end gap-4">
         <nav class="flex gap-x-8">
           <a href="#about" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">About</a>
-          <a href="#projects" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Projects</a>
-          <a href="#experience" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Experience</a>
-          <a href="#education" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Education</a>
+          {hasProjects && (
+            <a href="#projects" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Projects</a>
+          )}
+          {hasExperience && (
+            <a href="#experience" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Experience</a>
+          )}
+          {hasEducation && (
+            <a href="#education" class="text-sm text-gray-600 hover:text-gray-800 transition-colors">Education</a>
+          )}
         </nav>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
