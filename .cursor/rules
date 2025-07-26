@@ -1,0 +1,79 @@
+# DevPortfolio - Cursor AI Rules
+
+## Project Context
+This is a modern portfolio template built with Astro and Tailwind CSS v4. The project is designed for simplicity and ease of customization through a single configuration file.
+
+## Code Style Guidelines
+
+### General
+- Use TypeScript for type safety in configuration files
+- Prefer functional and declarative patterns
+- Keep components simple and focused on a single responsibility
+- Follow existing code conventions and patterns
+
+### Astro Components
+- Use `.astro` files for all components
+- Import styles through Tailwind utility classes
+- Keep component logic minimal - components should primarily render data from config
+- Use semantic HTML elements
+
+### Styling
+- Use Tailwind CSS utility classes exclusively
+- Maintain the monospace font aesthetic (IBM Plex Mono)
+- Follow the existing spacing and layout patterns
+- Use the accent color from config for themed elements
+
+### Configuration
+- All content changes should be made in `src/config.ts`
+- Keep the config structure flat and simple
+- Make all config sections optional where it makes sense
+- Use TypeScript interfaces for config type safety
+
+## Development Practices
+
+### When Adding Features
+1. First check if it can be accomplished through config changes
+2. If new components are needed, follow the existing component patterns
+3. Ensure new sections can be hidden by removing their config data
+4. Maintain the minimalist aesthetic
+
+### When Modifying Components
+1. Read the existing component structure first
+2. Maintain consistency with other components
+3. Use Tabler Icons for any new icons
+4. Test with different config variations (empty data, full data)
+
+### File Organization
+- Components go in `src/components/`
+- Keep the single-page structure (all sections in index.astro)
+- Don't create unnecessary abstraction layers
+
+## Common Tasks
+
+### Adding a New Section
+1. Create a new component in `src/components/`
+2. Add the corresponding data structure to `src/config.ts`
+3. Import and add the component to `src/pages/index.astro`
+4. Ensure it renders conditionally based on config data
+
+### Updating Styles
+1. Use Tailwind utilities only
+2. Check responsive behavior
+3. Maintain consistent spacing with other sections
+
+### Changing Content
+1. Only modify `src/config.ts`
+2. Don't edit component files for content changes
+
+## Commands to Remember
+```bash
+npm run dev     # Development server
+npm run build   # Production build
+npm run preview # Preview production build
+```
+
+## Important Notes
+- No testing framework is configured
+- No linting tools are set up
+- The project uses Tailwind CSS v4 with Vite plugin
+- All icons should come from Tabler Icons for consistency

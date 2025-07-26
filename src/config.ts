@@ -6,7 +6,7 @@ export const siteConfig = {
   social: {
     email: "your-email@example.com",
     linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://twitter.com/yourprofile",
+    twitter: "https://x.com/rfitzio",
     github: "https://github.com/RyanFitzgerald",
   },
   aboutMe:
@@ -14,15 +14,24 @@ export const siteConfig = {
   skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
   projects: [
     {
-      name: "Project Name",
-      description: "Brief description of what the project does and its impact",
-      link: "https://github.com/yourusername/project",
+      name: "AI Dev Roundup Newsletter",
+      description:
+        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
+      link: "https://aidevroundup.com/?ref=devportfolio",
       skills: ["React", "Node.js", "AWS"],
     },
     {
-      name: "Project Name",
-      description: "Brief description of what the project does and its impact",
-      link: "https://github.com/yourusername/project",
+      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      description:
+        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
+      link: "https://fullstackextensions.com/?ref=devportfolio",
+      skills: ["React", "Node.js", "AWS"],
+    },
+    {
+      name: "ExtensionKit",
+      description:
+        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
+      link: "https://extensionkit.io/?ref=devportfolio",
       skills: ["React", "Node.js", "AWS"],
     },
   ],
@@ -66,8 +75,8 @@ export const siteConfig = {
       achievements: [
         "Graduated Magna Cum Laude with 3.8 GPA",
         "Dean's List all semesters",
-        "President of Computer Science Club"
-      ]
+        "President of Computer Science Club",
+      ],
     },
     {
       school: "Online Platform",
@@ -76,8 +85,8 @@ export const siteConfig = {
       achievements: [
         "Completed 500+ hours of coursework",
         "Built 10+ portfolio projects",
-        "Specialized in React and Node.js"
-      ]
-    }
+        "Specialized in React and Node.js",
+      ],
+    },
   ],
 };
