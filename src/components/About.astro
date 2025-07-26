@@ -2,7 +2,7 @@
 import { siteConfig } from "../config";
 ---
 
-<section class="p-24">
+<section class="p-16 md:p-24">
   <div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
       <!-- Title Column -->
@@ -12,13 +12,8 @@ import { siteConfig } from "../config";
 
       <!-- Content Column -->
       <div class="lg:col-span-8 space-y-6">
-        <p class="text-2xl leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos
-          asperiores nihil consequatur tempore cupiditate architecto natus
-          commodi corrupti quas quasi facere est, dignissimos odit nam veniam
-          sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit!
-          Corrupti ratione mollitia temporibus necessitatibus, consectetur
-          reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!
+        <p class="text-2xl leading-relaxed text-gray-600">
+          {siteConfig.aboutMe}
         </p>
       </div>
     </div>
