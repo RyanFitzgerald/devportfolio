@@ -1,92 +1,51 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
-  accentColor: "#1d4ed8",
+  name: "Andrzej Fijało",
+  title: "Software Engineer",
+  description: "Portfolio website of Andrzej Fijało",
+  accentColor: "#d8811dff",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "andrzejfijalo@gmail.com",
+    linkedin: "https://linkedin.com/in/andrzejfijalo",
+    github: "https://github.com/AnrzejAF",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
-  projects: [
-    {
-      name: "AI Dev Roundup Newsletter",
-      description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
-      description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "ExtensionKit",
-      description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-  ],
+    `I'm an engineer with a strong background in low-level programming and image processing, focused on building and optimizing efficient vision systems. I work comfortably in Linux environments — both as a user and a system administrator — automating workflows, configuring systems, and writing scripts in Bash and Zsh.
+    My daily toolbox includes Git, Docker, and Confluence, and I specialize in video and image processing using GStreamer, DeepStream, OpenCV, YOLO, and TensorRT. I primarily develop on NVIDIA Jetson platforms, designing solutions that balance hardware constraints with AI performance requirements.
+    I have hands-on experience delivering end-to-end systems — from sensor integration and hardware setup to implementation, performance tuning, and documentation. I've also worked with ROS and containerized environments in drone and automation-related projects.
+    I value open technologies, technical clarity, and close collaboration across engineering disciplines.`,
+  tools: ["C++", "Python", "Bash", "Git", "Docker", "CMake"],
+  visions: ["OpenCV", "GStreamer", "DeepStream", "YOLO", "CUDA", "VPI", "FFmpeg"],
+  robotics: ["Jetson", "Linux", "ROS", "V4L2", "OpenFOAM"],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Advanced Protection Systems",
+      title: "R&D Engineer / Software Developer",
+      dateRange: "2022 - Present",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "VAVE Light",
+      title: "Lead Product Developer",
+      dateRange: "2018 - 2022",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
       ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
-      ],
-    },
+    }
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "Gdańsk University of Technology",
+      degree: "Master of Science, Computer Science - coursework completed",
+      dateRange: "2023 - 2025",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
       ],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
+      school: "Gdańsk University of Technology",
+      degree: "Bachelor of Science, Automation and Robotics",
+      dateRange: "2018 - 2022",
       achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
       ],
-    },
+    }
   ],
 };

@@ -23,16 +23,42 @@ import { siteConfig } from "../config";
           {siteConfig.aboutMe}
         </p>
 
-        <div class="pt-4">
+        <div class="pt-6 space-y-2">
+          <h3 class="text-xl font-semibold text-gray-800">Programming & Tools:</h3>
           <div class="flex flex-wrap gap-3">
             {
-              siteConfig.skills.map((skill) => (
+              siteConfig.tools.map((tool) => (
                 <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
+                  {tool}
                 </span>
               ))
             }
           </div>
+
+        <div class="pt-6 space-y-2">
+          <h3 class="text-xl font-semibold text-gray-800">Computer Vision & AI:</h3>
+          <div class="flex flex-wrap gap-3">
+            {
+              siteConfig.visions.map((vision) => (
+                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
+                  {vision}
+                </span>
+              ))
+            }
+          </div>
+
+        <div class="pt-6 space-y-2">
+          <h3 class="text-xl font-semibold text-gray-800">Robotics:</h3>
+          <div class="flex flex-wrap gap-3">
+            {
+              siteConfig.robotics.map((rob) => (
+                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
+                  {rob}
+                </span>
+              ))
+            }
+          </div>
+
         </div>
       </div>
     </div>
