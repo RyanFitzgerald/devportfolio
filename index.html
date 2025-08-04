@@ -113,6 +113,102 @@
     <h2 class="heading">Projects</h2>
     <div class="container">
         <div class="row">
+          <!-- Spatial Protein-Expression Prediction from Histology -->
+        <div class="project shadow-large no-image">
+        <div class="project-info">
+            <h3>Spatial Protein-Expression Prediction from Histology</h3>
+
+            <!-- Lead hook -->
+            <p>
+            Trained on ~15 000 spatial-omics spots across four specimens, this pipeline
+            predicts a 38-protein biomarker panel directly from routine biological tissue images. 
+            It couples classical ML (RF, SVR) with a fine-tuned PyTorch
+            ResNet50 to turn raw pathology images into quantitative biomarkers.  
+            Outputs feed immediately into cost-effectiveness simulations, eliminating
+            the need for additional wet-lab assays.
+            </p>
+
+            <!-- Key bullets -->
+            <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
+            <li> <strong>Why it matters for HEOR:</strong> The predicted protein panel
+                becomes low-cost, ready-made inputs for budget-impact and CEA models,
+                enabling fast evaluation of biomarker-guided therapies.</li>
+            <li><strong>Generative-AI workflow&nbsp;—</strong> Used <strong>Claude</strong> to
+            scaffold feature-engineering scripts and literature matrices,
+            trimming data-to-prototype time by ~50 %.</li>
+            <li><strong>Result&nbsp;—</strong> Classical baseline (<em>PCA + OLS / Random Forest</em>)
+            averaged Spearman&nbsp;ρ = 0.45; fine-tuned <strong>ResNet50</strong> lifted this
+            to ρ = 0.72, and flagship biomarker CD11b reached ρ ≈ 0.66—strong enough for
+            scenario analyses.</li>
+            <li> <strong>Repro —</strong> Python Markdown + GitHub Actions auto-rebuild to meet NICE transparency
+                guidance.</li>
+            </ul>
+
+            <!-- Techniques -->
+            <h4 style="margin:20px 0 6px;">Techniques Used</h4>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; font-size:0.95em;">
+            <div><strong>Pre-proc:</strong> RGB → HED, colour norm, patches</div>
+            <div><strong>Classical ML:</strong> RF, SVR, OLS + PCA</div>
+            <div><strong>Deep Learning:</strong> PyTorch ResNet50 TL, GroupKFold</div>
+            <div><strong>Metrics:</strong> RMSE, r, ρ, R²</div>
+            </div>
+
+            <a href="https://github.com/JackyChong611/Healthcare_Protein_Expression"
+            target="_blank" class="btn" style="margin-top:18px;">View on GitHub</a>
+        </div>
+        <div class="project-image">
+            <img src="images/Protein Expression.png" alt="Protein Expression Prediction" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+        </div>
+        <!-- NHS Dissatisfaction & Political Leanings -->
+        <div class="project shadow-large">
+            <div class="project-info">
+                <h3>NHS Dissatisfaction &amp; Political Leanings</h3>
+                <p>
+                Analysed British Social Attitudes surveys (2015–2019, 2021–2023) to quantify
+                how political leaning and demographics shape nine specific reasons for NHS
+                dissatisfaction.  Stepwise logistic models isolate ideology-driven vs
+                age-driven effects, controlling for sex, ethnicity, education, employment
+                and post-COVID shocks.  Outputs provide probability weights that can feed
+                demand-side modules of health-economic models.
+                </p>
+
+                <!-- HEOR-oriented bullets -->
+                <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
+                <li><strong>Why it matters for HEOR&nbsp;—</strong> Dissatisfaction impacts
+                    service uptake, adherence and political feasibility of funding scenarios;
+                    modelled probabilities can be plugged into cost-effectiveness or budget-impact
+                    sensitivity analyses.</li>
+
+                <li><strong>Key findings&nbsp;—</strong> Labour identifiers blame
+                    under-funding &amp; staffing; Conservatives cite inefficiency &amp; waste;
+                    unaffiliated focus on waiting times.  Age 65+ and employment status are
+                    independent predictors across all models.</li>
+
+                <li><strong>Model export&nbsp;—</strong> Coefficient tables auto-export to
+                    CSV so analysts can drop them into R or Python simulation frameworks
+                    (e.g., uptake curves, utility decrements, scenario weights).</li>
+                </ul>
+
+                 <!-- Techniques grid -->
+                <h4 style="margin:20px 0 6px;">Techniques Used</h4>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; font-size:0.95em;">
+                <div><strong>Data wrangling:</strong> R tidyverse</div>
+                <div><strong>Exploratory:</strong> ggplot2, Phi &amp; Cramér’s V</div>
+                <div><strong>Modelling:</strong> Stepwise logistic regression</div>
+                <div><strong>Export:</strong> Broom for HE model inputs</div>
+                </div>
+                <a href="https://github.com/JackyChong611/PortfolioProjects/tree/main/NHS_Dissatisfaction_Politics"
+                target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Images -->
+            <div class="project-image">
+                <img src="images/nhs_satisfaction_by_party.png"
+                    alt="Trend of NHS satisfaction by political support"
+                    style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+            </div>
+        </div>
+
             <!-- Twitter Sentiment Analysis with Natural Language Processing -->
             <div class="project shadow-large no-image">
                 <div class = 'project-info'>
@@ -134,39 +230,7 @@
     <img src="images/f1_score.png" alt="Sentiment Analysis F1 Score Graph"style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
                 </div>
             </div>
-                          <!-- NHS Dissatisfaction & Political Leanings -->
-<div class="project shadow-large">
-    <div class="project-info">
-        <h3>NHS Dissatisfaction &amp; Political Leanings</h3>
-        <p>
-            Analysed British Social Attitudes surveys (2015–2019, 2021–2023) to test whether
-            reasons for NHS dissatisfaction are linked to political leanings
-            (Labour vs Conservative vs Unaffiliated) while controlling for age, sex, ethnicity,
-            education, employment, and the post-COVID shock.
-        </p>
-        <ul>
-            <li>Used R for data cleaning, reshaping, and exploratory visualisation.</li>
-            <li>Computed Phi and Cramér’s V to screen bivariate associations.</li>
-            <li>Ran stepwise logistic regression (year fixed effects → age interactions → full controls)
-                on overall and nine reason-specific outcomes.</li>
-            <li>Labour supporters blamed under-funding &amp; staffing; Conservatives highlighted
-                inefficiency &amp; waste; unaffiliated focused on long waiting times.
-                Age 65+ and employment status were consistent predictors.</li>
-        </ul>
-        <a href="https://github.com/JackyChong611/PortfolioProjects/tree/main/NHS_Dissatisfaction_Politics"
-           target="_blank" class="btn">View on GitHub</a>
-    </div>
-
-    <!-- Images -->
-    <div class="project-image">
-        <img src="images/nhs_satisfaction_by_party.png"
-             alt="Trend of NHS satisfaction by political support"
-             style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
-        <img src="images/Logistic Regression with NHS Dissatisfaction.png"
-             alt="Logistic regression for NHS dissatisfaction"
-             style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
-    </div>
-</div>
+            <!-- End Twitter Sentiment Analysis Project -->
             <!-- COVID-19 Vaccination and Mortality Analysis Project (No Image) -->
             <div class="project shadow-large no-image">
                 <div class="project-info">
