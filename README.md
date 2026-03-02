@@ -29,7 +29,7 @@ To view a live preview of the site, [click here](https://ryanfitzgerald.github.i
 
 The template is designed to be easily customizable through the `src/config.ts` file. This single file controls:
 
-- **Personal Information**: Name, title, description
+- **Personal Information**: Ron Maynard R. Sarmenta, IT & Communications Coordinator | System & Data Analyst, description
 - **Accent Color**: Primary color theme (changing this will change the accent color site wide)
 - **Social Links**: Email, LinkedIn, Twitter, GitHub (all optional)
 - **About Section**: Personal bio/description
