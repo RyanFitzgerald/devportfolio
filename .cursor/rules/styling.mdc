@@ -1,0 +1,14 @@
+---
+description: Styling conventions using Tailwind CSS v4
+globs: "**/*.{astro,css}"
+alwaysApply: false
+---
+
+# Styling Conventions
+
+- Use **Tailwind CSS v4** utility classes exclusively (via `@tailwindcss/vite` plugin)
+- Maintain the **monospace font aesthetic** (IBM Plex Mono from Google Fonts)
+- Use the accent color from `siteConfig.accentColor` for themed elements
+- Follow existing spacing and layout patterns
+- Check responsive behavior when updating styles
+- Maintain consistent spacing between sections
