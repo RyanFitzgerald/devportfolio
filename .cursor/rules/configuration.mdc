@@ -1,0 +1,26 @@
+---
+description: Rules for working with the site configuration file
+globs: "**/config.ts"
+alwaysApply: false
+---
+
+# Configuration Rules
+
+`src/config.ts` exports a `siteConfig` object — the single source of truth for all site content.
+
+## Structure
+
+- **Basic info**: name, title, description, accentColor
+- **Social links**: email, linkedin, twitter, github (all optional)
+- **aboutMe**: string
+- **skills**: string[]
+- **projects**: array of {name, description, link, skills}
+- **experience**: array of {company, title, dateRange, bullets}
+- **education**: array of {school, degree, dateRange, achievements}
+
+## Guidelines
+
+- Keep the config structure flat and simple
+- Make all sections optional where it makes sense
+- Use TypeScript interfaces for type safety
+- Content changes should only happen here, not in component files

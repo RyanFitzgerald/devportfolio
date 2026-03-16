@@ -1,0 +1,19 @@
+---
+description: Conventions for writing and modifying Astro components
+globs: "**/*.astro"
+alwaysApply: false
+---
+
+# Astro Component Conventions
+
+- Components read directly from the imported `siteConfig` object — keep logic minimal
+- Use `.astro` files only (no React/Vue/etc)
+- Use semantic HTML elements
+- Use Tabler Icons for any new icons
+
+## When Modifying Components
+
+1. Read the existing component structure first
+2. Maintain consistency with other components in `src/components/`
+3. Test with different config variations (empty data, full data)
+4. Don't edit component files for content changes — change `src/config.ts` instead

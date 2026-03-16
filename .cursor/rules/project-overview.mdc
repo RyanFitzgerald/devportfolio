@@ -1,0 +1,43 @@
+---
+description: Project overview, architecture, and development commands
+alwaysApply: true
+---
+
+# Project Overview
+
+Modern, minimalist portfolio template built with **Astro**, **Tailwind CSS v4**, **TypeScript**, and **Tabler Icons**.
+
+## Development Commands
+
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+```
+
+## Architecture
+
+Component-based, single-page site with all content centralized in `src/config.ts`.
+
+- `src/components/` — Astro components (Hero, About, Projects, Experience, Education, Header, Footer)
+- `src/pages/index.astro` — Single-page layout importing all components
+- `src/config.ts` — Single source of truth for all content
+
+### Key Decisions
+
+1. **Single Configuration File** — all content managed through `src/config.ts`
+2. **Conditional Rendering** — sections hide automatically when their data is removed from config
+3. **Component Independence** — each section is self-contained, reads from config
+4. **Accent Color System** — single `accentColor` propagates via CSS custom properties
+
+## Adding a New Section
+
+1. Create a new component in `src/components/`
+2. Add the corresponding data structure to `src/config.ts`
+3. Import and add the component to `src/pages/index.astro`
+4. Ensure it renders conditionally based on config data
+
+## Important Notes
+
+- No linting or testing framework is configured
+- All icons should come from Tabler Icons for consistency
