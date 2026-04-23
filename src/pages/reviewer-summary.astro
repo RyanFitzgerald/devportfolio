@@ -1,0 +1,50 @@
+---
+import { siteConfig } from "../config";
+import "../styles/global.css";
+---
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="SM Entertainment reviewer summary" />
+    <title>Reviewer Summary - {siteConfig.name}</title>
+  </head>
+
+  <body class="bg-[var(--cream)] text-[var(--navy)]">
+    <main class="summary-shell">
+      <div class="summary-grid">
+        <section class="summary-card">
+          <p class="summary-label">Reviewer Summary</p>
+          <h1>SM Entertainment 제출용 요약본</h1>
+          <div class="summary-copy">
+            <p>
+              서정윤은 AI 기술을 단순 활용하는 수준이 아니라, 생성 로직과 콘텐츠 제작, 운영 프로세스를 하나의 구조로 설계하는 지원자입니다.
+            </p>
+            <p>
+              이번 포트폴리오는 AI-Human Collaborative Pipeline이라는 개념으로 구성되어 있으며, 로직 설계 능력과 PMO형 운영 감각을 함께 보여주는 데 초점을 맞췄습니다.
+            </p>
+          </div>
+
+          <div class="summary-actions print-hide">
+            <button type="button" class="print-button" onclick="window.print()">
+              PDF로 저장하기
+            </button>
+            <a href="/" class="back-button">메인 페이지로 돌아가기</a>
+          </div>
+        </section>
+
+        <section class="summary-card">
+          <p class="summary-label">Key Points</p>
+          <ul class="summary-list">
+            <li>AI 영상 생성의 비일관성을 평가 가능한 지표와 공정으로 구조화했습니다.</li>
+            <li>Dorememe를 통해 실시간 인터랙션과 비동기 시스템 설계 역량을 보여줍니다.</li>
+            <li>Writie 사례로 사용자 성장 중심의 LLM 컨텍스트 전략을 설명합니다.</li>
+            <li>KT디지털인재장학생 운영 경험을 통해 PMO 및 운영 지표 관리 능력을 증명합니다.</li>
+            <li>SM 맞춤형 숨은 제안 페이지로 직무 이해도와 응용 기획력을 보여줍니다.</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,78 +1,55 @@
 ---
 import { siteConfig } from "../config";
 
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const navItems = [
+  { href: "#top", label: "Intro" },
+  { href: "#featured-projects", label: "Projects" },
+  { href: "#management-layer", label: "Management" },
+  { href: "#full-archive", label: "Archive" },
+  { href: siteConfig.archive.hiddenPageHref, label: "SM Proposal" },
+];
 ---
 
 <header
   id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
+  class="fixed inset-x-0 top-0 z-50 transition-all duration-500"
 >
-  <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
-      <li>
-        <a
-          href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
-        >
-          About
-        </a>
-      </li>
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+    <a href="#top" class="flex items-center gap-2">
+      <strong class="text-sm uppercase tracking-[0.28em] text-[var(--navy-900)]">{siteConfig.englishName}</strong>
+      <span class="hidden md:inline text-xs text-[var(--muted)]">· AI-Human Pipeline</span>
+    </a>
+
+    <ul class="hidden items-center gap-6 lg:flex">
       {
-        hasProjects && (
+        navItems.map((item) => (
           <li>
             <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              href={item.href}
+              class="text-sm font-medium text-[var(--navy)]/80 transition hover:text-[var(--navy)]"
             >
-              Projects
+              {item.label}
             </a>
           </li>
-        )
-      }
-      {
-        hasExperience && (
-          <li>
-            <a
-              href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Experience
-            </a>
-          </li>
-        )
-      }
-      {
-        hasEducation && (
-          <li>
-            <a
-              href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Education
-            </a>
-          </li>
-        )
+        ))
       }
     </ul>
+
   </nav>
 </header>
 
 <script>
-  window.addEventListener("scroll", () => {
+  const syncHeader = () => {
     const header = document.getElementById("header");
-    if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
-    } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
-    }
-  });
-</script>
+    if (!header) return;
 
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+    if (window.scrollY > 24) {
+      header.classList.add("bg-white/78", "backdrop-blur-xl", "shadow-[0_18px_45px_rgba(31,47,99,0.12)]");
+    } else {
+      header.classList.remove("bg-white/78", "backdrop-blur-xl", "shadow-[0_18px_45px_rgba(31,47,99,0.12)]");
+    }
+  };
+
+  syncHeader();
+  window.addEventListener("scroll", syncHeader, { passive: true });
+</script>

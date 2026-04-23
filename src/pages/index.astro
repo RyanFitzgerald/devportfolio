@@ -1,39 +1,472 @@
 ---
 import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
-import Experience from "../components/Experience.astro";
-import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
+import type { ArchiveItem } from "../config";
 import "../styles/global.css";
+
+function extractYoutubeId(url: string | undefined): string | null {
+  if (!url) return null;
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&\s]+)/);
+  return match ? match[1] : null;
+}
+
+function toYoutubeEmbed(url: string | undefined): string | null {
+  const id = extractYoutubeId(url);
+  if (!id) return null;
+  return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=1`;
+}
+
+const projectVideoIds = siteConfig.highlightProjects.map((p) => extractYoutubeId(p.video));
+const projectEmbeds = siteConfig.highlightProjects.map((p) => toYoutubeEmbed(p.video));
+
+function isYoutubeUrl(url: string | undefined): boolean {
+  if (!url) return false;
+  return /youtu\.be\/|youtube\.com\//.test(url);
+}
+
+function youtubeThumbnail(url: string): string {
+  const id = extractYoutubeId(url);
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : "";
+}
+
+const promptSnippet = `SYSTEM
+사용자의 글을 대신 완성하지 않고 사고를 확장하는 질문을 먼저 제안한다.
+
+FLOW
+1. 목적과 독자를 확인한다.
+2. 문장의 감정과 논리 밀도를 점검한다.
+3. 바로 수정안보다 선택지와 질문을 제공한다.`;
 ---
 
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={siteConfig.description} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <meta property="og:title" content={`${siteConfig.name} - ${siteConfig.title}`} />
+    <meta property="og:description" content={siteConfig.description} />
+    <meta property="og:type" content="website" />
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
-  <body>
+
+  <body id="top">
     <Header />
-    <section>
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Education />
-    </section>
+
+    <!-- <button type="button" class="floating-reviewer-button" onclick="window.print()">
+      전체 이력서 PDF 다운 받기
+    </button> -->
+
+    <main class="page-shell">
+      <section id="top" class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">{siteConfig.hero.eyebrow}</p>
+          <h1>{siteConfig.hero.headline}</h1>
+          <p class="hero-summary">{siteConfig.hero.summary}</p>
+
+          <div class="hero-actions">
+            <a href={siteConfig.hero.primaryCta.href} class="button-primary">{siteConfig.hero.primaryCta.label}</a>
+            <a href={siteConfig.hero.secondaryCta.href} class="button-secondary">{siteConfig.hero.secondaryCta.label}</a>
+          </div>
+
+          <div class="hero-stats">
+            {
+              siteConfig.hero.stats.map((stat) => (
+                <div class="mini-stat">
+                  <span>{stat.label}</span>
+                  <strong>{stat.value}</strong>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <div class="hero-visual-head">
+            <span>포트폴리오 핵심 3축</span>
+            <strong>설계 · 구현 · 기획</strong>
+          </div>
+
+          <div class="hero-pipeline">
+            <div class="hero-pipeline-item">
+              <span class="hpi-badge">특허 출원 중</span>
+              <strong>FLIMFLOW</strong>
+              <p>생성형 AI 영상 워크플로우 설계 · 파이프라인 구조화</p>
+              <div class="hpi-tags">
+                <span>LangChain</span><span>Stable Diffusion</span><span>Python</span>
+              </div>
+            </div>
+            <div class="hero-pipeline-item">
+              <span class="hpi-badge">졸업작품 · 전시 출품</span>
+              <strong>Dorememe</strong>
+              <p>VR + AI 실시간 공감각 미디어아트 · Unity 단독 개발</p>
+              <div class="hpi-tags">
+                <span>Unity</span><span>PyTorch</span><span>Flask</span>
+              </div>
+            </div>
+            <div class="hero-pipeline-item">
+              <span class="hpi-badge">기획 · 개발 진행 중</span>
+              <strong>writie</strong>
+              <p>Claude API 기반 초개인화 글쓰기 플랫폼 서비스 기획</p>
+              <div class="hpi-tags">
+                <span>Claude API</span><span>Figma</span><span>Prompt Design</span>
+              </div>
+            </div>
+            <div class="hpi-footer">SM 엔터테인먼트 지원 포트폴리오</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="intro-strip">
+        <img src="/media/youn.jpg" alt={siteConfig.name} class="intro-avatar" />
+        <div class="intro-text">
+          <p class="section-kicker">About</p>
+          <h2>{siteConfig.about.heading}</h2>
+          <p>{siteConfig.about.body}</p>
+        </div>
+      </section>
+
+      <section id="featured-projects" class="content-section">
+        <div class="section-header">
+          <div>
+            <p class="section-kicker">Featured Projects</p>
+            <h2>핵심 프로젝트 3선</h2>
+          </div>
+          <p>FLIMFLOW · Dorememe · writie</p>
+        </div>
+
+        <!-- 슬라이더 컨트롤 -->
+        <div class="slider-nav">
+          <div class="slider-tabs">
+            {siteConfig.highlightProjects.map((project, i) => (
+              <button type="button" class={`slider-tab ${i === 0 ? "is-active" : ""}`} data-slide={i}>
+                <span class="slider-tab-num">0{i + 1}</span>
+                <span class="slider-tab-title">{project.title}</span>
+              </button>
+            ))}
+          </div>
+          <div class="slider-arrows">
+            <button type="button" class="slider-arrow" id="slider-prev" aria-label="이전 프로젝트">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3L5 9l6 6"/></svg>
+            </button>
+            <button type="button" class="slider-arrow" id="slider-next" aria-label="다음 프로젝트">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 슬라이드 패널 -->
+        <div class="feature-slider-outer">
+          <!-- Slide 0: FLIMFLOW -->
+          <div class="feature-slide is-active" data-index="0">
+            <div class="feature-copy">
+              <p class="feature-label">{siteConfig.highlightProjects[0].subtitle}</p>
+              <h3>{siteConfig.highlightProjects[0].title}</h3>
+              <p>{siteConfig.highlightProjects[0].summary}</p>
+              <p class="feature-status">{siteConfig.highlightProjects[0].status}</p>
+              <div class="evidence-grid">
+                <div class="compact-list">
+                  <span>수행한 역할</span>
+                  <ul>{siteConfig.highlightProjects[0].role.map((item) => <li>{item}</li>)}</ul>
+                </div>
+                <div class="compact-list">
+                  <span>증빙 포인트</span>
+                  <ul>{siteConfig.highlightProjects[0].proof.map((item) => <li>{item}</li>)}</ul>
+                </div>
+              </div>
+              <div class="tag-row">{siteConfig.highlightProjects[0].stack.map((s) => <span>{s}</span>)}</div>
+            </div>
+            <div class="feature-media-column">
+              <div class="media-slider" data-media-slider>
+                <!-- Slide 0: YouTube 인라인 플레이어 -->
+                <div class="media-slide is-active">
+                  <div class="video-card">
+                    <div class="video-head">
+                      <span>별 재단사 결과 영상</span>
+                      <a href={siteConfig.highlightProjects[0].video} target="_blank" rel="noreferrer" class="yt-link">YouTube에서 보기 ↗</a>
+                    </div>
+                    <iframe class="portfolio-video" src={projectEmbeds[0] ?? ""} title="FLIMFLOW 결과 영상" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <!-- Slide 1+: 도식 이미지 -->
+                {siteConfig.highlightProjects[0].diagrams?.map((diagram, index) => (
+                  <div class="media-slide">
+                    <figure class="diagram-card">
+                      <img src={diagram} alt={siteConfig.highlightProjects[0].diagramCaptions?.[index] ?? `diagram ${index + 1}`} />
+                      {siteConfig.highlightProjects[0].diagramCaptions?.[index] && (
+                        <figcaption class="diagram-caption">{siteConfig.highlightProjects[0].diagramCaptions[index]}</figcaption>
+                      )}
+                    </figure>
+                  </div>
+                ))}
+                <div class="media-nav">
+                  <button type="button" class="media-arrow media-prev" aria-label="이전">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2L4 7l5 5"/></svg>
+                  </button>
+                  <span class="media-dots">1 / {(siteConfig.highlightProjects[0].diagrams?.length ?? 0) + 1}</span>
+                  <button type="button" class="media-arrow media-next" aria-label="다음">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2l5 5-5 5"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 1: Dorememe -->
+          <div class="feature-slide" data-index="1">
+            <div class="feature-copy">
+              <p class="feature-label">{siteConfig.highlightProjects[1].subtitle}</p>
+              <h3>{siteConfig.highlightProjects[1].title}</h3>
+              <p>{siteConfig.highlightProjects[1].summary}</p>
+              <p class="feature-status">{siteConfig.highlightProjects[1].status}</p>
+              <div class="compact-list">
+                <span>핵심 기여</span>
+                <ul>{siteConfig.highlightProjects[1].role.map((item) => <li>{item}</li>)}</ul>
+              </div>
+              <div class="tag-row">{siteConfig.highlightProjects[1].stack.map((s) => <span>{s}</span>)}</div>
+            </div>
+            <div class="feature-media-column">
+              <div class="video-card">
+                <div class="video-head">
+                  <span>Dorememe 시연 영상</span>
+                  <button type="button" class="sound-toggle" data-video-target="dorememe-video">Sound Off</button>
+                </div>
+                <video id="dorememe-video" class="portfolio-video" src={siteConfig.highlightProjects[1].video} autoplay muted loop playsinline controls></video>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: writie -->
+          <div class="feature-slide" data-index="2">
+            <div class="feature-copy">
+              <p class="feature-label">{siteConfig.highlightProjects[2].subtitle}</p>
+              <h3>{siteConfig.highlightProjects[2].title}</h3>
+              <p>{siteConfig.highlightProjects[2].summary}</p>
+              <p class="feature-status">{siteConfig.highlightProjects[2].status}</p>
+              <div class="compact-list">
+                <span>핵심 기여</span>
+                <ul>{siteConfig.highlightProjects[2].role.map((item) => <li>{item}</li>)}</ul>
+              </div>
+              <div class="tag-row">{siteConfig.highlightProjects[2].stack.map((s) => <span>{s}</span>)}</div>
+            </div>
+            <div class="feature-media-column">
+              <div class="prompt-card">
+                <div class="prompt-head">
+                  <span>Prompt Structure</span>
+                  <strong>Question-led writing support</strong>
+                </div>
+                <pre><code>{promptSnippet}</code></pre>
+                <div class="prompt-logo-wrap">
+                  <img src="/media/logo_blue_rmbg.png" alt="writie 로고" class="prompt-logo" />
+                </div>
+              </div>
+              {siteConfig.highlightProjects[2].image && (
+                <figure class="diagram-card">
+                  <img src={siteConfig.highlightProjects[2].image} alt="writie 프로토타입 화면" />
+                  <figcaption class="diagram-caption">writie 프로토타입 — Figma UI/UX 설계안</figcaption>
+                </figure>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="management-layer" class="content-section">
+        <div class="section-header">
+          <div>
+            <p class="section-kicker">Management Layer</p>
+            <h2>{siteConfig.management.title}</h2>
+          </div>
+          <p>{siteConfig.management.summary}</p>
+        </div>
+
+        <div class="management-grid">
+          <div class="management-panel">
+            {
+              siteConfig.management.metrics.map((metric) => (
+                <article class="metric-card">
+                  <p>{metric.label}</p>
+                  <strong>{metric.value}</strong>
+                  <span>{metric.detail}</span>
+                </article>
+              ))
+            }
+          </div>
+
+          <div class="management-panel">
+            <p class="panel-label">Communication Stack</p>
+            <div class="tool-cloud">
+              {siteConfig.management.tools.map((tool) => <span>{tool}</span>)}
+            </div>
+
+            <p class="panel-label second-label">Skills</p>
+            <div class="skill-cloud">
+              {siteConfig.skills.map((skill) => <span>{skill}</span>)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="full-archive" class="content-section">
+        <div class="section-header">
+          <div>
+            <p class="section-kicker">Full Archive</p>
+            <h2>프로젝트 · 경력 · 활동 전체 이력</h2>
+          </div>
+          <p>
+            프로젝트, 인턴십, 수상, 대외활동, 학력을 구분해 넣었습니다. 각 탭을 눌러 상세 내용을 바로 읽을 수 있습니다.
+          </p>
+        </div>
+
+        <div class="archive-shell">
+          <div class="archive-tab-row" role="tablist" aria-label="Portfolio archive tabs">
+            {
+              siteConfig.archiveTabs.map((tab, index) => (
+                <button
+                  type="button"
+                  class={`archive-tab ${index === 0 ? "is-active" : ""}`}
+                  data-archive-tab={tab.id}
+                  aria-selected={index === 0 ? "true" : "false"}
+                >
+                  {tab.label}
+                </button>
+              ))
+            }
+          </div>
+
+          <div class="archive-panel-wrap">
+            {
+              siteConfig.archiveTabs.map((tab, index) => (
+                <section
+                  class={`archive-panel ${index === 0 ? "is-active" : ""}`}
+                  data-archive-panel={tab.id}
+                  hidden={index !== 0}
+                >
+                  <div class="archive-grid">
+                    {
+                      tab.items.map((item: ArchiveItem) => (
+                        <article class="archive-card">
+                          <p class="archive-card-label">{item.subtitle}</p>
+                          <h3>{item.title}</h3>
+                          {item.image && <img src={item.image} alt={item.title} class="archive-card-img" />}
+                          {item.description && <p>{item.description}</p>}
+                          {
+                            item.bullets && (
+                              <ul>
+                                {item.bullets.map((bullet) => <li>{bullet}</li>)}
+                              </ul>
+                            )
+                          }
+                          {
+                            item.tags && (
+                              <div class="tag-row">
+                                {item.tags.map((tag) => <span>{tag}</span>)}
+                              </div>
+                            )
+                          }
+                          {
+                            item.link && isYoutubeUrl(item.link) ? (
+                              <div class="archive-yt-thumb">
+                                <img src={youtubeThumbnail(item.link)} alt={item.title} class="archive-yt-img" />
+                                <a href={item.link} target="_blank" rel="noreferrer" class="yt-play-btn">
+                                  ▶ {item.linkLabel ?? "영상 보기"}
+                                </a>
+                              </div>
+                            ) : item.link && (
+                              <a href={item.link} target="_blank" rel="noreferrer" class="inline-link">
+                                {item.linkLabel ?? "링크 보기"}
+                              </a>
+                            )
+                          }
+                        </article>
+                      ))
+                    }
+                  </div>
+                </section>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+
     <Footer />
+
+    <script>
+      // ── Featured project carousel ──────────────────────────────────────
+      const slides = Array.from(document.querySelectorAll<HTMLElement>(".feature-slide"));
+      const sliderTabs = Array.from(document.querySelectorAll<HTMLElement>(".slider-tab"));
+      let current = 0;
+
+      function goTo(index: number) {
+        const total = slides.length;
+        const next = (index + total) % total;
+        slides[current].classList.remove("is-active");
+        sliderTabs[current]?.classList.remove("is-active");
+        slides[next].classList.add("is-active");
+        sliderTabs[next]?.classList.add("is-active");
+        current = next;
+      }
+
+      sliderTabs.forEach((tab, i) => {
+        tab.addEventListener("click", () => goTo(i));
+      });
+
+      document.getElementById("slider-prev")?.addEventListener("click", () => goTo(current - 1));
+      document.getElementById("slider-next")?.addEventListener("click", () => goTo(current + 1));
+
+      // ── Media sliders (video ↔ diagrams) ───────────────────────────────
+      document.querySelectorAll<HTMLElement>("[data-media-slider]").forEach((slider) => {
+        const mSlides = Array.from(slider.querySelectorAll<HTMLElement>(".media-slide"));
+        const dots = slider.querySelector<HTMLElement>(".media-dots");
+        let mCur = 0;
+
+        function goMedia(i: number) {
+          mSlides[mCur].classList.remove("is-active");
+          mCur = (i + mSlides.length) % mSlides.length;
+          mSlides[mCur].classList.add("is-active");
+          if (dots) dots.textContent = `${mCur + 1} / ${mSlides.length}`;
+        }
+
+        slider.querySelector(".media-prev")?.addEventListener("click", () => goMedia(mCur - 1));
+        slider.querySelector(".media-next")?.addEventListener("click", () => goMedia(mCur + 1));
+      });
+
+      // ── Archive tabs ───────────────────────────────────────────────────
+      const archiveTabs = Array.from(document.querySelectorAll("[data-archive-tab]"));
+      const archivePanels = Array.from(document.querySelectorAll("[data-archive-panel]"));
+
+      archiveTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = tab.getAttribute("data-archive-tab");
+          archiveTabs.forEach((item) => {
+            item.classList.remove("is-active");
+            item.setAttribute("aria-selected", "false");
+          });
+          tab.classList.add("is-active");
+          tab.setAttribute("aria-selected", "true");
+
+          archivePanels.forEach((panel) => {
+            const match = panel.getAttribute("data-archive-panel") === target;
+            panel.classList.toggle("is-active", match);
+            panel.toggleAttribute("hidden", !match);
+          });
+        });
+      });
+
+      const soundButtons = Array.from(document.querySelectorAll(".sound-toggle"));
+      soundButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetId = button.getAttribute("data-video-target");
+          const video = targetId ? document.getElementById(targetId) : null;
+          if (!(video instanceof HTMLVideoElement)) return;
+          video.muted = !video.muted;
+          button.textContent = video.muted ? "Sound Off" : "Sound On";
+        });
+      });
+
+    </script>
   </body>
 </html>

@@ -1,194 +1,51 @@
 ---
 import { siteConfig } from "../config";
 
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const socialEntries = [
+  { label: "Email", href: siteConfig.social.email ? `mailto:${siteConfig.social.email}` : undefined },
+  { label: "LinkedIn", href: siteConfig.social.linkedin },
+  { label: "GitHub", href: siteConfig.social.github },
+].filter((entry) => entry.href);
 ---
 
-<footer class="relative bg-gray-50 border-t border-gray-200">
-  <div class="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-    <div
-      class="flex flex-col md:flex-row md:items-center md:justify-between gap-8"
-    >
-      <div class="flex flex-col gap-4">
-        <h3 class="text-2xl font-bold text-gray-800">
-          {siteConfig.name}
-        </h3>
-        <p class="text-base text-gray-600">
-          {siteConfig.title}
-        </p>
-        <div class="flex gap-x-6">
-          <a
-            href={`mailto:${siteConfig.social.email}`}
-            aria-label="Email"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
-            style={`--accent-color: ${siteConfig.accentColor}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-6 w-6"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-              ></path>
-              <path d="M3 7l9 6l9 -6"></path>
-            </svg>
-          </a>
-          <a
-            href={siteConfig.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
-            style={`--accent-color: ${siteConfig.accentColor}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-6 w-6"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M8 11v5"></path><path d="M8 8v.01"></path><path d="M12 16v-5"
-              ></path><path d="M16 16v-3a2 2 0 1 0 -4 0"></path><path
-                d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"
-              ></path></svg
-            >
-          </a>
-          <a
-            href={siteConfig.social.twitter}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
-            style={`--accent-color: ${siteConfig.accentColor}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-6 w-6"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-                d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
-            >
-          </a>
-          <a
-            href={siteConfig.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
-            style={`--accent-color: ${siteConfig.accentColor}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-6 w-6"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-              ></path></svg
-            >
-          </a>
-        </div>
+<footer class="relative overflow-hidden border-t border-white/70 bg-[var(--navy)] px-6 py-16 text-white">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(245,168,200,0.3),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.14),_transparent_28%)]"></div>
+
+  <div class="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.4fr_1fr]">
+    <div class="space-y-4">
+      <p class="text-xs font-semibold uppercase tracking-[0.34em] text-white/60">Closing Frame</p>
+      <h2 class="max-w-2xl text-3xl font-semibold tracking-tight md:text-5xl">
+        Human-centered AI systems need both logic and taste.
+      </h2>
+      <p class="max-w-2xl text-sm leading-7 text-white/74 md:text-base">
+        {siteConfig.name}는 기술 설계와 콘텐츠 실행 사이의 간극을 줄이는 방식으로 AI 경험을 기획합니다.
+      </p>
+    </div>
+
+    <div class="grid gap-6 rounded-[2rem] border border-white/15 bg-white/8 p-6 backdrop-blur-sm">
+      <div>
+        <p class="text-sm font-semibold text-[var(--pink-soft)]">{siteConfig.name} / {siteConfig.englishName}</p>
+        <p class="mt-2 text-sm text-white/70">{siteConfig.title}</p>
       </div>
 
-      <div class="hidden md:block flex flex-col md:items-end gap-4">
-        <nav class="flex gap-x-8">
-          <a
-            href="#about"
-            class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-            >About</a
-          >
-          {
-            hasProjects && (
-              <a
-                href="#projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                Projects
-              </a>
-            )
-          }
-          {
-            hasExperience && (
-              <a
-                href="#experience"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                Experience
-              </a>
-            )
-          }
-          {
-            hasEducation && (
-              <a
-                href="#education"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                Education
-              </a>
-            )
-          }
-        </nav>
-        <p class="text-sm text-gray-500">
-          © {new Date().getFullYear()}
-          {siteConfig.name}. All rights reserved.
-        </p>
+      <div class="flex flex-wrap gap-3">
+        {
+          socialEntries.map((entry) => (
+            <a
+              href={entry.href}
+              target={entry.label === "Email" ? undefined : "_blank"}
+              rel={entry.label === "Email" ? undefined : "noreferrer"}
+              class="rounded-full border border-white/15 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-white transition hover:border-[var(--pink-strong)] hover:bg-white hover:text-[var(--navy)]"
+            >
+              {entry.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="text-xs uppercase tracking-[0.22em] text-white/50">
+        © {new Date().getFullYear()} Seo Jungyoun. Workflow crafted for SM Entertainment.
       </div>
     </div>
-  </div>
-
-  <!-- Decorative pattern -->
-  <div class="absolute inset-0 -z-10 overflow-hidden">
-    <svg
-      aria-hidden="true"
-      class="absolute bottom-0 left-0 w-full h-24 text-gray-100"
-    >
-      <pattern
-        id="footer-pattern"
-        x="0"
-        y="0"
-        width="100"
-        height="100"
-        patternUnits="userSpaceOnUse"
-      >
-        <path
-          d="M0 50 Q 25 40, 50 50 T 100 50"
-          stroke="currentColor"
-          stroke-width="0.5"
-          fill="none"
-          opacity="0.4"></path>
-      </pattern>
-      <rect width="100%" height="100%" fill="url(#footer-pattern)"></rect>
-    </svg>
   </div>
 </footer>

@@ -1,0 +1,253 @@
+---
+import { siteConfig } from "../config";
+import "../styles/global.css";
+---
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SM AI 가상 아티스트 운영 제안 — 나이비스 실시간 소통을 위한 제한적 사용자 개입 모델" />
+    <title>SM 제안서 · naevis 운영 모델 — {siteConfig.name}</title>
+  </head>
+
+  <body>
+    <nav class="proposal-nav">
+      <a href="/" class="proposal-nav-logo">{siteConfig.name}</a>
+      <span class="proposal-nav-badge">SM Proposal</span>
+    </nav>
+
+    <div class="proposal-hero">
+      <p class="summary-label">SM AI Virtual Artist Operations Proposal</p>
+      <h1 class="proposal-hero-title">
+        나이비스가 팬과 대화할 때,<br />
+        <em>무엇이 AI이고 무엇이 운영인가?</em>
+      </h1>
+      <p class="proposal-hero-sub">
+        FILMFLOW의 "제한적 사용자 개입 모델"을 naevis 실시간 소통 운영에 적용한 가상 기획 제안입니다.<br />
+        팬 몰입감과 브랜드 일관성을 동시에 지키는 운영 파이프라인을 제안합니다.
+      </p>
+    </div>
+
+    <main class="proposal-content">
+
+      <!-- Section 1: Context -->
+      <section class="proposal-block">
+        <p class="summary-label">Context</p>
+        <h2>naevis가 마주한 도전</h2>
+        <p class="proposal-desc">
+          SM의 AI 가상 아티스트 naevis는 kwangya 세계관을 기반으로 활동하며 실시간 팬 소통이 점점 중요해지고 있습니다.
+          하지만 생성형 AI를 그대로 투입하면 두 가지 충돌이 생깁니다.
+        </p>
+        <div class="proposal-2col">
+          <div class="proposal-card">
+            <p class="prop-card-title">현재 AI 즉시 응답 구조의 문제</p>
+            <ul class="proposal-list">
+              <li>팬 질문 → AI가 즉각 생성 → 세계관 이탈 위험</li>
+              <li>브랜드 페르소나 일관성 통제 불가</li>
+              <li>민감 발언·루머 대응 실패 시 대형 이슈 발생</li>
+              <li>운영팀의 24/7 실시간 모니터링 부담 과중</li>
+              <li>다국어·다채널 확장 시 통제 불가</li>
+            </ul>
+          </div>
+          <div class="proposal-card proposal-card-accent">
+            <p class="prop-card-title">필요한 것</p>
+            <ul class="proposal-list">
+              <li>AI 자율성과 운영 통제의 구조적 분리</li>
+              <li>팬 몰입감을 해치지 않는 자동화 안전망</li>
+              <li>세계관 일관성을 시스템 레벨에서 보장</li>
+              <li>운영팀이 핵심 케이스에만 집중할 수 있는 구조</li>
+              <li>위기 상황에서 즉각 개입 가능한 에스컬레이션 경로</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- naevis 레퍼런스 영상 -->
+        <div class="naevis-ref">
+          <p class="summary-label" style="margin-bottom:0.6rem;">naevis Reference</p>
+          <p class="proposal-desc" style="margin-bottom:1rem;">
+            naevis의 세계관 활동 및 팬 소통 방식을 참고합니다. (YouTube 공식 채널 영상 — 저작권: SM Entertainment)
+          </p>
+          <div class="naevis-video-wrap">
+            <iframe
+              class="naevis-video"
+              src="https://www.youtube.com/embed/5oWtjxsC0UQ?autoplay=1&mute=1&loop=1&playlist=5oWtjxsC0UQ&controls=1"
+              title="naevis 레퍼런스 영상"
+              frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: The Model -->
+      <section class="proposal-block">
+        <p class="summary-label">The Model</p>
+        <h2>제한적 사용자 개입 모델 (Limited Intervention Model)</h2>
+        <p class="proposal-desc">
+          FILMFLOW 특허 출원의 핵심 아이디어인 "입력 즉시 출력이 아닌, 단계별 검증과 제한적 개입으로 품질을 제어한다"는 원칙을 AI 아티스트 운영에 이식했습니다.
+          팬의 모든 메시지는 아래 3단계 파이프라인을 통과한 뒤 naevis의 응답으로 출력됩니다.
+        </p>
+
+        <div class="pipeline-wrap">
+          <div class="pipeline-step">
+            <div class="pipeline-icon">01</div>
+            <div class="pipeline-info">
+              <strong>Moderation</strong>
+              <p>입력 필터링 · 리스크 감지 · 차단</p>
+              <span>
+                팬 메시지가 세계관을 위협하거나, 혐오 표현·허위정보·타 아티스트 비방을 포함하는 경우 즉시 차단합니다.
+                위험 등급에 따라 자동 차단(high) 또는 운영팀 검토 큐(medium)로 분기합니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="pipeline-connector">Intent 분류로 전달</div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-icon">02</div>
+            <div class="pipeline-info">
+              <strong>Intent Classification</strong>
+              <p>의도 분류 · 감정 분석 · 응답 경로 결정</p>
+              <span>
+                통과된 메시지를 <b>일상 소통 / 세계관 질문 / 감정 호소 / 민감 주제</b> 4가지로 분류합니다.
+                분류 결과에 따라 완전 자동 응답 경로 또는 운영팀 검토 후 응답 경로로 라우팅합니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="pipeline-connector">Response 생성으로 전달</div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-icon">03</div>
+            <div class="pipeline-info">
+              <strong>Response Framing</strong>
+              <p>페르소나 적용 · 세계관 반영 · 출력</p>
+              <span>
+                naevis의 고유 말투와 감정 표현, SM이 정의한 kwangya 세계관, 현재 컴백·시즌 맥락을 시스템 프롬프트로 주입하여 응답을 생성합니다.
+                출력 전 Brand Safety 레이어를 한 번 더 통과시켜 최종 검증합니다.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Decision Matrix -->
+      <section class="proposal-block">
+        <p class="summary-label">Operation Design</p>
+        <h2>자동 응답 vs. 운영팀 개입 — 판단 기준</h2>
+        <p class="proposal-desc">
+          모든 응답을 자동화하면 리스크가 생기고, 모든 응답에 사람이 개입하면 확장성이 없습니다.
+          두 영역을 명확히 분리하는 것이 이 모델의 핵심입니다. 전체 메시지의 약 80%는 자동 처리, 20%를 운영팀이 검토합니다.
+        </p>
+        <div class="matrix-wrap">
+          <div class="matrix-col matrix-auto">
+            <p class="matrix-label auto">자동 응답 가능 영역 (~80%)</p>
+            <ul class="proposal-list">
+              <li>일상적 인사 및 감사 표현</li>
+              <li>팬 닉네임 호명·응원 메시지 답변</li>
+              <li>공식 발표된 컴백·일정 정보 안내</li>
+              <li>naevis 세계관 내 단순 Q&A (kwangya 관련)</li>
+              <li>다국어 인사 (영어·중국어·일본어)</li>
+              <li>앨범·굿즈 관련 공식 정보 응답</li>
+            </ul>
+          </div>
+          <div class="matrix-col matrix-human">
+            <p class="matrix-label human">운영팀 개입 필요 영역 (~20%)</p>
+            <ul class="proposal-list">
+              <li>정치·사회적 민감 발언에 대한 반응</li>
+              <li>타 아티스트 언급 및 직접 비교 상황</li>
+              <li>세계관 설정과 충돌하는 깊은 세계관 질문</li>
+              <li>루머·허위정보 확산 우려 메시지</li>
+              <li>정서적으로 취약한 팬의 위기 발언</li>
+              <li>미공개 정보를 유도하는 질문</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Brand Safety -->
+      <section class="proposal-block">
+        <p class="summary-label">Brand Safety</p>
+        <h2>브랜드 일관성은 시스템이 지킨다</h2>
+        <p class="proposal-desc">
+          운영팀이 없는 시간에도 naevis는 SM이 정의한 페르소나 그대로 팬과 소통합니다. 4가지 보호 레이어가 항상 작동합니다.
+        </p>
+        <div class="safety-grid">
+          <div class="proposal-card">
+            <strong class="safety-title">Persona Lock</strong>
+            <p>naevis의 말투·어휘 선택·감정 표현 방식을 시스템 프롬프트로 고정. 페르소나 업데이트는 SM 기획팀만 접근 가능.</p>
+          </div>
+          <div class="proposal-card">
+            <strong class="safety-title">Lore Guardrail</strong>
+            <p>kwangya 세계관 및 SM Culture Universe와 충돌하는 발화를 자동 감지·차단. 세계관 데이터베이스와 실시간 대조.</p>
+          </div>
+          <div class="proposal-card">
+            <strong class="safety-title">Tone Modulator</strong>
+            <p>감정 톤(밝음·진지함·유머)을 컨텍스트에 따라 조절하되, SM이 설정한 브랜드 이미지 하한선을 항상 유지.</p>
+          </div>
+          <div class="proposal-card">
+            <strong class="safety-title">Audit Log</strong>
+            <p>모든 응답 이력 저장. 이슈 발생 시 즉시 추적 가능. 운영팀 대시보드에서 실시간 모니터링 및 A/B 테스트 지원.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Connection to my experience -->
+      <section class="proposal-block">
+        <p class="summary-label">Why This Proposal</p>
+        <h2>이 기획이 제 경험에서 나온 이유</h2>
+        <div class="proposal-card proposal-card-dark">
+          <p class="prop-card-title" style="color: rgba(245,168,200,0.9)">FILMFLOW 특허 설계와의 연결점</p>
+          <p style="color: rgba(255,255,255,0.88); line-height: 1.7; font-size: 0.95rem; margin: 0 0 1rem;">
+            FILMFLOW 특허 출원의 핵심은 <strong style="color: white;">"입력 즉시 출력이 아닌, 사용자 개입 단계를 설계해 품질을 제어한다"</strong>는 개념입니다.
+            스토리보드 파싱 → 6축 충분성 평가 → 제한적 개입 → 프레임 체이닝으로 이어지는 FILMFLOW 파이프라인의 논리를,
+            팬 메시지 → Moderation → Intent Classification → Response Framing으로 이어지는 이 운영 파이프라인에 그대로 이식했습니다.
+          </p>
+          <p style="color: rgba(255,255,255,0.88); line-height: 1.7; font-size: 0.95rem; margin: 0;">
+            생성 AI의 자율성을 전면 허용하지 않고 운영 레이어를 사이에 두는 설계 철학, 이것이 두 프로젝트가 공유하는 핵심입니다.
+            이 기획자는 AI를 도구로 다루는 것을 넘어, AI가 만들어내는 불확실성을 구조로 통제하는 방식을 이해하고 있습니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 6: Expected outcomes -->
+      <section class="proposal-block">
+        <p class="summary-label">Expected Outcomes</p>
+        <h2>기대 효과</h2>
+        <div class="outcomes-grid">
+          <div class="outcome-item">
+            <strong>팬 몰입감 유지</strong>
+            <p>자동 응답 영역에서 24/7 실시간 소통 가능, 응답 지연 없음</p>
+          </div>
+          <div class="outcome-item">
+            <strong>브랜드 리스크 최소화</strong>
+            <p>민감 영역은 인간이 검토해 대형 브랜드 사고 예방</p>
+          </div>
+          <div class="outcome-item">
+            <strong>운영 효율 향상</strong>
+            <p>메시지 80% 이상 자동 처리, 운영팀은 핵심 케이스에만 집중</p>
+          </div>
+          <div class="outcome-item">
+            <strong>글로벌 확장성</strong>
+            <p>다국어·다채널 확장에도 동일 파이프라인 적용, 운영 비용 선형 증가 방지</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="proposal-cta-block">
+        <p>
+          이 제안은 가상 시나리오이지만, FILMFLOW 특허 설계와 동일한 방법론에서 출발합니다.<br />
+          AI와 운영의 경계를 구조로 정의하는 기획자 서정윤입니다.
+        </p>
+        <div class="summary-actions print-hide">
+          <a href="/" class="back-button">메인 포트폴리오로</a>
+          <a href={siteConfig.archive.reviewerSummaryHref} class="print-button">심사위원용 요약본 보기</a>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

@@ -1,6 +1,9 @@
 ---
 import { siteConfig } from "../config";
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+
+// 1. config.ts에 정의된 'highlightProjects'를 정확히 가져옵니다.
+const projects = siteConfig.highlightProjects || [];
+const hasProjects = projects.length > 0;
 ---
 
 {
@@ -19,79 +22,66 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
           </div>
 
           <div class="lg:col-span-8">
-            <div class="space-y-8">
-              {siteConfig.projects.map((project, index) => {
-                const Component = project.link ? "a" : "div";
-                const linkProps = project.link
-                  ? {
-                      href: project.link,
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                    }
-                  : {};
+            <div class="space-y-16"> {/* 프로젝트 간 간격을 넓혔습니다 */}
+              {projects.map((project, index) => {
+                
+                // 2. 유튜브 URL 자동 변환 및 보안 에러 방지 로직
+                let videoSrc = project.video;
+                const isYoutube = videoSrc?.includes('youtube.com') || videoSrc?.includes('youtu.be');
+                
+                if (isYoutube && videoSrc && !videoSrc.includes('embed')) {
+                  // watch?v= 또는 youtu.be/ 형태를 embed/로 변환
+                  const videoId = videoSrc.split('v=')[1]?.split('&')[0] || videoSrc.split('/').pop();
+                  videoSrc = `https://www.youtube.com/embed/${videoId}`;
+                }
 
                 return (
                   <div class="group relative">
-                    <Component
-                      {...linkProps}
-                      class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
-                        project.link
-                          ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
-                          : ""
-                      }`}
-                    >
-                      {project.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
-                          <svg
-                            class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 17L17 7M17 7H7M17 7V17"
-                            />
-                          </svg>
+                    <div class="space-y-6">
+                      <div>
+                        <span class="text-sm font-mono" style={{ color: siteConfig.accentColor }}>
+                          0{index + 1}
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-1">
+                          {project.title} {/* config.ts의 'title' 필드 사용 */}
+                        </h3>
+                        <p class="text-gray-500 font-medium">{project.subtitle}</p>
+                      </div>
+
+                      <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                        {project.summary} {/* config.ts의 'summary' 필드 사용 */}
+                      </p>
+
+                      {/* 3. 영상 렌더링 섹션 */}
+                      {videoSrc && (
+                        <div class="mt-4 aspect-video w-full rounded-2xl overflow-hidden shadow-xl bg-black border border-gray-100">
+                          {isYoutube ? (
+                            <iframe
+                              src={`${videoSrc}?rel=0&showinfo=0`} 
+                              class="w-full h-full"
+                              title={project.title}
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              allowfullscreen
+                            ></iframe>
+                          ) : (
+                            <video src={videoSrc} controls class="w-full h-full object-cover"></video>
+                          )}
                         </div>
                       )}
 
-                      <div class="space-y-4">
-                        <div>
-                          <span
-                            class="text-sm font-mono"
-                            style={{ color: siteConfig.accentColor }}
-                          >
-                            0{index + 1}
-                          </span>
-                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {project.name}
-                          </h3>
+                      {/* 4. 기술 스택 (config.ts의 'stack' 필드 사용) */}
+                      {project.stack && (
+                        <div class="flex flex-wrap gap-2 pt-2">
+                          {project.stack.map((skill) => (
+                            <span class="px-3 py-1.5 bg-gray-900 text-white rounded-lg text-xs font-medium">
+                              {skill}
+                            </span>
+                          ))}
                         </div>
-
-                        <p
-                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
-                        >
-                          {project.description}
-                        </p>
-
-                        {project.skills && project.skills.length > 0 && (
-                          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
-                            {project.skills.map((skill) => (
-                              <span
-                                class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
-                                  project.link ? "group-hover:bg-gray-800" : ""
-                                }`}
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </Component>
+                      )}
+                    </div>
                   </div>
                 );
               })}
