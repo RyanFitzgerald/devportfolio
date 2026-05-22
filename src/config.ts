@@ -1,16 +1,16 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
+  name: "Greatness Igbava",
   title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  description: "Portfolio of Greatness Igbava — Senior Software Engineer",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
+    email: "kidrivs@gmail.com",
     linkedin: "https://linkedin.com/in/yourprofile",
     twitter: "https://x.com/rfitzio",
     github: "https://github.com/RyanFitzgerald",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
+    "I'm a Senior Software Engineer focused on building products that scale and hold up under real conditions. I work across the full stack — React and JavaScript on the frontend, Node.js and Python on the backend, and cloud infrastructure on AWS with Docker. I care about writing systems that are straightforward to maintain and interfaces that feel good to use.",
   skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
   projects: [
     {

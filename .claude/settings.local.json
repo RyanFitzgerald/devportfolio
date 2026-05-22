@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(impeccable)",
+      "Skill(impeccable:*)",
+      "Bash(node \"C:\\\\Users\\\\GEZZY\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\load-context.mjs\")"
+    ]
+  }
+}
