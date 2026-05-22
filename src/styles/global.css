@@ -1,5 +1,143 @@
 @import "tailwindcss";
 
+:root {
+  --bg:          oklch(9% 0.012 262);
+  --bg-surface:  oklch(13.5% 0.012 262);
+  --fg:          oklch(92% 0.005 262);
+  --fg-muted:    oklch(55% 0.008 262);
+  --fg-subtle:   oklch(30% 0.01  262);
+  --accent:      oklch(78% 0.16  58);
+  --border:      oklch(20% 0.01  262);
+  --ease-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quint:  cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scroll reveal ── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.75s var(--ease-expo), transform 0.75s var(--ease-expo);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.75s var(--ease-expo);
+}
+
+.reveal-fade.is-visible {
+  opacity: 1;
+}
+
+.stagger-1 { transition-delay: 0.06s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.18s; }
+.stagger-4 { transition-delay: 0.24s; }
+.stagger-5 { transition-delay: 0.30s; }
+.stagger-6 { transition-delay: 0.36s; }
+
+/* ── Hero entrance ── */
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(48px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes expand-x {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.hero-role {
+  animation: slide-up 0.9s var(--ease-expo) 0ms both;
+}
+
+.hero-title {
+  animation: slide-up 0.9s var(--ease-expo) 80ms both;
+}
+
+.hero-divider {
+  transform-origin: left center;
+  animation: expand-x 0.9s var(--ease-expo) 220ms both;
+}
+
+.hero-cta {
+  animation: fade-in 0.7s ease 400ms both;
+}
+
+.hero-socials {
+  animation: fade-in 0.7s ease 520ms both;
+}
+
+/* ── Nav links (shared: Header + Footer) ── */
+
+.nav-link {
+  position: relative;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: width 0.3s var(--ease-expo);
+}
+
+.nav-link:hover {
+  color: var(--fg);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Reduced motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-role,
+  .hero-title,
+  .hero-divider,
+  .hero-cta,
+  .hero-socials {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

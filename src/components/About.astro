@@ -2,39 +2,57 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
-  <div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-4">
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
-        >
-          About Me
-        </h2>
-        <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
-          style={`background-color: ${siteConfig.accentColor}`}
-        >
-        </div>
-      </div>
+<section id="about" class="px-8 sm:px-12 md:px-16 lg:px-20 py-20 md:py-28 lg:py-36" style="background: var(--bg)">
+  <div class="max-w-6xl mx-auto">
 
-      <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+    <!-- Section label -->
+    <div class="reveal flex items-center gap-4 mb-14 sm:mb-20">
+      <span class="text-xs tracking-[0.22em] uppercase font-semibold" style="color: var(--accent)">01</span>
+      <span class="text-xs tracking-[0.22em] uppercase" style="color: var(--fg-subtle)">About</span>
+      <div class="flex-1 h-px ml-2" style="background: var(--border)"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 lg:gap-24 items-start">
+
+      <!-- Bio -->
+      <div class="reveal stagger-1">
+        <p
+          class="font-medium leading-[1.65]"
+          style="font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--fg-muted); max-width: 60ch; text-wrap: pretty"
+        >
           {siteConfig.aboutMe}
         </p>
+      </div>
 
-        <div class="pt-4">
-          <div class="flex flex-wrap gap-3">
-            {
-              siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
-                </span>
-              ))
-            }
-          </div>
+      <!-- Skills -->
+      <div class="reveal stagger-2">
+        <p class="text-xs tracking-[0.22em] uppercase mb-5" style="color: var(--fg-subtle)">
+          Technologies
+        </p>
+        <div class="flex flex-wrap gap-2.5">
+          {siteConfig.skills.map((skill) => (
+            <span class="skill-tag px-3 py-1.5 text-sm font-medium">
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<style>
+  .skill-tag {
+    color: var(--fg-muted);
+    border: 1px solid var(--border);
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    cursor: default;
+  }
+
+  .skill-tag:hover {
+    color: var(--accent);
+    border-color: oklch(78% 0.16 58 / 0.5);
+    background: oklch(78% 0.16 58 / 0.06);
+  }
+</style>
