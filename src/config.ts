@@ -1,16 +1,16 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Rachit Panchal",
+  title: "Student at Emerald High School",
+
+  description: "Portfolio website of Rachit Panchal",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "rachitpanchal15@gmail.com",
+    linkedin: "https://www.linkedin.com/in/rachit-panchal-1800b4409/",
+    github: "https://github.com/rachitpanchal15-cyber",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
+    "Hey, I'm Rachit Panchal, a freshman at Emerald High School in Dublin, CA. I'm into coding, AI, and entrepreneurship. I won 1st place at the Los Altos Hacks hackathon with my project Venture AI, and I love building things that solve real problems. I'm always looking for the next idea to bring to life.",
   skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
   projects: [
     {

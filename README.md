@@ -14,7 +14,7 @@ This template also comes with `CLAUDE.md` and `.cursor/rules` files for easy int
 
 ## Preview
 
-To view a live preview of the site, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+To view a live preview of the site, [click here](https://rachitpanchal.github.io/devportfolio/).
 
 ## Built With
 
@@ -151,7 +151,7 @@ devportfolio/
 If you'd like to run it locally:
 
 ```
-git clone https://github.com/RyanFitzgerald/devportfolio.git
+git clone https://github.com/rachitpanchal/devportfolio.git
 cd devportfolio
 npm install
 ```
