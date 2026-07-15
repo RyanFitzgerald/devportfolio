@@ -1,92 +1,62 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
-  accentColor: "#1d4ed8",
+  name: "Zeeshan Shaik",
+  title: "Electrical Engineering Student",
+  description: "Portfolio website of Zeeshan Shaik",
+  accentColor: "#1759bb",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "zeeshanmohshaik14@gmail.com",
+    linkedin: "",
+    twitter: "",
+    github: "https://github.com/Triple19",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "My name is Zeeshan Shaik, and I am an <strong>incoming</strong> junior in high school. I am electrical engineering student interested in learning about computer programming, machine learning, and computer components. My hobbies consist of playing video games and reading books.",
+  skills: ["Java", "Javascript", "Angular", "Node.js", "Python"],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Environmental Science Fair Project",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "A project dedicated to research and effects of Methane and other chemicals on the environment. Results of research were demonstrated using python programs. It was submitted for judge review at a state level competitions.",
+      link: "N/A",
+      skills: ["Research", "Python"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "EduFlex",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Demo website to practice coding skills using AI APIs.",
+      link: "https://github.com/Triple19/Eduflex",
+      skills: ["Typescript", "HTML", "Python"],
     },
     {
-      name: "ExtensionKit",
+      name: "Waterpark Research Project",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Independent Research Project conducted with two other peers to research the effects of business dynamics on the local community and city. Our group recieved judge review and we even coordinated with officials of the waterpark franchise as a whole. ",
+      link: "N/A",
+      skills: ["Research", "Teamwork", "Communication"],
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "ThinkNeuro Internship Program",
+      title: "Intern",
+      dateRange: "June 2026 - August 2026",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Learned important GitHub Skills", "Developed strong resume", "Strengthened team skills"
       ],
     },
-    {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
-      bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
-      ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
-      ],
-    },
+ 
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "Round Rock High School",
+      degree: "Sophomore",
+      dateRange: "2024 - Present",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+        "Taking many AP Classes",
+        "Present in Robotics and Engineering Clubs",
+        "Moving on to my 3rd year",
       ],
     },
-    {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
-    },
+
   ],
 };
