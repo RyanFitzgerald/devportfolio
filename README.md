@@ -171,6 +171,7 @@ The template can be deployed to any static hosting service easily (and in most c
 - To deploy with GitHub Pages, [click here](https://docs.astro.build/en/guides/deploy/github/).
 - To deploy with Cloudflare Pages, [click here](https://docs.astro.build/en/guides/deploy/cloudflare/).
 - To deploy with Render, [click here](https://docs.astro.build/en/guides/deploy/render/).
+- To deploy with Wasmer Edge, [![Deploy to Wasmer](https://img.shields.io/badge/Deploy%20to-Wasmer-171717?logo=wasmer&logoColor=white)](https://wasmer.io/apps/create?github=RyanFitzgerald%2Fdevportfolio) (imports this repository; import your own copy to deploy your customized portfolio).
 
 Want to deploy somewhere else? Find more guides [here](https://docs.astro.build/en/guides/deploy/).
 
